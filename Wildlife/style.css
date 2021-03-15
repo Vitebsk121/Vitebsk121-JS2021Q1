@@ -398,7 +398,7 @@ img {
     max-width: 1440px;
     margin: 0 auto;
     min-height: 779px;
-    background: url(./assets/images/fox.jpg) no-repeat center;
+    background: #02160b url(./assets/images/fox.jpg) no-repeat center;
     background-size: cover;
 }
 
@@ -769,7 +769,7 @@ img {
     margin: 0 auto;
     max-width: 1440px;
     height: 359px;
-    background: url(./assets/images/footer.jpg) no-repeat center;
+    background: #181617 url(./assets/images/footer.jpg) no-repeat center;
     background-size: cover;
 
 }
