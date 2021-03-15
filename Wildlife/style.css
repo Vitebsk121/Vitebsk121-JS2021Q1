@@ -467,6 +467,7 @@ img {
 }
 
 .header__search {
+    cursor: pointer;
     padding-top: 15px;
 }
 
