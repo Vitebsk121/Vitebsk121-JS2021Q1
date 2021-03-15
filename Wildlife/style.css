@@ -494,7 +494,7 @@ img {
 }
 
 .header__button:hover {
-    background: #E39128;
+    background: #CD6326;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
@@ -745,6 +745,10 @@ img {
 
 .email__form__send:hover {
     background: #E39128;
+}
+
+.email__form__send:active {
+    background: #8F5613;
 }
 
 /* articles style end */
