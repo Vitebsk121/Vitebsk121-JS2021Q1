@@ -1,0 +1,206 @@
+/* roboto-regular - latin */
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../../assets/fonts/roboto-v20-latin-regular.eot'); /* IE9 Compat Modes */
+    src: local(''),
+         url('../../assets/fonts/roboto-v20-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('../../assets/fonts/roboto-v20-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+         url('../../assets/fonts/roboto-v20-latin-regular.woff') format('woff'), /* Modern Browsers */
+         url('../../assets/fonts/roboto-v20-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('../../assets/fonts/roboto-v20-latin-regular.svg#Roboto') format('svg'); /* Legacy iOS */
+}
+/* roboto-500 - latin */
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    src: url('../../assets/fonts/roboto-v20-latin-500.eot'); /* IE9 Compat Modes */
+    src: local(''),
+         url('../../assets/fonts/roboto-v20-latin-500.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('../../assets/fonts/roboto-v20-latin-500.woff2') format('woff2'), /* Super Modern Browsers */
+         url('../../assets/fonts/roboto-v20-latin-500.woff') format('woff'), /* Modern Browsers */
+         url('../../assets/fonts/roboto-v20-latin-500.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('../../assets/fonts/roboto-v20-latin-500.svg#Roboto') format('svg'); /* Legacy iOS */
+}
+/* roboto-900 - latin */
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 900;
+    src: url('../../assets/fonts/roboto-v20-latin-900.eot'); /* IE9 Compat Modes */
+    src: local(''),
+         url('../../assets/fonts/roboto-v20-latin-900.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('../../assets/fonts/roboto-v20-latin-900.woff2') format('woff2'), /* Super Modern Browsers */
+         url('../../assets/fonts/roboto-v20-latin-900.woff') format('woff'), /* Modern Browsers */
+         url('../../assets/fonts/roboto-v20-latin-900.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('../../assets/fonts/roboto-v20-latin-900.svg#Roboto') format('svg'); /* Legacy iOS */
+}
+
+
+
+.page {
+    background-color: orange;
+}
+
+.wrapper {
+    margin: 0 auto;
+    width: 1920px;
+    background-color: palegreen;
+}
+
+/* header start */
+.header {
+    background-color: #FFFFFF;
+}
+
+.header__wrapper {
+    margin: 0 auto;
+    padding: 16px 0 24px 0;
+    width: 1620px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    max-width: 59px;
+}
+
+.logo__link {
+    text-decoration: none;
+}
+
+.logo__title {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 36px;
+    line-height: 42px;
+    color: #333333;
+}
+
+.logo__subtitle {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 18px;
+    line-height: 21px;
+    letter-spacing: 0.08em;
+    color: #333333;
+    margin-top: -6px;
+}
+
+.nav__list {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.nav__item {
+    margin-right: 83px;
+}
+
+.nav__link {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 19px;
+    color: #333333;
+    text-decoration: none;
+}
+
+.nav__link:active,
+.nav__link:focus,
+.nav__link:hover {
+    opacity: 0.75;
+}
+
+.active__link {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 16px;
+    line-height: 19px;
+    color: #333333;
+}
+
+.active__link:active,
+.active__link:focus,
+.active__link:hover {
+    opacity: 1;
+    cursor: default;
+}
+
+/* The switch - the box around the slider */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 54px;
+    height: 31px;
+}
+  
+  /* Hide default HTML checkbox */
+.switch input {display:none;}
+  
+  /* The slider */
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #f2f2f2;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+  
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 20px;
+    width: 20px;
+    left: 6px;
+    bottom: 5px;
+    background-color: #FFFFFF;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+  
+input:checked + .slider {
+    background-color: #4f4f4f;
+}
+  
+/* input:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+} */
+  
+input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(23px);
+    background-color: #1b1b1b;
+}
+  
+  /* Rounded sliders */
+.slider.round {
+    border-radius: 34px;
+}
+  
+.slider.round:before {
+    border-radius: 50%;
+}
+
+/* header end */
+
+/* main start */
+
+.favorite-animal {
+    height: 940px;
+    background: url(../../assets/images/favorite-animal__bg.jpg) no-repeat center;
+    background-size: cover;
+}
