@@ -55,6 +55,14 @@
     background-color: #FFFFFF;
 }
 
+.hiden__title {
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+
 .header__wrapper {
     margin: 0 auto;
     padding: 16px 0 24px 0;
