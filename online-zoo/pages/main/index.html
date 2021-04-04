@@ -50,12 +50,14 @@
             <section class="favorite">
                 <div class="favorite__wrapper">
                     <h2 class="favorite__title">Watch your favorite animal online</h2>
-                    <form action="../main/index.html">
-                        <button class="favorite__button">
-                            <img class="favorite__button-pic" src="../../assets/icons/play__watch-online-btn.svg" alt="play">
-                            watch-online
-                        </button>
-                    </form>
+                    <div class="favorite__button">
+                        <form action="../main/index.html">
+                            <button class="watch-online__button">
+                                <img class="watch-online__button-pic" src="../../assets/icons/play__watch-online-btn.svg" alt="play">
+                                watch-online
+                            </button>
+                        </form>
+                    </div>
                     <div class="galary">
                         <div class="animals__cards">
                             <figure class="animal__card">
@@ -188,10 +190,84 @@
                                     </figcaption>
                             </figure>
                         </div>
-                        <form class="galary__range-scroll" action="">
+                        <div class="galary__range-scroll">
                             <p class="count">02/<span class="count-all">08</span></p>
-                            <input type="range" name="" id="" min="1" max="8" step="1">
-                        </form>
+                            <input class="galary__range" type="range" min="1" max="8" step="1" value="2">
+                        </div>
+                    </div>
+                    <ul class="galary__social-list">
+                        <li class="galary__social-item">
+                            <a href="https://www.instagram.com/" class="galary__social-link"><img src="../../assets/icons/instagram.svg" alt="instagram" class="galary__social-pic"></a>
+                        </li>
+                        <li class="galary__social-item">
+                            <a href="https://twitter.com/" class="galary__social-link"><img src="../../assets/icons/twitter.svg" alt="twitter" class="galary__social-pic"></a>
+                        </li>
+                        <li class="galary__social-item">
+                            <a href="https://www.youtube.com/" class="galary__social-link"><img src="../../assets/icons/youtube.svg" alt="youtube" class="galary__social-pic"></a>
+                        </li>
+                        <li class="galary__social-item">
+                            <a href="https://vk.com/" class="galary__social-link"><img src="../../assets/icons/vkontekte.svg" alt="vkontakte" class="galary__social-pic"></a>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            <section class="how-it-works">
+                <div class="how-it-works__top">
+                    <div class="how-it-works__top-wrapper">
+                        <h3 class="how-it-works__title">How it works?</h3>
+                        <p class="how-it-works__subtitle">As a voice for wildlife, we are devastated by
+                             the impact of the 2020 Australian bushfires on precious species and their habitat,
+                             and we are determined to assist in all aspects, including providing veterinary support and raising much-needed
+                             emergency funds. Zoo Online saves wildlife and inspires everyone to make conservation a priority in their lives.
+                             Animals have the right to a pain-free and happy life. They have equal claim to the resources of this planet,
+                             and deserve a life of dignity and compassion.As a voice for wildlife, we are devastated by the impact of the 2020
+                             Australian bushfires on precious species and their habitat.
+                        </p>
+                        <div class="how-it-works__image">
+                            <img src="../../assets/images/how-it-works__1.jpg" alt="wildlife pic" class="how-it-works__pic">
+                        </div>
+                        <div class="how-it-works__range-scroll">
+                            <p class="range-scroll__count">01/<span class="range-scroll__count-all">04</span></p>
+                            <input class="range-scroll" type="range" min="1" max="4" step="1" value="1">
+                        </div>
+                        <div class="how-it-works__button">
+                            <form action="../main/index.html">
+                                <button class="watch-online__button">
+                                    <img class="watch-online__button-pic" src="../../assets/icons/play__watch-online-btn.svg" alt="play">
+                                    watch-online
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="how-it-works__cards">
+                    <div class="how-it-works__cards-wrapper">
+                        <div class="how-it-works__card">
+                            <img src="../../assets/icons/inspires__card.svg" alt="inspires" class="how-it-works__icon">
+                            <p class="how-it-works__card-title">What inspires us?</p>
+                            <p class="how-it-works__card-subtitle">
+                                As a voice for wildlife, we are devastated by the impact of
+                                the 2020 Australian bushfires on precious species and their
+                                habitat, and we are determined to assist in all aspects.
+                            </p>
+                        </div>
+                        <div class="how-it-works__card">
+                            <img src="../../assets/icons/mission__card.svg" alt="mission" class="how-it-works__icon">
+                            <p class="how-it-works__card-title">Our mission</p>
+                            <p class="how-it-works__card-subtitle">
+                                Zoo Online saves wildlife and inspires everyone to make
+                                conservation a priority in their lives.
+                            </p>
+                        </div>
+                        <div class="how-it-works__card">
+                            <img src="../../assets/icons/believe__card.svg" alt="believe" class="how-it-works__icon">
+                            <p class="how-it-works__card-title">What we believe in?</p>
+                            <p class="how-it-works__card-subtitle">
+                                Animals have the right to a pain-free and happy life.
+                                They have equal claim to the resources of this planet,
+                                and deserve a life of dignity and compassion.
+                            </p>
+                        </div>
                     </div>
                 </div>
             </section>
