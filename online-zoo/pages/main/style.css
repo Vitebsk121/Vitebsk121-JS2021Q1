@@ -1194,25 +1194,25 @@ input[class="range-scroll"]:focus::-ms-fill-upper {
 
 .nav__eagle {
     position: absolute;
-    top: 160px;
+    top: 180px;
     left: -280px;
 }
 
 .nav__crocodile {
     position: absolute;
-    top: 190px;
+    top: 210px;
     left: -160px;
 }
 
 .nav__gorilla {
     position: absolute;
-    top: 270px;
+    top: 290px;
     left: 170px;
 }
 
 .nav__panda {
     position: absolute;
-    top: 175px;
+    top: 195px;
     left: 490px;
 }
 
@@ -1229,6 +1229,8 @@ input[class="range-scroll"]:focus::-ms-fill-upper {
 
 .map__placeholder:hover + .placeholder__nav {
     visibility: visible;
+    -webkit-transition: 1s;
+    -webkit-transform: translatey(-20px);
 }
 
 .placeholder__nav-wrapper {
