@@ -13,7 +13,7 @@
         <header class="header">
             <div class="header__wrapper">
                 <div class="logo">
-                    <a href="./index.html" class="logo__link">
+                    <a href="../main/index.html" class="logo__link">
                         <p class="logo__title">zoo</p>
                         <p class="logo__subtitle">online</p>
                     </a>
@@ -24,16 +24,16 @@
                             <a href="#" class="nav__link active__link">About</a>
                         </li>
                         <li class="nav__item">
-                            <a href="#" class="nav__link">Zoos</a>
+                            <a href="../zoos/panda.html" class="nav__link">Zoos</a>
                         </li>
                         <li class="nav__item">
-                            <a href="#" class="nav__link">Map</a>
+                            <a href="../map/map.html" class="nav__link">Map</a>
                         </li>
                         <li class="nav__item">
-                            <a href="#" class="nav__link">Contact Us</a>
+                            <a href="#footer" class="nav__link">Contact Us</a>
                         </li>
                         <li class="nav__item">
-                            <a href="#" class="nav__link">Design</a>
+                            <a href="https://www.figma.com/file/HKt5Nlx0jghQtJp6jW9q8F/zooApp" class="nav__link">Design</a>
                         </li>
     
                     </ul>
@@ -136,7 +136,8 @@
                                 </figcaption>
                             </figure>
                             <figure class="animal__card">
-                                <img class="animal__card-pic" src="../../assets/images/crocodile.png" alt="crocodile">                                <figcaption class="animal__card-nav">
+                                <img class="animal__card-pic" src="../../assets/images/crocodile.png" alt="crocodile"> 
+                                    <figcaption class="animal__card-nav">
                                     <p class="animal__card-title"></p>
                                     <div class="animal_card-button"></div>
                                     <figcaption class="animal__card-nav">
@@ -163,7 +164,8 @@
                                     </figcaption>
                             </figure>
                             <figure class="animal__card">
-                                <img class="animal__card-pic" src="../../assets/images/fox.jpg" alt="fox">                                <figcaption class="animal__card-nav">
+                                <img class="animal__card-pic" src="../../assets/images/fox.jpg" alt="fox">
+                                <figcaption class="animal__card-nav">
                                     <p class="animal__card-title"></p>
                                     <div class="animal_card-button"></div>
                                     <figcaption class="animal__card-nav">
@@ -284,7 +286,7 @@
                             <div class="pets__cards">
                                 <figure class="pet__card">
                                     <img src="../../assets/images/panda.jpg" alt="panda" class="pet__card-pic">
-                                    <figcaption class="animal__card-nav">
+                                    <figcaption class="pet__card-nav">
                                         <p class="animal__card-title">Panda’s name is Bei Bei. He 
                                             is 2 years old. Bei Bei is from China. He loves bamboos.</p>
                                         <div class="animal__card-buttons">
@@ -309,7 +311,7 @@
                                 </figure>
                                 <div class="pet__card">
                                     <img src="../../assets/images/eagle.jpg" alt="eagle" class="pet__card-pic">
-                                    <figcaption class="animal__card-nav">
+                                    <figcaption class="pet__card-nav">
                                         <p class="animal__card-title">Lorem ipsum dolor sit amet
                                              consectetur adipisicing elit. Ipsam, molestias.</p>
                                         <div class="animal__card-buttons">
@@ -335,7 +337,7 @@
                                 </div>
                                 <div class="pet__card">
                                     <img src="../../assets/images/gorilla2.jpg" alt="gorilla" class="pet__card-pic">
-                                    <figcaption class="animal__card-nav">
+                                    <figcaption class="pet__card-nav">
                                         <p class="animal__card-title">Lorem ipsum dolor sit amet
                                              consectetur adipisicing elit. Ipsam, molestias.</p>
                                         <div class="animal__card-buttons">
@@ -360,7 +362,7 @@
                                 </div>
                                 <div class="pet__card">
                                     <img src="../../assets/images/crocodile2.jpg" alt="crocodile" class="pet__card-pic">
-                                    <figcaption class="animal__card-nav">
+                                    <figcaption class="pet__card-nav">
                                         <p class="animal__card-title">Lorem ipsum dolor sit amet
                                              consectetur adipisicing elit. Ipsam, molestias.</p>
                                         <div class="animal__card-buttons">
@@ -395,8 +397,8 @@
                             <input class="range-scroll" type="range" min="1" max="8" step="1" value="1">
                         </div>
                         <div class="pets-galary__button">
-                            <form action="../main/index.html">
-                                <button type="button" class="watch-online__button pets__choose-button">
+                            <form action="../map/map.html">
+                                <button class="watch-online__button pets__choose-button">
                                     Choose your favorite
                                 </button>
                             </form>
@@ -629,7 +631,7 @@
                 </div>
             </section>
         </main>
-        <footer class="footer">
+        <footer class="footer" id="footer">
             <div class="footer__wrapper">
                 <div class="footer__header">
                     <div class="footer__logo">
@@ -647,10 +649,10 @@
                                 <a href="#" class="footer__nav__link">Zoos</a>
                             </li>
                             <li class="footer__nav__item">
-                                <a href="#" class="footer__nav__link">Map</a>
+                                <a href="../map/map.html" class="footer__nav__link">Map</a>
                             </li>
                             <li class="footer__nav__item">
-                                <a href="#" class="footer__nav__link">Design</a>
+                                <a href="https://www.figma.com/file/HKt5Nlx0jghQtJp6jW9q8F/zooApp" class="footer__nav__link">Design</a>
                             </li>
                         </ul>
                     </nav>
@@ -666,21 +668,67 @@
                     <div class="footer__contact">
                         <h4 class="contact__title">Contact us</h4>
                         <form class="contact__form">
-                            <fieldset>
+                            <fieldset class="footer__contact-forms">
                                 <p class="contact__forms">
-                                    <input class="footer__input" type="text" placeholder="Name">
-                                    <input class="footer__input" type="email" placeholder="Email">
+                                    <input name="user-name" required class="footer__input" type="text" placeholder="Name">
+                                    <input name="user-email" required class="footer__input" type="email" placeholder="Email">
                                     <legend class="footer__legend" >Please enter your message</legend>
-                                    <textarea class="footer__textarea" maxlength="280" cols="30" rows="5"></textarea>
+                                    <textarea name="user-massage" required class="footer__textarea" maxlength="280" cols="30" rows="5"></textarea>
                                 </p>
                                 <p class="contact__checkbox__form">
-                                    <input class="footer__checkbox" type="checkbox">
-                                    I agree to the processing of Personal Data
+                                    <input name="user-agreement" required class="footer__checkbox" type="checkbox" id="check">
+                                    <label class="footer__label" for="check">
+                                        I agree to the processing of Personal Data
+                                    </label>
                                 </p>
+                                <div class="contact__button">
+                                    <form action="../main/index.html">
+                                        <button class="contact__send">
+                                            send
+                                            <img src="../../assets/icons/footer__arrow.svg" alt="send" class="footer__arrow">
+                                        </button>
+                                    </form>
+                                </div>
                             </fieldset>
                         </form>
                     </div>
-                    <div class="footer__info"></div>
+                    <div class="footer__info">
+                        <h4 class="footer__info-title">
+                            ZOO Online Centre
+                        </h4>
+                        <div class="footer__info-contact">
+                            <div class="footer__adress">
+                                <p class="footer__adress-street">
+                                    132, Address District, Street
+                                </p>
+                                <p class="footer__adress-work-time">
+                                    Open Daily 10:00 am - 5:00 pm
+                                </p>
+                            </div>
+                            <div class="footer__phone">
+                                <a href="tel:(702) 163-3433" class="footer__phone-number">T(702) 163-3433</a>
+                                <a href="mailto:zoo.online@gmail.com" class="footer__email">zoo.online@gmail.com</a>
+                            </div>
+                            <ul class="footer__social-list">
+                                <li class="footer__social-item">
+                                    <a href="https://www.instagram.com/" class="galary__social-link"><img src="../../assets/icons/instagram.svg" alt="instagram" class="galary__social-pic"></a>
+                                </li>
+                                <li class="footer__social-item">
+                                    <a href="https://twitter.com/" class="galary__social-link"><img src="../../assets/icons/twitter.svg" alt="twitter" class="galary__social-pic"></a>
+                                </li>
+                                <li class="footer__social-item">
+                                    <a href="https://vk.com/" class="galary__social-link"><img src="../../assets/icons/vkontekte.svg" alt="vkontakte" class="galary__social-pic"></a>
+                                </li>
+                                <li class="footer__social-item">
+                                    <a href="https://www.youtube.com/" class="galary__social-link"><img src="../../assets/icons/youtube.svg" alt="youtube" class="galary__social-pic"></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="developers">
+                    <p class="developers__name">©Noora Sagnayeva</p>
+                    <p class="developers__organisation">©RSSchool and ©Yem Digital - 2021</p>
                 </div>
             </div>
         </footer>
