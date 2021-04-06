@@ -341,6 +341,7 @@ input:checked + .slider:before {
 
 .pet__card:hover {
     transform: scale(1.26);
+    cursor: pointer;
 }
 
 .pet__card:hover:after {
@@ -350,15 +351,13 @@ input:checked + .slider:before {
 .pet__card__active {
     background: url(../../assets/icons/pet__card-ellipse.svg) no-repeat center;
     background-size: contain;
-}
-
-.pet__card__active  {
     width: 157px;
     height: 157px;
 }
 
 .pet__card__active:hover {
     transform: scale(1);
+    cursor: default;
 }
 
 
@@ -519,10 +518,15 @@ input[class="range-scroll"] {
 
 .map__placeholder:hover {
     background: url(../../assets/icons/map__placeholder-hover.svg) no-repeat center;
+    cursor: pointer;
 }
 
 .placeholder__active {
     background: url(../../assets/icons/map__placeholder-hover.svg) no-repeat center;
+}
+
+.placeholder__active:hover {
+    cursor: default;
 }
 
 .placeholder__eagle {

@@ -268,7 +268,7 @@ input:checked + .slider:before {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 30px;
+    gap: 20px;
 }
 
 .pets__cards {
@@ -383,6 +383,11 @@ input:checked + .slider:before {
 
 .pets__slider-right img {
     transform: rotate(-90deg);
+}
+
+.pets__slider-pic {
+    width: 23px;
+    height: 23px;
 }
 
 .main__wrapper {
