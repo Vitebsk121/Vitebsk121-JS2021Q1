@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Online zoo</title>
+    <title>Alligator</title>
     <link rel="stylesheet" href="../reset.css">
     <link rel="stylesheet" href="style.css">
 </head>
-</head>
 <body class="page">
+    <h1 class="hiden__title">Online Zoo</h1>
     <div class="wrapper">
         <header class="header">
             <div class="header__wrapper">
@@ -24,10 +24,10 @@
                             <a href="../main/index.html" class="nav__link">About</a>
                         </li>
                         <li class="nav__item">
-                            <a href="../zoos/panda.html" class="nav__link">Zoos</a>
+                            <a href="#" class="nav__link active__link">Zoos</a>
                         </li>
                         <li class="nav__item">
-                            <a href="#" class="nav__link  active__link">Map</a>
+                            <a href="../map/map.html" class="nav__link">Map</a>
                         </li>
                         <li class="nav__item">
                             <a href="#footer" class="nav__link">Contact Us</a>
@@ -47,83 +47,107 @@
             </div>
         </header>
         <main class="main">
-            <div class="main__wrapper">
-                <div class="main__top">
-                    <h3 class="section__title">Choose your favorite</h3>
-                    <p class="section__subtitle">
-                        As a voice for wildlife, we are devastated by the impact
-                        of the 2020 Australian bushfires on precious species and
-                        their habitat, and we are determined to assist in all aspects,
-                        including providing veterinary support and raising much-needed
-                        emergency funds. Zoo Online saves wildlife and inspires
-                        everyone to make conservation a priority in their lives.
-                        Animals have the right to a pain-free and happy life.
-                        They have equal claim to the resources of this planet,
-                        and deserve a life of dignity and compassion.As a voice for
-                        wildlife, we are devastated by the impact of the 2020 Australian
-                        bushfires on precious species and their habitat.
-                    </p>
-                </div>
-                <div class="pets__list">
-                    <div class="pets__galary-wrapper">
-                        <div class="pets__galary">
-                            <div class="left__slider">
-                                <button type="button" class="pets__slider pets__slider-left">
-                                    <img src="../../assets/icons/pets__slider.svg" alt="slider left" class="pets__slider-pic">
-                                </button>
+            <aside class="main__choose-pet">
+                <div class="pets__galary">
+                    <div class="left__slider">
+                        <button type="button" class="pets__slider pets__slider-left">
+                            <img src="../../assets/icons/pets__slider.svg" alt="slider left" class="pets__slider-pic">
+                        </button>
+                    </div>
+                    <div class="pets__cards">
+                        <a class="zoos__link" href="../zoos/panda.html">
+                            <div class="pet__card" title="Panda">
+                                <div class="pet__card-pic-panda"></div>
                             </div>
-                            <div class="pets__cards">
-                                <div class="pet__card">
-                                    <div class="pet__card-pic-gorilla"></div>
-                                </div>
-                                <div class="pet__card pet__card__active">
-                                    <div class="pet__card-pic-panda"></div>
-                                </div>
-                                <div class="pet__card">
-                                    <div class="pet__card-pic-crocodile"></div>
-                                </div>
-                                <div class="pet__card">
-                                    <div class="pet__card-pic-eagle"></div>
+                        </a>
+                        <a class="zoos__link" href="../zoos/eagle.html">
+                            <div class="pet__card" title="Eagle">
+                                <div class="pet__card-pic-eagle">
                                 </div>
                             </div>
-                            <div class="right__slider">
-                                <button class="pets__slider pets__slider-right">
-                                    <img src="../../assets/icons/pets__slider.svg" alt="slider right" class="pets__slider-pic">
-                                </button>
+                        </a>
+                        <a class="zoos__link" href="#">
+                            <div class="pet__card pet__card__active" title="Alligator">
+                                <div class="pet__card-pic-crocodile"></div>
                             </div>
-                        </div>
-                        <div class="pets-galary__range-scroll">
-                            <p class="range-scroll__count">02/<span class="range-scroll__count-all">04</span></p>
-                            <input class="range-scroll" type="range" min="1" max="4" step="1" value="2">
-                        </div>
+                        </a>
+                        <a class="zoos__link" href="../zoos/gorilla.html">
+                            <div class="pet__card" title="Gorilla">
+                                <div class="pet__card-pic-gorilla"></div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="right__slider">
+                        <button class="pets__slider pets__slider-right">
+                            <img src="../../assets/icons/pets__slider.svg" alt="slider right" class="pets__slider-pic">
+                        </button>
                     </div>
                 </div>
-                <div class="world-map">
-                    <figure>
-                        <img class="world-map__pic" src="../../assets/icons/map__world-map.svg" alt="map of the world">
-                        <figcaption>
-                            <div class="map__placeholder placeholder__eagle" title="Eagle">
-                                <div class="map__placeholder-pic-eagle"></div>
+            </aside>
+            <div class="main__wrapper">
+                <h3 class="section__title">Alligator and Spoonbill Swamp Webcam</h3>
+                <div class="main__content">
+                    <div class="main__videos">
+                        <div class="main__video">
+                            <iframe width="790" height="442"
+                            src="https://www.youtube.com/embed/EnxRJii_dp8?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                        <div class="main__videos-playlist">
+                            <div class="playlist__video">
+                                <iframe width="246" height="141" src="https://www.youtube.com/embed/EnxRJii_dp8?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                             </div>
-                            <div class="map__placeholder placeholder__crocodile" title="Crocodile">
-                                <div class="map__placeholder-pic-crocodile"></div>
+                            <div class="playlist__video">
+                                <iframe width="246" height="141" src="https://www.youtube.com/embed/EnxRJii_dp8?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                             </div>
-                            <div class="map__placeholder placeholder__gorilla" title="Gorilla">
-                                <div class="map__placeholder-pic-gorilla"></div>
+                            <div class="playlist__video">
+                                <iframe width="246" height="141" src="https://www.youtube.com/embed/EnxRJii_dp8?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                             </div>
-                            <div class="map__placeholder placeholder__panda placeholder__active" title="Panda">
-                                <div class="map__placeholder-pic-panda"></div>
+                        </div>
+                        <div class="videos__scroll">
+                            <div class="scroll__point scroll__point-active"></div>
+                            <div class="scroll__point"></div>
+                            <div class="scroll__point"></div>
+                        </div>
+                    </div>
+                    <div class="main__info">
+                        <div class="info__content">
+                            <div class="info__item">
+                                <h4 class="info__item-title">
+                                    Population:
+                                </h4>
+                                <p class="info__item-subtitle">
+                                    Roughly 1.25 million 
+                                </p>
                             </div>
-                        </figcaption>
-                    </figure>
-                </div>
-                <div class="map__button">
-                    <form action="../main/index.html">
-                        <button class="watch-online__button">
-                            <img class="watch-online__button-pic" src="../../assets/icons/play__watch-online-btn.svg" alt="play">
-                            watch-online
-                        </button>
-                    </form>
+                            <div class="info__item">
+                                <h4 class="info__item-title">
+                                    Habitat:
+                                </h4>
+                                <p class="info__item-subtitle">
+                                    Alligators can be found in slow-moving rivers, ponds, lakes and swamps. 
+                                </p>
+                            </div>
+                            <div class="info__item">
+                                <h4 class="info__item-title">
+                                    Diet:
+                                </h4>
+                                <p class="info__item-subtitle">
+                                    Their diets include prey species that are
+                                    abundant and easily accessible. Juvenile alligators
+                                    eat primarily insects, amphibians, small fish, and other
+                                    invertebrates. Adult alligators eat rough fish, snakes,
+                                    turtles, small mammals, and birds.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="info__button">
+                            <form action="#">
+                                <button class="watch-online__button info__feed-button">
+                                    fEEd
+                                </button>
+                            </form>
+                        </div>
+                    </div>
                 </div>
             </div>
         </main>
@@ -142,13 +166,13 @@
                                 <a href="../main/index.html" class="footer__nav__link">About</a>
                             </li>
                             <li class="footer__nav__item">
-                                <a href="#" class="footer__nav__link">Zoos</a>
+                                <a href="../zoos/panda.html" class="footer__nav__link">Zoos</a>
                             </li>
                             <li class="footer__nav__item">
-                                <a href="#" class="footer__nav__link">Map</a>
+                                <a href="../map/map.html" class="footer__nav__link">Map</a>
                             </li>
                             <li class="footer__nav__item">
-                                <a href="#" class="footer__nav__link">Design</a>
+                                <a href="https://www.figma.com/file/HKt5Nlx0jghQtJp6jW9q8F/zooApp" class="footer__nav__link">Design</a>
                             </li>
                         </ul>
                     </nav>
