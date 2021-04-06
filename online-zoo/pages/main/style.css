@@ -883,6 +883,14 @@ input[class="range-scroll"]:focus::-ms-fill-upper {
     padding: 0;
 }
 
+.pets__slider:hover {
+    transform: scale(1.15);
+}
+
+.pets__slider:active {
+    transform: scale(0.9);
+}
+
 .pets__slider-right img {
     transform: rotate(-180deg);
 }
@@ -1137,6 +1145,10 @@ input[class="range-scroll"]:focus::-ms-fill-upper {
     width: 66px;
     height: 93px;
     background: url(../../assets/icons/map__placeholder.svg) no-repeat center;
+}
+
+.map__placeholder:hover {
+    background: url(../../assets/icons/map__placeholder-hover.svg) no-repeat center;
 }
 
 .placeholder__eagle {
