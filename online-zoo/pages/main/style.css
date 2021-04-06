@@ -818,6 +818,7 @@ input[class="range-scroll"]:focus::-ms-fill-upper {
 
 .pet__card {
     position: relative;
+    overflow: hidden;
 }
 
 .pet__card::after {
@@ -828,17 +829,38 @@ input[class="range-scroll"]:focus::-ms-fill-upper {
     height: 100%;
     background: linear-gradient(357.17deg, #000000 -56.45%, rgba(0, 0, 0, 0) 65.03%);
     position: absolute;
+    top: 278px;
     bottom: 0;
     left: 0;
     z-index: 2;
 }
 
-.pet__card:hover:after {
-    visibility: visible;
+.pet__card-nav {
+    visibility: hidden;
+    width: 100%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 14px;
+    position: absolute;
+    top: 278px;
+    bottom: 0;
+    left: 0;
+    z-index: 3;
 }
 
-.pet__card:hover .animal__card-nav {
+.pet__card:hover:after {
     visibility: visible;
+    -webkit-transition: 1s;
+    -webkit-transform: translatey(-278px);
+}
+
+.pet__card:hover .pet__card-nav {
+    visibility: visible;
+    -webkit-transition: 1s;
+    -webkit-transform: translatey(-78px);
 }
 
 .pets__slider {
