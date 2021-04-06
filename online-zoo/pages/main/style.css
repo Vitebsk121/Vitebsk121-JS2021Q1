@@ -1036,6 +1036,14 @@ input[class="range-scroll"]:focus::-ms-fill-upper {
     border: none;
 }
 
+.testimonials__slider:hover {
+    transform: scale(1.15);
+}
+
+.testimonials__slider:active {
+    transform: scale(0.9);
+}
+
 .testimonials__slider-right {
     transform: rotate(-180deg);
 }
