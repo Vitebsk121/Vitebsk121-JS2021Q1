@@ -38,6 +38,14 @@
          url('../../assets/fonts/roboto-v20-latin-900.svg#Roboto') format('svg'); /* Legacy iOS */
 }
 
+.hiden__title {
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+
 .wrapper {
     margin: 0 auto;
     width: 1920px;
