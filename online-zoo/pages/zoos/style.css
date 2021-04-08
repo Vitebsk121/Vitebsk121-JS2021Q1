@@ -663,8 +663,10 @@ input:checked + .slider:before {
 
 .footer__textarea {
     padding: 0;
+    padding-top: 10px;
+    margin-top: 10px;
     width: 380px;
-    height: 121.5px;
+    height: 103px;
     resize: none;
     background-color: transparent;
     border: 1px solid #BDBDBD;
@@ -680,7 +682,7 @@ input:checked + .slider:before {
 .footer__legend {
     padding: 0 5px;
     position: absolute;
-    top: 87px;
+    top: 97px;
     left: 15px;
     font-family: 'Roboto';
     font-style: normal;
