@@ -663,9 +663,8 @@ input:checked + .slider:before {
 
 .footer__textarea {
     padding: 0;
-    padding-top: 10px;
     width: 380px;
-    height: 124px;
+    height: 121.5px;
     resize: none;
     background-color: transparent;
     border: 1px solid #BDBDBD;
@@ -681,7 +680,7 @@ input:checked + .slider:before {
 .footer__legend {
     padding: 0 5px;
     position: absolute;
-    top: 90px;
+    top: 87px;
     left: 15px;
     font-family: 'Roboto';
     font-style: normal;
@@ -723,8 +722,8 @@ input:checked + .slider:before {
 .footer__checkbox +  .footer__label::before {
     content: '';
     display: inline-block;
-    width: 13px;
-    height: 13px;
+    width: 10.5px;
+    height: 10.5px;
     margin-right: 6px;
     border: 1px solid #BDBDBD;
     border-radius: 1px;
@@ -744,6 +743,7 @@ input:checked + .slider:before {
 
 .contact__send {
     margin: 0;
+    margin-right: 13px;
     padding: 0;
     display: flex;
     gap: 24px;
