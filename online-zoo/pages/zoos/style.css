@@ -53,6 +53,7 @@
 }
 
 .hiden__title {
+    position: absolute;
     height: 1px;
     width: 1px;
     overflow: hidden;
@@ -95,17 +96,14 @@
     line-height: 21px;
     letter-spacing: 0.08em;
     color: #333333;
-    margin-top: -6px;
+    margin-top: -9px;
+    padding-left: 2px;
 }
 
 .nav__list {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-}
-
-.nav__item {
-    margin-right: 83px;
 }
 
 .nav__link {

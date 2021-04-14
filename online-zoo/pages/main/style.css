@@ -53,6 +53,7 @@
 }
 
 .hiden__title {
+    position: absolute;
     height: 1px;
     width: 1px;
     overflow: hidden;
@@ -95,17 +96,15 @@
     line-height: 21px;
     letter-spacing: 0.08em;
     color: #333333;
-    margin-top: -6px;
+    margin-top: -9px;
+    padding-left: 2px;
 }
 
 .nav__list {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-}
-
-.nav__item {
-    margin-right: 83px;
+    gap: 83px;
 }
 
 .nav__link {
@@ -281,11 +280,14 @@ input:checked + .slider:before {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top: -100px;
-    margin-left: 689px;
+    margin-top: -79px;
+    margin-left: 666px;
     height: 421px;
-    width: 1124px;
-    background: url(../../assets/icons/line.svg) no-repeat center;
+    width: 1164px;
+}
+
+.animals__cards-wrapper {
+    background: url(../../assets/icons/line.svg) no-repeat center left;
 }
 
 .animals__cards {
@@ -540,7 +542,7 @@ input[class="galary__range"] {
   }
 
   .galary__range-scroll {
-      margin-top: 20px;
+      margin-top: 10px;
       margin-left: -235px;
       display: flex;
       flex-direction: column;
@@ -571,7 +573,7 @@ input[class="galary__range"] {
       flex-direction: column;
       max-width: 20px;
       gap: 15px;
-      margin-top: -114px;
+      margin-top: -125px;
   }
 
   .galary__social-pic:hover {
@@ -756,7 +758,7 @@ input[class="range-scroll"]:focus::-ms-fill-upper {
 
 .how-it-works__cards-wrapper {
     padding-top: 100px;
-    margin-bottom: 100px;
+    margin-bottom: 133px;
     max-width: 1200px;
     display: flex;
     justify-content: center;
