@@ -2267,6 +2267,10 @@ input[class="range-scroll"]:focus::-ms-fill-upper {
         padding: 91px 10px 0;
     }
 
+    .favorite {
+        height: 669px;
+    }
+
     .favorite__title {
         font-size: 48px;
         line-height: 56px;
@@ -2513,7 +2517,7 @@ input[class="range-scroll"]:focus::-ms-fill-upper {
 
     .placeholder__panda {
         top: 7px;
-        left: 213px;
+        left: 216px;
     }
 
     .map__placeholder:hover {
