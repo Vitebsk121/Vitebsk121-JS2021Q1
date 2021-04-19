@@ -18,7 +18,7 @@
                         <p class="logo__subtitle">online</p>
                     </a>
                 </div>
-                <nav class="header__nav"></nav>
+                <nav class="header__nav">
                     <ul class="nav__list">
                         <li class="nav__item">
                             <a href="#" class="nav__link active__link">About</a>
@@ -35,14 +35,20 @@
                         <li class="nav__item">
                             <a href="https://www.figma.com/file/HKt5Nlx0jghQtJp6jW9q8F/zooApp" class="nav__link">Design</a>
                         </li>
-    
                     </ul>
                 </nav>
-                <div class="header__switch">
-                    <label class="switch">
-                        <input type="checkbox">
-                        <span class="slider round"></span>
-                      </label>
+                <div class="header__right">
+                    <div class="header__switch">
+                        <label class="switch">
+                            <input type="checkbox">
+                            <span class="slider round"></span>
+                          </label>
+                    </div>
+                    <div class="header__burger">
+                        <span class="header__burger-line header__burger-line-first"></span>
+                        <span class="header__burger-line header__burger-line-second"></span>
+                        <span class="header__burger-line header__burger-line-third"></span>
+                    </div>
                 </div>
             </div>
         </header>
@@ -54,97 +60,20 @@
                         <form action="../zoos/panda.html">
                             <button class="watch-online__button">
                                 <img class="watch-online__button-pic" src="../../assets/icons/play__watch-online-btn.svg" alt="play">
-                                watch-online
+                                <p class="button__title">watch online</p>
                             </button>
                         </form>
                     </div>
                     <div class="galary">
-                        <div class="animals__cards">
-                            <figure class="animal__card">
-                                <img class="animal__card-pic" src="../../assets/images/eagle.jpg" alt="eagle">
-                                <figcaption class="animal__card-nav">
-                                    <p class="animal__card-title">Lorem ipsum dolor sit amet
-                                         consectetur adipisicing elit. Labore, nihil.</p>
-                                    <div class="animal__card-buttons">
-                                        <form action="../zoos/eagle.html">
-                                            <button class="animal__card-button-play">
-                                                <div class="play-pic">
-                                                    <img src="../../assets/icons/play__litle.svg" alt="play">
-                                                </div>
-                                                <p>watch-online</p>
-                                            </button>
-                                        </form>
-                                        <form action="">
-                                            <button class="animal__card-button-donate">
-                                                <div class="donate-pic">
-                                                    <p>$</p>
-                                                </div>
-                                                <p>donate</p>
-                                            </button>
-                                        </form>
-                                    </div>
-                                </figcaption>
-                            </figure>
-                            <figure class="animal__card card__active">
-                                <img class="animal__card-pic" src="../../assets/images/panda.jpg" alt="panda">
-                                <figcaption class="animal__card-nav">
-                                    <p class="animal__card-title">Panda’s name is Bei Bei. He 
-                                        is 2 years old. Bei Bei is from China. He loves bamboos.</p>
-                                    <div class="animal__card-buttons">
-                                        <form action="../zoos/panda.html">
-                                            <button class="animal__card-button-play">
-                                                <div class="play-pic">
-                                                    <img src="../../assets/icons/play__litle.svg" alt="play">
-                                                </div>
-                                                <p>watch-online</p>
-                                            </button>
-                                        </form>
-                                        <form action="">
-                                            <button class="animal__card-button-donate">
-                                                <div class="donate-pic">
-                                                    <p>$</p>
-                                                </div>
-                                                <p>donate</p>
-                                            </button>
-                                        </form>
-                                    </div>
-                                </figcaption>
-                            </figure>
-                            <figure class="animal__card">
-                                <img class="animal__card-pic" src="../../assets/images/gorilla.jpg" alt="gorilla">
-                                <figcaption class="animal__card-nav">
-                                    <p class="animal__card-title">Lorem ipsum dolor sit, amet
-                                         consectetur adipisicing elit. Ipsa, ullam!</p>
-                                    <div class="animal__card-buttons">
-                                        <form action="../zoos/gorilla.html">
-                                            <button class="animal__card-button-play">
-                                                <div class="play-pic">
-                                                    <img src="../../assets/icons/play__litle.svg" alt="play">
-                                                </div>
-                                                <p>watch-online</p>
-                                            </button>
-                                        </form>
-                                        <form action="">
-                                            <button class="animal__card-button-donate">
-                                                <div class="donate-pic">
-                                                    <p>$</p>
-                                                </div>
-                                                <p>donate</p>
-                                            </button>
-                                        </form>
-                                    </div>
-                                </figcaption>
-                            </figure>
-                            <figure class="animal__card">
-                                <img class="animal__card-pic" src="../../assets/images/crocodile.png" alt="crocodile"> 
+                        <div class="animals__cards-wrapper">
+                            <div class="animals__cards">
+                                <figure class="animal__card">
+                                    <img class="animal__card-pic" src="../../assets/images/eagle.jpg" alt="eagle">
                                     <figcaption class="animal__card-nav">
-                                    <p class="animal__card-title"></p>
-                                    <div class="animal_card-button"></div>
-                                    <figcaption class="animal__card-nav">
-                                        <p class="animal__card-title">Lorem ipsum dolor sit amet,
-                                             consectetur adipisicing elit. Architecto, in!</p>
+                                        <p class="animal__card-title">Lorem ipsum dolor sit amet
+                                             consectetur adipisicing elit. Labore, nihil.</p>
                                         <div class="animal__card-buttons">
-                                            <form action="../zoos/alligator.html">
+                                            <form action="../zoos/eagle.html">
                                                 <button class="animal__card-button-play">
                                                     <div class="play-pic">
                                                         <img src="../../assets/icons/play__litle.svg" alt="play">
@@ -162,15 +91,12 @@
                                             </form>
                                         </div>
                                     </figcaption>
-                            </figure>
-                            <figure class="animal__card">
-                                <img class="animal__card-pic" src="../../assets/images/fox.jpg" alt="fox">
-                                <figcaption class="animal__card-nav">
-                                    <p class="animal__card-title"></p>
-                                    <div class="animal_card-button"></div>
+                                </figure>
+                                <figure class="animal__card card__active">
+                                    <img class="animal__card-pic" src="../../assets/images/panda.jpg" alt="panda">
                                     <figcaption class="animal__card-nav">
-                                        <p class="animal__card-title">Lorem ipsum dolor, sit amet 
-                                            consectetur adipisicing elit. Nam, aut.</p>
+                                        <p class="animal__card-title">Panda’s name is Bei Bei. He 
+                                            is 2 years old. Bei Bei is from China. He loves bamboos.</p>
                                         <div class="animal__card-buttons">
                                             <form action="../zoos/panda.html">
                                                 <button class="animal__card-button-play">
@@ -190,7 +116,89 @@
                                             </form>
                                         </div>
                                     </figcaption>
-                            </figure>
+                                </figure>
+                                <figure class="animal__card">
+                                    <img class="animal__card-pic" src="../../assets/images/gorilla.jpg" alt="gorilla">
+                                    <figcaption class="animal__card-nav">
+                                        <p class="animal__card-title">Lorem ipsum dolor sit, amet
+                                             consectetur adipisicing elit. Ipsa, ullam!</p>
+                                        <div class="animal__card-buttons">
+                                            <form action="../zoos/gorilla.html">
+                                                <button class="animal__card-button-play">
+                                                    <div class="play-pic">
+                                                        <img src="../../assets/icons/play__litle.svg" alt="play">
+                                                    </div>
+                                                    <p>watch-online</p>
+                                                </button>
+                                            </form>
+                                            <form action="">
+                                                <button class="animal__card-button-donate">
+                                                    <div class="donate-pic">
+                                                        <p>$</p>
+                                                    </div>
+                                                    <p>donate</p>
+                                                </button>
+                                            </form>
+                                        </div>
+                                    </figcaption>
+                                </figure>
+                                <figure class="animal__card">
+                                    <img class="animal__card-pic" src="../../assets/images/crocodile.png" alt="crocodile"> 
+                                        <figcaption class="animal__card-nav">
+                                        <p class="animal__card-title"></p>
+                                        <div class="animal_card-button"></div>
+                                        <figcaption class="animal__card-nav">
+                                            <p class="animal__card-title">Lorem ipsum dolor sit amet,
+                                                 consectetur adipisicing elit. Architecto, in!</p>
+                                            <div class="animal__card-buttons">
+                                                <form action="../zoos/alligator.html">
+                                                    <button class="animal__card-button-play">
+                                                        <div class="play-pic">
+                                                            <img src="../../assets/icons/play__litle.svg" alt="play">
+                                                        </div>
+                                                        <p>watch-online</p>
+                                                    </button>
+                                                </form>
+                                                <form action="">
+                                                    <button class="animal__card-button-donate">
+                                                        <div class="donate-pic">
+                                                            <p>$</p>
+                                                        </div>
+                                                        <p>donate</p>
+                                                    </button>
+                                                </form>
+                                            </div>
+                                        </figcaption>
+                                </figure>
+                                <figure class="animal__card">
+                                    <img class="animal__card-pic" src="../../assets/images/fox.jpg" alt="fox">
+                                    <figcaption class="animal__card-nav">
+                                        <p class="animal__card-title"></p>
+                                        <div class="animal_card-button"></div>
+                                        <figcaption class="animal__card-nav">
+                                            <p class="animal__card-title">Lorem ipsum dolor, sit amet 
+                                                consectetur adipisicing elit. Nam, aut.</p>
+                                            <div class="animal__card-buttons">
+                                                <form action="../zoos/panda.html">
+                                                    <button class="animal__card-button-play">
+                                                        <div class="play-pic">
+                                                            <img src="../../assets/icons/play__litle.svg" alt="play">
+                                                        </div>
+                                                        <p>watch-online</p>
+                                                    </button>
+                                                </form>
+                                                <form action="">
+                                                    <button class="animal__card-button-donate">
+                                                        <div class="donate-pic">
+                                                            <p>$</p>
+                                                        </div>
+                                                        <p>donate</p>
+                                                    </button>
+                                                </form>
+                                            </div>
+                                        </figcaption>
+                                </figure>
+                            </div>
                         </div>
                         <div class="galary__range-scroll">
                             <p class="count">02/<span class="count-all">08</span></p>
@@ -227,6 +235,8 @@
                         </p>
                         <div class="how-it-works__image">
                             <img src="../../assets/images/how-it-works__1.jpg" alt="wildlife pic" class="how-it-works__pic">
+                            <img src="../../assets/images/how-it-works__1-tablet.jpg" alt="wildlife pic" class="how-it-works__pic-tablet">
+                            <img src="../../assets/images/how-it-works__1-mobile.png" alt="wildlife pic" class="how-it-works__pic-mobile">
                         </div>
                         <div class="how-it-works__range-scroll">
                             <p class="range-scroll__count">01/<span class="range-scroll__count-all">04</span></p>
@@ -236,7 +246,7 @@
                             <form action="../zoos/panda.html">
                                 <button class="watch-online__button">
                                     <img class="watch-online__button-pic" src="../../assets/icons/play__watch-online-btn.svg" alt="play">
-                                    watch-online
+                                    watch online
                                 </button>
                             </form>
                         </div>
@@ -360,7 +370,7 @@
                                         </div>
                                     </figcaption>
                                 </div>
-                                <div class="pet__card">
+                                <div class="pet__card pet__card-hiden">
                                     <img src="../../assets/images/crocodile2.jpg" alt="crocodile" class="pet__card-pic">
                                     <figcaption class="pet__card-nav">
                                         <p class="animal__card-title">Lorem ipsum dolor sit amet
@@ -459,7 +469,7 @@
                                 </button>
                             </div>
                             <div class="testimonials__cards">
-                                <div class="testimonials__card">
+                                <div class="testimonials__card testimonials__card-hidden">
                                     <div class="testimonials__card-wrapper">
                                         <div class="testimonials__avatar">
                                             <img src="../../assets/icons/testimonials__user-avatar.svg" alt="" class="testimonials__avatar-pic">
@@ -474,7 +484,7 @@
                                         </p>
                                     </div>
                                 </div>
-                                <div class="testimonials__card">
+                                <div class="testimonials__card testimonials__card-hidden-mobile">
                                     <div class="testimonials__card-wrapper">
                                         <div class="testimonials__avatar">
                                             <img src="../../assets/icons/testimonials__user-photo.svg" alt="" class="testimonials__avatar-pic">
@@ -515,7 +525,7 @@
                     <h3 class="section__title map__title">Map</h3>
                     <div class="world-map">
                         <figure>
-                            <img class="world-map__pic" src="../../assets/icons/map__world-map.svg" alt="map of the world">
+                            <!-- <img class="world-map__pic" src="../../assets/icons/map__world-map.svg" alt="map of the world"> -->
                             <figcaption>
                                 <div class="map__placeholder placeholder__eagle">
                                     <div class="map__placeholder-pic-eagle"></div>
@@ -624,7 +634,7 @@
                         <form action="../zoos/panda.html">
                             <button class="watch-online__button">
                                 <img class="watch-online__button-pic" src="../../assets/icons/play__watch-online-btn.svg" alt="play">
-                                watch-online
+                                watch online
                             </button>
                         </form>
                     </div>
@@ -723,6 +733,13 @@
                                     <a href="https://www.youtube.com/" class="galary__social-link"><img src="../../assets/icons/youtube.svg" alt="youtube" class="galary__social-pic"></a>
                                 </li>
                             </ul>
+                            <div class="footer__header__button-1200px">
+                                <form action="#">
+                                    <button class="watch-online__button footer__header__btn">
+                                        donate for volunteers
+                                    </button>
+                                </form>
+                            </div>
                         </div>
                     </div>
                 </div>
