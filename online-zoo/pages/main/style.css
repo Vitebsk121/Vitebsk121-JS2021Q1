@@ -658,6 +658,11 @@ input[class="galary__range"] {
     background-color: #f2f2f2;
 }
 
+.how-it-works__pic-tablet,
+.how-it-works__pic-mobile {
+    display: none;
+}
+
 
 .how-it-works__top-wrapper {
     display: flex;
@@ -2221,6 +2226,14 @@ input[class="range-scroll"]:focus::-ms-fill-upper {
 }
 
 @media screen and (max-width: 640px) {
+    .header {
+        position: fixed;
+        width: 100%;
+    }
+
+    .main {
+        padding-top: 94px;
+    }
 
     .favorite {
         background: url(../../assets/images/favorite-animal__bg-tablet.jpg) no-repeat center;
@@ -2638,6 +2651,10 @@ input[class="range-scroll"]:focus::-ms-fill-upper {
         height: 669px;
         background: url(../../assets/images/favorite-animal__bg-mobile.jpg) no-repeat center;
     }
+
+    .main {
+        padding-top: 92px;
+      }
 
 }
 
