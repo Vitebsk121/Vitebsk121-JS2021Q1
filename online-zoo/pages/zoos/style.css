@@ -1283,6 +1283,61 @@ input:checked + .slider:before {
 }
 
 @media screen and (max-width: 980px) {
+    .main {
+        gap: 26px;
+    }
+    
+    .main__info {
+        max-width: 497px;
+        gap: 30px;
+    }
+
+    .main__content {
+        flex-direction: column;
+        gap: 50px;
+    }
+
+    .main__video {
+        width: 497px;
+        height: 280px;
+        border-radius: 5px;
+        overflow: hidden;
+    }
+    
+    .playlist__video {
+        width: 155px;
+        height: 89px;
+        border-radius: 5px;
+        overflow: hidden;
+    }
+
+    .main__videos-playlist {
+        gap: 16px;
+    }
+
+    .main__videos {
+        gap: 15px;
+    }
+
+    .main__choose-pet {
+        margin-left: 15px;
+        height: 560px;
+        width: 90px
+    }
+
+    .videos__scroll {
+        position: relative;
+        left: 0px;
+        margin-top: 15px;
+    }
+
+    .info__content {
+        gap: 13px;
+      }
+
+
+
+
     .header__wrapper {
         padding: 16px 20px 24px 20px;
     }
@@ -1455,6 +1510,16 @@ input:checked + .slider:before {
     .developers {
         margin-bottom: 50px;
     }
+
+    .pet__card {
+        width: 82px;
+        height: 82px;
+    }
+
+    .pet__card__active {
+        width: 91px;
+        height: 91px;
+    }
 }
 
 @media screen and (max-width: 640px) {
@@ -1475,10 +1540,6 @@ input:checked + .slider:before {
         margin-bottom: 70px;
       }
 
-    .pets__cards {
-        margin-left: 68px;
-    }
-
     .pets-in-zoo__wrapper {
         margin: 0 20px 0 20px;
         overflow: hidden;
@@ -1494,6 +1555,27 @@ input:checked + .slider:before {
 
     .footer__legend {
         left: 5px;
+    }
+
+    .main__choose-pet {
+        margin-left: 6px;
+    }
+
+    .pet__card-pic-gorilla {
+        margin-top: -4px;
+    }
+
+    .pets__slider-right img {
+        margin-top: -8px;
+    }
+
+    .section__title {
+        margin-left: 11px;
+    }
+
+    .main__wrapper {
+        gap: 35px;
+        margin-bottom: 80px;
     }
 
 
