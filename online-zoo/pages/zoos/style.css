@@ -906,7 +906,7 @@ input:checked + .slider:before {
     }
 
     .pet__card-pic-gorilla {
-        margin-top: -15px;
+        margin-top: -8px;
     }
 
     .pets__slider-right img {
@@ -1562,7 +1562,7 @@ input:checked + .slider:before {
     }
 
     .pet__card-pic-gorilla {
-        margin-top: -4px;
+        margin-top: -2px;
     }
 
     .pets__slider-right img {
@@ -1578,6 +1578,47 @@ input:checked + .slider:before {
         margin-bottom: 80px;
     }
 
+
+}
+
+@media screen and (max-width: 615px) {
+
+    .main__video {
+        width: 205px;
+        height: 116px;
+        border-radius: 5px;
+        overflow: hidden;
+    }
+    
+    .playlist__video {
+        width: 98px;
+        height: 56.26px;
+        border-radius: 5px;
+        overflow: hidden;
+    }
+
+    .main__videos-playlist {
+        gap: 9px;
+    }
+
+    .playlist__video:last-child {
+        display: none;
+    }
+
+    .main__videos {
+        gap: 10px;
+    }
+
+    .main__choose-pet {
+        margin-left: 15px;
+        height: 560px;
+        width: 90px
+    }
+
+    .main__info {
+        max-width: 205px;
+        gap: 30px;
+      }
 
 }
 
@@ -1726,11 +1767,6 @@ input:checked + .slider:before {
     .pets-in-zoo__wrapper {
         margin: 0 10px;
         gap: 28px;
-    }
-
-    .pets__cards {
-        margin-left: 362px;
-        gap: 16px;
     }
 
     .pets__galary-wrapper {
@@ -1957,6 +1993,81 @@ input:checked + .slider:before {
     }
 
 
+
+}
+
+@media screen and (max-width: 400px) {
+    .section__title {
+        font-size: 24px;
+        line-height: 28px;
+    }
+
+    .pet__card {
+        width: 47px;
+        height: 47px;
+    }
+
+    .pet__card__active {
+        width: 65px;
+        height: 65px;
+    }
+
+    .main__choose-pet {
+        margin-left: 5px;
+        margin-top: 35px;
+        height: 270px;
+        width: 65px;
+    }
+
+    .main__wrapper {
+        margin-bottom: 61px;
+        padding-top: 35px;
+        gap: 20px;
+    }
+
+    .section__title {
+        margin-left: 6px;
+    }
+
+    .pets__galary {
+        gap: 10px;
+    }
+
+    .header__wrapper {
+        padding: 16px 20px 22px 10px;
+    }
+
+    .videos__scroll {
+        position: relative;
+        left: -2px;
+        margin-top: 10px;
+    }
+
+    .main__content {
+        gap: 30px;
+    }
+
+    .info__item-title {
+        font-size: 14px;
+        line-height: 16px;
+    }
+
+    .info__item-subtitle {
+        font-size: 12px;
+        line-height: 14px;
+    }
+
+    .info__content {
+        gap: 17px;
+    }
+
+    .info__item {
+        gap: 7px;
+    }
+
+    .main__info {
+        gap: 16px;
+    }
 
 }
 
