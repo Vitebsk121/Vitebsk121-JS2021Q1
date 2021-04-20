@@ -321,19 +321,6 @@ input:checked + .slider:before {
     position: relative;
 }
 
-.pet__card::after {
-    visibility: hidden;
-    display: block;
-    content: '';
-    width: 100%;
-    height: 100%;
-    background: url(../../assets/icons/pet__card-ellipse.svg) no-repeat center;
-    background-size: contain;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 2;
-}
 
 .pet__card-pic-gorilla {
     background: url(../../assets/images/gorilla.jpg) no-repeat center;
@@ -425,7 +412,7 @@ input:checked + .slider:before {
 .main__wrapper {
     padding-top: 60px;
     margin-bottom: 100px;
-    width: 1200px;
+    max-width: 1200px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -447,7 +434,6 @@ input:checked + .slider:before {
 }
 
 .main__videos {
-    width: 790px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -869,11 +855,94 @@ input:checked + .slider:before {
     display: none;
 }
 
+.galary__social-pic:hover {
+    transform: scale(1.1);
+}
+
+.galary__social-pic:active {
+    transform: scale(0.9);
+}
+
+.main__video {
+    width: 790px;
+    height: 442px;
+}
+
+.playlist__video {
+    width: 246px;
+    height: 141px;
+}
+
 /* footer end */
 
 /* media start */
 
 @media screen and (max-width: 1600px) {
+
+    .pet__card-pic-crocodile {
+        position: relative;
+        top: -3px;
+    }
+
+    .footer__legend {
+        left: 4px;
+    }
+
+    .main__wrapper {
+        margin-bottom: 97px;
+    }
+
+    .info__feed-button {
+        padding: 16px 72px;
+    }
+
+    .info__content {
+        gap: 16px;
+    }
+
+    .main__info {
+        max-width: 253px;
+        gap: 21px;
+    }
+
+    .pet__card-pic-gorilla {
+        margin-top: -15px;
+    }
+
+    .pets__slider-right img {
+        margin-top: -15px;
+    }
+
+    .main {
+        gap: 64px;
+    }
+
+    .main__choose-pet {
+        margin-left: 15px;
+        height: 560px;
+        width: 122px
+    }
+
+    .main__content {
+        gap: 18px;
+    }
+
+    .main__video {
+        width: 527px;
+        height: 297px;
+    }
+    
+    .playlist__video {
+        width: 164px;
+        height: 94px;
+    }
+
+    .main__videos-playlist {
+        gap: 18px;
+    }
+
+
+
 
     .favorite {
         height: 926px;
@@ -943,7 +1012,7 @@ input:checked + .slider:before {
     }
 
     .pets__cards {
-        gap: 20px;
+        gap: 0;
     }
 
     .pet__card {
@@ -955,19 +1024,6 @@ input:checked + .slider:before {
         width: 210px;
     }
 
-    .pet__card::after {
-        visibility: hidden;
-        display: block;
-        content: '';
-        width: 100%;
-        height: 100%;
-        background: linear-gradient(357.17deg, #000000 -56.45%, rgba(0, 0, 0, 0) 65.03%);
-        position: absolute;
-        top: 210px;
-        bottom: 0;
-        left: 0;
-        z-index: 2;
-    }
     
     .pet__card-nav {
         visibility: hidden;
@@ -1051,6 +1107,25 @@ input:checked + .slider:before {
 }
 
 @media screen and (max-width: 1200px) {
+    
+    
+
+    .videos__scroll {
+        position: relative;
+        left: -11px;
+    }
+
+    .pet__card {
+        width: 112px;
+        height: 112px;
+    }
+
+    .pet__card__active {
+        width: 121px;
+        height: 121px;
+    }
+
+
     .header__nav {
         margin-top: 12px;
     }
@@ -1238,11 +1313,6 @@ input:checked + .slider:before {
         flex-direction: column;
         gap: 50px;
         margin-bottom: 100px;
-    }
-
-    .left__slider,
-    .right__slider {
-        display: none;
     }
     
     .pet__card-hiden {

@@ -1091,6 +1091,14 @@ input[class="range-scroll"] {
     display: none;
 }
 
+.galary__social-pic:hover {
+    transform: scale(1.1);
+}
+
+.galary__social-pic:active {
+    transform: scale(0.9);
+}
+
 /* footer end */
 
 /* media start */
