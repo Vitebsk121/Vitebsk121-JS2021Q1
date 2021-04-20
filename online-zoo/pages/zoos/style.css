@@ -913,9 +913,6 @@ input:checked + .slider:before {
         margin-top: -15px;
     }
 
-    .main {
-        gap: 64px;
-    }
 
     .main__choose-pet {
         margin-left: 15px;
@@ -2034,7 +2031,11 @@ input:checked + .slider:before {
     }
 
     .header__wrapper {
-        padding: 16px 20px 22px 10px;
+        padding: 16px 10px 22px 10px;
+    }
+
+    .footer__wrapper {
+        padding: 38px 10px 0;
     }
 
     .videos__scroll {
