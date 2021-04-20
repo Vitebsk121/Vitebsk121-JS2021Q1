@@ -417,6 +417,7 @@ input:checked + .slider:before {
     flex-direction: column;
     align-items: flex-start;
     gap: 40px;
+    overflow: hidden;
 }
 
 .section__title {
@@ -1104,6 +1105,10 @@ input:checked + .slider:before {
 }
 
 @media screen and (max-width: 1200px) {
+    .main {
+        gap: 100px;
+    }
+
     .main__choose-pet {
         height: 530px;
     }
