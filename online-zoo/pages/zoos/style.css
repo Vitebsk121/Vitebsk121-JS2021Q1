@@ -292,7 +292,7 @@ input:checked + .slider:before {
     position: sticky;
     margin-left: 25px;
     margin-top: 60px;
-    top: 0;
+    top: 0px;
 }
 
 .pets__galary {
@@ -1104,7 +1104,9 @@ input:checked + .slider:before {
 }
 
 @media screen and (max-width: 1200px) {
-    
+    .main__choose-pet {
+        height: 530px;
+    }
     
 
     .videos__scroll {
@@ -1318,7 +1320,7 @@ input:checked + .slider:before {
 
     .main__choose-pet {
         margin-left: 15px;
-        height: 560px;
+        height: 410px;
         width: 90px
     }
 
@@ -1523,6 +1525,10 @@ input:checked + .slider:before {
     .header {
         position: fixed;
         width: 100%;
+    }
+
+    .main__choose-pet  {
+        top: 94px;
     }
 
     .main {
