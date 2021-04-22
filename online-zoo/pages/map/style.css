@@ -460,6 +460,7 @@ input[class="range-scroll"] {
     height: 10px;
     -webkit-appearance: none;
     width: 245px;
+    background-color: transparent;
   }
   input[class="range-scroll"]:focus {
     outline: none;
@@ -478,7 +479,7 @@ input[class="range-scroll"] {
     box-shadow: 0px 0px 0px #000000;
     border: 0px solid #000000;
     height: 10px;
-    width: 30px;
+    width: 62px;
     border-radius: 0px;
     background: #333333;
     cursor: pointer;
@@ -502,7 +503,7 @@ input[class="range-scroll"] {
     box-shadow: 0px 0px 0px #000000;
     border: 0px solid #000000;
     height: 10px;
-    width: 30px;
+    width: 50px;
     border-radius: 0px;
     background: #333333;
     cursor: pointer;
@@ -533,7 +534,7 @@ input[class="range-scroll"] {
     box-shadow: 0px 0px 0px #000000;
     border: 0px solid #000000;
     height: 10px;
-    width: 30px;
+    width: 50px;
     border-radius: 0px;
     background: #333333;
     cursor: pointer;
