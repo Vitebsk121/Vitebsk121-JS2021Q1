@@ -318,8 +318,8 @@ input:checked + .slider:before {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 108px;
-    height: 108px;
+    width: 124px;
+    height: 124px;
     border-radius: 100px;
     position: relative;
 }
