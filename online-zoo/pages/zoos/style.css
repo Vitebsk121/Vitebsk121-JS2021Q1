@@ -1619,7 +1619,7 @@ input:checked + .slider:before {
 
     .main__choose-pet {
         margin-left: 15px;
-        height: 560px;
+        height: 420px;
         width: 90px
     }
 
