@@ -104,7 +104,7 @@
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    gap: 83px;
+    grid-gap: 83px;
 }
 
 .nav__link {
@@ -269,7 +269,7 @@ input:checked + .slider:before {
     display: flex;
     flex-direction: column;
     max-width: 790px;
-    gap: 20px;
+    grid-gap: 20px;
     align-items: center;
 }
 
@@ -299,19 +299,19 @@ input:checked + .slider:before {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 30px;
+    grid-gap: 30px;
 }
 
 .pets__galary {
     display: flex;
     align-items: center;
-    gap: 30px;
+    grid-gap: 30px;
 }
 
 .pets__cards {
     display: flex;
     align-items: center;
-    gap: 30px;
+    grid-gap: 30px;
 }
 
 .pet__card {
@@ -453,7 +453,7 @@ input:checked + .slider:before {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 11px;
+    grid-gap: 11px;
 }
 
 input[class="range-scroll"] {
@@ -701,7 +701,7 @@ input[class="range-scroll"] {
 
 .placeholder__nav-wrapper {
     display: flex;
-    gap: 20px;
+    grid-gap: 20px;
 }
 
 .placeholder__nav-pic-eagle {
@@ -739,7 +739,7 @@ input[class="range-scroll"] {
 .placeholder__nav-info {
     display: flex;
     flex-direction: column;
-    gap: 5px;
+    grid-gap: 5px;
 }
 
 .placeholder__nav-info__title {
@@ -858,7 +858,7 @@ input[class="range-scroll"] {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    gap: 73px;
+    grid-gap: 73px;
 }
 
 
@@ -886,7 +886,7 @@ input[class="range-scroll"] {
 .footer_main {
     position: relative;
     display: flex;
-    gap: 441px;
+    grid-gap: 441px;
     padding-bottom: 60.5px;
     margin-bottom: 28px;
 }
@@ -917,7 +917,7 @@ input[class="range-scroll"] {
     position: relative;
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    grid-gap: 20px;
 }
 
 .footer__contact-forms {
@@ -985,7 +985,7 @@ input[class="range-scroll"] {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    gap: 6px;
+    grid-gap: 6px;
 }
 
 .footer__checkbox {
@@ -1035,7 +1035,7 @@ input[class="range-scroll"] {
     margin-right: 13px;
     padding: 0;
     display: flex;
-    gap: 24px;
+    grid-gap: 24px;
     align-items: center;
     background-color: transparent;
     font-family: 'Roboto';
@@ -1055,20 +1055,20 @@ input[class="range-scroll"] {
 .footer__info {
     display: flex;
     flex-direction: column;
-    gap: 35px;
+    grid-gap: 35px;
 }
 
 .footer__info-contact {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    grid-gap: 20px;
 }
 
 .footer__adress,
 .footer__phone {
     display: flex;
     flex-direction: column;
-    gap: 5px;
+    grid-gap: 5px;
 }
 
 .footer__info-title {
@@ -1101,13 +1101,13 @@ input[class="range-scroll"] {
 
 .footer__social-list {
     display: flex;
-    gap: 15px;
+    grid-gap: 15px;
 }
 
 .developers {
     display: flex;
     flex-direction: column;
-    gap: 5px;
+    grid-gap: 5px;
 }
 
 .developers__name,
@@ -1169,7 +1169,7 @@ input[class="range-scroll"] {
     }
 
     .animals__cards {
-        gap: 30px;
+        grid-gap: 30px;
     }
     
     .animal__card {
@@ -1210,11 +1210,11 @@ input[class="range-scroll"] {
     }
 
     .pets-in-zoo__wrapper {
-        gap: 31px
+        grid-gap: 31px
     }
 
     .pets__cards {
-        gap: 30px;
+        grid-gap: 30px;
     }
 
     .pet__card {
@@ -1248,7 +1248,7 @@ input[class="range-scroll"] {
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        gap: 14px;
+        grid-gap: 14px;
         position: absolute;
         top: 210px;
         bottom: 0;
@@ -1298,7 +1298,7 @@ input[class="range-scroll"] {
     }
 
     .footer_main {
-        gap: 78px;
+        grid-gap: 78px;
         padding-bottom: 63.5px;
         margin-bottom: 32px;
     }
@@ -1318,7 +1318,7 @@ input[class="range-scroll"] {
 @media screen and (max-width: 1200px) {
 
     .pets__cards {
-        gap: 15px;
+        grid-gap: 15px;
     }
 
     .pet__card__active {
@@ -1336,7 +1336,7 @@ input[class="range-scroll"] {
     .pets__galary {
         display: flex;
         align-items: center;
-        gap: 40px;
+        grid-gap: 40px;
     }
 
     .header__nav {
@@ -1348,7 +1348,7 @@ input[class="range-scroll"] {
     }
 
     .how-it-works__cards-wrapper {
-        gap: 20px;
+        grid-gap: 20px;
         margin-bottom: 120px;
     }
 
@@ -1357,11 +1357,11 @@ input[class="range-scroll"] {
         display: flex;
         flex-direction: column;
         align-items: center;
-        gap: 15px;
+        grid-gap: 15px;
     }
 
     .pets__galary-wrapper {
-        gap: 25px;
+        grid-gap: 25px;
     }
 
     .pay-and-feed__arrow {
@@ -1381,7 +1381,7 @@ input[class="range-scroll"] {
     }
 
     .testimonials_wrapper {
-        gap: 61px;
+        grid-gap: 61px;
     }
 
     .footer {
@@ -1389,15 +1389,15 @@ input[class="range-scroll"] {
     }
 
     .testimonials__galary {
-        gap: 26px;
+        grid-gap: 26px;
     }
 
     .testimonials__cards {
-        gap: 20px;
+        grid-gap: 20px;
     }
 
     .testimonials__cards-and-button-wrapper {
-        gap: 48px;
+        grid-gap: 48px;
     }
 
     .testimonials__range-scroll {
@@ -1551,7 +1551,7 @@ input[class="range-scroll"] {
     
     .header__right {
         display: flex;
-        gap: 34px;
+        grid-gap: 34px;
     }
 
     .how-it-works__pic {
@@ -1564,7 +1564,7 @@ input[class="range-scroll"] {
 
     .how-it-works__cards-wrapper {
         flex-direction: column;
-        gap: 50px;
+        grid-gap: 50px;
         margin-bottom: 100px;
     }
     
@@ -1602,7 +1602,7 @@ input[class="range-scroll"] {
     }
 
     .testimonials_wrapper {
-        gap: 47px;
+        grid-gap: 47px;
     }
 
     .testimonials__card-wrapper {
@@ -1691,7 +1691,7 @@ input[class="range-scroll"] {
 
     .footer__nav__list {
         flex-direction: column;
-        gap: 5px;
+        grid-gap: 5px;
         align-items: flex-start;
     }
 
@@ -1719,11 +1719,11 @@ input[class="range-scroll"] {
     }
 
     .pets__galary {
-        gap: 12px;
+        grid-gap: 12px;
     }
 
     .pets__cards {
-        gap: 0px;
+        grid-gap: 0px;
     }
 
     .pets__list {
@@ -1755,7 +1755,7 @@ input[class="range-scroll"] {
     }
 
     .pets__galary-wrapper {
-        gap: 25px;
+        grid-gap: 25px;
     }
 
     .pay-and-feed__subtitle {
@@ -1775,7 +1775,7 @@ input[class="range-scroll"] {
     }
 
     .header__right {
-        gap: 25px;
+        grid-gap: 25px;
     }
 
     .favorite__wrapper {
@@ -1800,7 +1800,7 @@ input[class="range-scroll"] {
 
     .animals__cards {
         margin-left: 21px;
-        gap: 10px;
+        grid-gap: 10px;
     }
 
     .animals__cards-wrapper {
@@ -1837,13 +1837,13 @@ input[class="range-scroll"] {
         height: auto;
         bottom: 6px;
         left: 8px;
-        gap: 6px;
+        grid-gap: 6px;
     }
 
     .animal__card figcaption>div {
         flex-direction: column;
         align-items: flex-start;
-        gap: 6px;
+        grid-gap: 6px;
     }
 
     .galary__range-scroll  {
@@ -1871,7 +1871,7 @@ input[class="range-scroll"] {
 
     .how-it-works__top-wrapper {
         padding: 0 10px;
-        gap: 27px;
+        grid-gap: 27px;
     }
 
     .how-it-works__pic-tablet {
@@ -1899,7 +1899,7 @@ input[class="range-scroll"] {
 
     .how-it-works__cards-wrapper {
         padding: 50px 10px 0;
-        gap: 30px;
+        grid-gap: 30px;
         margin-bottom: 50px;
     }
 
@@ -1913,11 +1913,11 @@ input[class="range-scroll"] {
 
     .pets-in-zoo__wrapper {
         margin: 0 10px;
-        gap: 28px;
+        grid-gap: 28px;
     }
 
     .pets__galary-wrapper {
-        gap: 20px;
+        grid-gap: 20px;
         margin-bottom: 50px;
     }
 
@@ -1941,7 +1941,7 @@ input[class="range-scroll"] {
     .testimonials_wrapper {
         padding-top: 50px;
         margin-bottom: 50px;
-        gap: 35px;
+        grid-gap: 35px;
     }
 
     .testimonials__card-hidden {
@@ -2043,7 +2043,7 @@ input[class="range-scroll"] {
     }
 
     .placeholder__nav-wrapper {
-        gap: 8px;
+        grid-gap: 8px;
         max-width: 199px;
     }
 
@@ -2121,7 +2121,7 @@ input[class="range-scroll"] {
     }
 
     .footer_main {
-        gap: 55px;
+        grid-gap: 55px;
     }
     
     .footer__header__button-1200px {
@@ -2145,7 +2145,7 @@ input[class="range-scroll"] {
     }
 
     .main__top {
-        gap: 10px;
+        grid-gap: 10px;
     }
 
     .section__subtitle {
@@ -2154,11 +2154,11 @@ input[class="range-scroll"] {
     }
 
     .pets__galary {
-        gap: 3px;
+        grid-gap: 3px;
     }
 
     .pets__cards {
-        gap: 10px;
+        grid-gap: 10px;
     }
 
     .pet__card {
