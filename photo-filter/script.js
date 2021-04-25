@@ -64,10 +64,14 @@ function upload() {
     const file = loadPicture.files[0];
     const reader = new FileReader();
     reader.onload = () => {
-        image.src = reader.result;
+        const img = new Image();
+        img.src = reader.result;
+        image.src = img.src;
     }
     reader.readAsDataURL(file);
-  };
+    loadPicture.value = '';
+};
+
 
 inputs.forEach(input => input.addEventListener('input', handleUpdeate));
 fullscreen.addEventListener('click', startStopFullscreen);
