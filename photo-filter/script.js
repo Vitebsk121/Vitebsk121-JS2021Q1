@@ -3,7 +3,9 @@ const fullscreen = document.querySelector('.fullscreen');
 const inputs = document.querySelectorAll('.controls');
 const outputs = document.querySelectorAll('.output')
 const nextPicture = document.querySelector('.btn-next');
+const reset = document.querySelector('.btn-reset');
 const image = document.getElementById('image');
+const loadPicture = document.querySelector('input[type="file"]');
 let count = 1;
 
 function handleUpdeate() {
@@ -48,6 +50,27 @@ function swapPicture() {
     };
 };
 
-fullscreen.addEventListener('click', startStopFullscreen);
+function resetValues() {
+    document.documentElement.style.setProperty(`--blur`, '0px');
+    document.documentElement.style.setProperty(`--invert`, '0%');
+    document.documentElement.style.setProperty(`--sepia`, '0%');
+    document.documentElement.style.setProperty(`--saturate`, '100%');
+    document.documentElement.style.setProperty(`--hue`, '0deg');
+    inputs.forEach(item => item.name === 'saturate' ?  item.value = 100 : item.value = 0);
+    outputs.forEach(item => item.name === 'saturate' ?  item.value = 100 : item.value = 0);
+};
+
+function upload() {
+    const file = loadPicture.files[0];
+    const reader = new FileReader();
+    reader.onload = () => {
+        image.src = reader.result;
+    }
+    reader.readAsDataURL(file);
+  };
+
 inputs.forEach(input => input.addEventListener('input', handleUpdeate));
+fullscreen.addEventListener('click', startStopFullscreen);
 nextPicture.addEventListener('click', swapPicture);
+reset.addEventListener('click', resetValues);
+loadPicture.addEventListener('change', upload);
