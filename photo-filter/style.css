@@ -4,6 +4,12 @@
   box-sizing: border-box;
   user-select: none;
 }
+
+canvas {
+  display: none;
+}
+
+
 a:focus {
   outline: 0;
 }
