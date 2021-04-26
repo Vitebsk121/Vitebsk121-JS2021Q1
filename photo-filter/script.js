@@ -8,6 +8,8 @@ const image = document.getElementById('image');
 const loadPicture = document.querySelector('input[type="file"]');
 const canvas = document.querySelector('canvas');
 const savePicture = document.querySelector('.btn-save');
+const buttonsContainer = document.querySelector('.btn-container');
+const button = document.querySelectorAll('.btn');
 
 let count = 1;
 let blurValue = '0px';
@@ -123,10 +125,18 @@ function download() {
     link.delete;
 };
 
+function addActiveClass(event) {
+    button.forEach((item) => {
+        item.classList.remove('btn-active');
+    });
+    event.target.classList.add('btn-active');
+};
+
 inputs.forEach(input => input.addEventListener('input', handleUpdeate));
 fullscreen.addEventListener('click', startStopFullscreen);
 nextPicture.addEventListener('click', swapPicture);
 reset.addEventListener('click', resetValues);
 loadPicture.addEventListener('change', upload);
 savePicture.addEventListener('click', download);
+buttonsContainer.addEventListener('click', addActiveClass);
 drawImage();
