@@ -9,6 +9,7 @@ const loadPicture = document.querySelector('input[type="file"]');
 const canvas = document.querySelector('canvas');
 const savePicture = document.querySelector('.btn-save');
 const button = document.querySelectorAll('.btn');
+const buttonsContainer = document.querySelector('.btn-container');
 
 let n = 1;
 let count = 1;
@@ -39,9 +40,8 @@ function handleUpdeate() {
 };
 
 const startStopFullscreen = () => {
-    let elem = document.querySelector('body')
     if (!document.fullscreenElement) {
-        elem.requestFullscreen()
+        document.documentElement.requestFullscreen()
     } else {
         document.exitFullscreen();
     }
@@ -131,12 +131,17 @@ function download() {
     link.delete;
 };
 
-function addActiveClass(event) {
-    button.forEach((item) => {
-        item.classList.remove('btn-active');
+function addActiveClass() {
+    button.forEach((el) => {
+        el.addEventListener('click', () => {
+        if (el.classList.contains('btn-active')) {
+        return;
+        }
+        button.forEach((elem) => elem.classList.remove('btn-active'))
+        el.classList.add('btn-active')
+        });
     });
-    event.target.classList.add('btn-active');
-};
+}
 
 inputs.forEach(input => input.addEventListener('input', handleUpdeate));
 fullscreen.addEventListener('click', startStopFullscreen);
@@ -144,5 +149,5 @@ nextPicture.addEventListener('click', swapPicture);
 reset.addEventListener('click', resetValues);
 loadPicture.addEventListener('change', upload);
 savePicture.addEventListener('click', download);
-button.addEventListener('click', addActiveClass);
+buttonsContainer.addEventListener('click', addActiveClass);
 drawImage();
