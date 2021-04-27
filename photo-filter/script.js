@@ -8,9 +8,9 @@ const image = document.getElementById('image');
 const loadPicture = document.querySelector('input[type="file"]');
 const canvas = document.querySelector('canvas');
 const savePicture = document.querySelector('.btn-save');
-const buttonsContainer = document.querySelector('.btn-container');
 const button = document.querySelectorAll('.btn');
 
+let n = 1;
 let count = 1;
 let blurValue = '0px';
 let invertValue = '0%';
@@ -19,11 +19,12 @@ let saturateValue = '100%';
 let hueValue = '0deg';
 
 
+
 function handleUpdeate() {
     const suffix = this.dataset.sizing || '';
     document.documentElement.style.setProperty(`--${this.name}`, this.value + suffix);
     if (this.name === 'blur') {
-        blurValue = this.value * 2 + suffix;
+        blurValue = this.value + suffix;
     } else if (this.name === 'invert') {
         invertValue = this.value + suffix;
     } else if (this.name === 'sepia') {
@@ -111,7 +112,12 @@ function drawImage() {
     canvas.width = img.width;
     canvas.height = img.height;
     const ctx = canvas.getContext("2d");
-    ctx.filter = `blur(${blurValue}) invert(${invertValue}) sepia(${sepiaValue}) saturate(${saturateValue}) hue-rotate(${hueValue})`;
+    if (img.height > image.width) {
+        n = img.height / image.height;
+    } else {
+        n = img.width / image.width;
+    }
+    ctx.filter = `blur(${blurValue * n}) invert(${invertValue}) sepia(${sepiaValue}) saturate(${saturateValue}) hue-rotate(${hueValue})`;
     ctx.drawImage(img, 0, 0);
   }; 
 }
@@ -138,5 +144,5 @@ nextPicture.addEventListener('click', swapPicture);
 reset.addEventListener('click', resetValues);
 loadPicture.addEventListener('change', upload);
 savePicture.addEventListener('click', download);
-buttonsContainer.addEventListener('click', addActiveClass);
+button.addEventListener('click', addActiveClass);
 drawImage();
