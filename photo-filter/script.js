@@ -25,7 +25,7 @@ function handleUpdeate() {
     const suffix = this.dataset.sizing || '';
     document.documentElement.style.setProperty(`--${this.name}`, this.value + suffix);
     if (this.name === 'blur') {
-        blurValue = this.value + suffix;
+        blurValue = this.value;
     } else if (this.name === 'invert') {
         invertValue = this.value + suffix;
     } else if (this.name === 'sepia') {
@@ -116,8 +116,8 @@ function drawImage() {
         n = img.height / image.height;
     } else {
         n = img.width / image.width;
-    }
-    ctx.filter = `blur(${blurValue * n}) invert(${invertValue}) sepia(${sepiaValue}) saturate(${saturateValue}) hue-rotate(${hueValue})`;
+    };
+    ctx.filter = `blur(${blurValue * n}px) invert(${invertValue}) sepia(${sepiaValue}) saturate(${saturateValue}) hue-rotate(${hueValue})`;
     ctx.drawImage(img, 0, 0);
   }; 
 }
