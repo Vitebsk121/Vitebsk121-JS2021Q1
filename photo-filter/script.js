@@ -11,9 +11,9 @@ const savePicture = document.querySelector('.btn-save');
 const button = document.querySelectorAll('.btn');
 const buttonsContainer = document.querySelector('.btn-container');
 
-let n = 1;
+let n = 0;
 let count = 1;
-let blurValue = '0px';
+let blurValue = '0';
 let invertValue = '0%';
 let sepiaValue = '0%';
 let saturateValue = '100%';
@@ -119,7 +119,7 @@ function drawImage() {
     };
     ctx.filter = `blur(${blurValue * n}px) invert(${invertValue}) sepia(${sepiaValue}) saturate(${saturateValue}) hue-rotate(${hueValue})`;
     ctx.drawImage(img, 0, 0);
-  }; 
+  };
 }
 
 function download() {
