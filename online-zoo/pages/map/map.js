@@ -1,4 +1,3 @@
-'use strict';
 const ligthTheme = document.querySelectorAll('.light');
 const chbox = document.getElementById('theme');
 
