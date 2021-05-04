@@ -10,37 +10,37 @@
 <body class="page">
     <h1 class="hiden__title">Online Zoo</h1>
     <div class="wrapper">
-        <header class="header">
+        <header class="header light">
             <div class="header__wrapper">
                 <div class="logo">
                     <a href="../main/index.html" class="logo__link">
-                        <p class="logo__title">zoo</p>
-                        <p class="logo__subtitle">online</p>
+                        <p class="logo__title light">zoo</p>
+                        <p class="logo__subtitle light">online</p>
                     </a>
                 </div>
                 <nav class="header__nav">
                     <ul class="nav__list">
                         <li class="nav__item">
-                            <a href="#" class="nav__link active__link">About</a>
+                            <a href="#" class="nav__link active__link light">About</a>
                         </li>
                         <li class="nav__item">
-                            <a href="../zoos/panda.html" class="nav__link">Zoos</a>
+                            <a href="../zoos/panda.html" class="nav__link light">Zoos</a>
                         </li>
                         <li class="nav__item">
-                            <a href="../map/map.html" class="nav__link">Map</a>
+                            <a href="../map/map.html" class="nav__link light">Map</a>
                         </li>
                         <li class="nav__item">
-                            <a href="#footer" class="nav__link">Contact Us</a>
+                            <a href="#footer" class="nav__link light">Contact Us</a>
                         </li>
                         <li class="nav__item">
-                            <a href="https://www.figma.com/file/HKt5Nlx0jghQtJp6jW9q8F/zooApp" class="nav__link">Design</a>
+                            <a href="https://www.figma.com/file/HKt5Nlx0jghQtJp6jW9q8F/zooApp" class="nav__link light">Design</a>
                         </li>
                     </ul>
                 </nav>
                 <div class="header__right">
                     <div class="header__switch">
                         <label class="switch">
-                            <input type="checkbox">
+                            <input type="checkbox" id="theme">
                             <span class="slider round"></span>
                           </label>
                     </div>
@@ -67,6 +67,11 @@
                     <div class="galary">
                         <div class="animals__cards-wrapper">
                             <div class="animals__cards">
+                                <figure class="animal__card hidden-left card__none">
+                                    <div class="white-circle">
+                                        <div class="white-dot"></div>
+                                    </div>
+                                </figure>
                                 <figure class="animal__card">
                                     <img class="animal__card-pic" src="../../assets/images/eagle.jpg" alt="eagle">
                                     <figcaption class="animal__card-nav">
@@ -144,163 +149,11 @@
                                 </figure>
                                 <figure class="animal__card">
                                     <img class="animal__card-pic" src="../../assets/images/crocodile.png" alt="crocodile"> 
-                                        <figcaption class="animal__card-nav">
-                                        <p class="animal__card-title"></p>
-                                        <div class="animal_card-button"></div>
-                                        <figcaption class="animal__card-nav">
-                                            <p class="animal__card-title">Lorem ipsum dolor sit amet,
-                                                 consectetur adipisicing elit. Architecto, in!</p>
-                                            <div class="animal__card-buttons">
-                                                <form action="../zoos/alligator.html">
-                                                    <button class="animal__card-button-play">
-                                                        <div class="play-pic">
-                                                            <img src="../../assets/icons/play__litle.svg" alt="play">
-                                                        </div>
-                                                        <p>watch-online</p>
-                                                    </button>
-                                                </form>
-                                                <form action="">
-                                                    <button class="animal__card-button-donate">
-                                                        <div class="donate-pic">
-                                                            <p>$</p>
-                                                        </div>
-                                                        <p>donate</p>
-                                                    </button>
-                                                </form>
-                                            </div>
-                                        </figcaption>
-                                </figure>
-                                <figure class="animal__card">
-                                    <img class="animal__card-pic" src="../../assets/images/fox.jpg" alt="fox">
                                     <figcaption class="animal__card-nav">
-                                        <p class="animal__card-title"></p>
-                                        <div class="animal_card-button"></div>
-                                        <figcaption class="animal__card-nav">
-                                            <p class="animal__card-title">Lorem ipsum dolor, sit amet 
-                                                consectetur adipisicing elit. Nam, aut.</p>
-                                            <div class="animal__card-buttons">
-                                                <form action="../zoos/panda.html">
-                                                    <button class="animal__card-button-play">
-                                                        <div class="play-pic">
-                                                            <img src="../../assets/icons/play__litle.svg" alt="play">
-                                                        </div>
-                                                        <p>watch-online</p>
-                                                    </button>
-                                                </form>
-                                                <form action="">
-                                                    <button class="animal__card-button-donate">
-                                                        <div class="donate-pic">
-                                                            <p>$</p>
-                                                        </div>
-                                                        <p>donate</p>
-                                                    </button>
-                                                </form>
-                                            </div>
-                                        </figcaption>
-                                </figure>
-                            </div>
-                        </div>
-                        <div class="galary__range-scroll">
-                            <p class="count">02/<span class="count-all">08</span></p>
-                            <input class="galary__range" type="range" min="1" max="8" step="1" value="2">
-                        </div>
-                    </div>
-                    <ul class="galary__social-list">
-                        <li class="galary__social-item">
-                            <a href="https://www.instagram.com/" class="galary__social-link"><img src="../../assets/icons/instagram.svg" alt="instagram" class="galary__social-pic"></a>
-                        </li>
-                        <li class="galary__social-item">
-                            <a href="https://twitter.com/" class="galary__social-link"><img src="../../assets/icons/twitter.svg" alt="twitter" class="galary__social-pic"></a>
-                        </li>
-                        <li class="galary__social-item">
-                            <a href="https://www.youtube.com/" class="galary__social-link"><img src="../../assets/icons/youtube.svg" alt="youtube" class="galary__social-pic"></a>
-                        </li>
-                        <li class="galary__social-item">
-                            <a href="https://vk.com/" class="galary__social-link"><img src="../../assets/icons/vkontekte.svg" alt="vkontakte" class="galary__social-pic"></a>
-                        </li>
-                    </ul>
-                </div>
-            </section>
-            <section class="how-it-works">
-                <div class="how-it-works__top">
-                    <div class="how-it-works__top-wrapper">
-                        <h3 class="how-it-works__title section__title">How it works?</h3>
-                        <p class="how-it-works__subtitle">As a voice for wildlife, we are devastated by
-                             the impact of the 2020 Australian bushfires on precious species and their habitat,
-                             and we are determined to assist in all aspects, including providing veterinary support and raising much-needed
-                             emergency funds. Zoo Online saves wildlife and inspires everyone to make conservation a priority in their lives.
-                             Animals have the right to a pain-free and happy life. They have equal claim to the resources of this planet,
-                             and deserve a life of dignity and compassion.As a voice for wildlife, we are devastated by the impact of the 2020
-                             Australian bushfires on precious species and their habitat.
-                        </p>
-                        <div class="how-it-works__image">
-                            <img src="../../assets/images/how-it-works__1.jpg" alt="wildlife pic" class="how-it-works__pic">
-                            <img src="../../assets/images/how-it-works__1-tablet.jpg" alt="wildlife pic" class="how-it-works__pic-tablet">
-                            <img src="../../assets/images/how-it-works__1-mobile.png" alt="wildlife pic" class="how-it-works__pic-mobile">
-                        </div>
-                        <div class="how-it-works__range-scroll">
-                            <p class="range-scroll__count">01/<span class="range-scroll__count-all">04</span></p>
-                            <input class="range-scroll" type="range" min="1" max="4" step="1" value="1">
-                        </div>
-                        <div class="how-it-works__button">
-                            <form action="../zoos/panda.html">
-                                <button class="watch-online__button">
-                                    <img class="watch-online__button-pic" src="../../assets/icons/play__watch-online-btn.svg" alt="play">
-                                    watch online
-                                </button>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-                <div class="how-it-works__cards">
-                    <div class="how-it-works__cards-wrapper">
-                        <div class="how-it-works__card">
-                            <img src="../../assets/icons/inspires__card.svg" alt="inspires" class="how-it-works__icon">
-                            <p class="how-it-works__card-title">What inspires us?</p>
-                            <p class="how-it-works__card-subtitle">
-                                As a voice for wildlife, we are devastated by the impact of
-                                the 2020 Australian bushfires on precious species and their
-                                habitat, and we are determined to assist in all aspects.
-                            </p>
-                        </div>
-                        <div class="how-it-works__card">
-                            <img src="../../assets/icons/mission__card.svg" alt="mission" class="how-it-works__icon">
-                            <p class="how-it-works__card-title">Our mission</p>
-                            <p class="how-it-works__card-subtitle">
-                                Zoo Online saves wildlife and inspires everyone to make
-                                conservation a priority in their lives.
-                            </p>
-                        </div>
-                        <div class="how-it-works__card">
-                            <img src="../../assets/icons/believe__card.svg" alt="believe" class="how-it-works__icon">
-                            <p class="how-it-works__card-title">What we believe in?</p>
-                            <p class="how-it-works__card-subtitle">
-                                Animals have the right to a pain-free and happy life.
-                                They have equal claim to the resources of this planet,
-                                and deserve a life of dignity and compassion.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <section class="pets-in-zoo">
-                <div class="pets-in-zoo__wrapper">
-                    <h3 class="section__title">Pets in Zoo</h3>
-                    <div class="pets__galary-wrapper">
-                        <div class="pets__galary">
-                            <div class="left__slider">
-                                <button type="button" class="pets__slider pets__slider-left">
-                                    <img src="../../assets/icons/pets__slider.svg" alt="slider left" class="pets__slider-pic">
-                                </button>
-                            </div>
-                            <div class="pets__cards">
-                                <figure class="pet__card">
-                                    <img src="../../assets/images/panda.jpg" alt="panda" class="pet__card-pic">
-                                    <figcaption class="pet__card-nav">
-                                        <p class="animal__card-title">Panda’s name is Bei Bei. He 
-                                            is 2 years old. Bei Bei is from China. He loves bamboos.</p>
+                                        <p class="animal__card-title">Lorem ipsum dolor sit, amet
+                                             consectetur adipisicing elit. Ipsa, ullam!</p>
                                         <div class="animal__card-buttons">
-                                            <form action="../zoos/panda.html">
+                                            <form action="../zoos/gorilla.html">
                                                 <button class="animal__card-button-play">
                                                     <div class="play-pic">
                                                         <img src="../../assets/icons/play__litle.svg" alt="play">
@@ -319,11 +172,36 @@
                                         </div>
                                     </figcaption>
                                 </figure>
-                                <div class="pet__card">
-                                    <img src="../../assets/images/eagle.jpg" alt="eagle" class="pet__card-pic">
-                                    <figcaption class="pet__card-nav">
+                                <figure class="animal__card">
+                                    <img class="animal__card-pic" src="../../assets/images/fox.jpg" alt="fox">
+                                    <figcaption class="animal__card-nav">
+                                        <p class="animal__card-title">Lorem ipsum dolor sit, amet
+                                             consectetur adipisicing elit. Ipsa, ullam!</p>
+                                        <div class="animal__card-buttons">
+                                            <form action="../zoos/gorilla.html">
+                                                <button class="animal__card-button-play">
+                                                    <div class="play-pic">
+                                                        <img src="../../assets/icons/play__litle.svg" alt="play">
+                                                    </div>
+                                                    <p>watch-online</p>
+                                                </button>
+                                            </form>
+                                            <form action="">
+                                                <button class="animal__card-button-donate">
+                                                    <div class="donate-pic">
+                                                        <p>$</p>
+                                                    </div>
+                                                    <p>donate</p>
+                                                </button>
+                                            </form>
+                                        </div>
+                                    </figcaption>
+                                </figure>
+                                <figure class="animal__card hidden-right">
+                                    <img class="animal__card-pic" src="../../assets/images/white-bear.jpeg" alt="white-bear">
+                                    <figcaption class="animal__card-nav">
                                         <p class="animal__card-title">Lorem ipsum dolor sit amet
-                                             consectetur adipisicing elit. Ipsam, molestias.</p>
+                                             consectetur adipisicing elit. Labore, nihil.</p>
                                         <div class="animal__card-buttons">
                                             <form action="../zoos/eagle.html">
                                                 <button class="animal__card-button-play">
@@ -344,14 +222,13 @@
                                         </div>
                                     </figcaption>
                                 </figure>
-                                </div>
-                                <div class="pet__card">
-                                    <img src="../../assets/images/gorilla2.jpg" alt="gorilla" class="pet__card-pic">
-                                    <figcaption class="pet__card-nav">
+                                <figure class="animal__card hidden-right">
+                                    <img class="animal__card-pic" src="../../assets/images/kangaroo.jpeg" alt="kangaroo">
+                                    <figcaption class="animal__card-nav">
                                         <p class="animal__card-title">Lorem ipsum dolor sit amet
-                                             consectetur adipisicing elit. Ipsam, molestias.</p>
+                                             consectetur adipisicing elit. Labore, nihil.</p>
                                         <div class="animal__card-buttons">
-                                            <form action="../zoos/gorilla.html">
+                                            <form action="../zoos/eagle.html">
                                                 <button class="animal__card-button-play">
                                                     <div class="play-pic">
                                                         <img src="../../assets/icons/play__litle.svg" alt="play">
@@ -369,14 +246,14 @@
                                             </form>
                                         </div>
                                     </figcaption>
-                                </div>
-                                <div class="pet__card pet__card-hiden">
-                                    <img src="../../assets/images/crocodile2.jpg" alt="crocodile" class="pet__card-pic">
-                                    <figcaption class="pet__card-nav">
+                                </figure>
+                                <figure class="animal__card hidden-right">
+                                    <img class="animal__card-pic" src="../../assets/images/penguin.jpeg" alt="penguin">
+                                    <figcaption class="animal__card-nav">
                                         <p class="animal__card-title">Lorem ipsum dolor sit amet
-                                             consectetur adipisicing elit. Ipsam, molestias.</p>
+                                             consectetur adipisicing elit. Labore, nihil.</p>
                                         <div class="animal__card-buttons">
-                                            <form action="../zoos/alligator.html">
+                                            <form action="../zoos/eagle.html">
                                                 <button class="animal__card-button-play">
                                                     <div class="play-pic">
                                                         <img src="../../assets/icons/play__litle.svg" alt="play">
@@ -394,6 +271,425 @@
                                             </form>
                                         </div>
                                     </figcaption>
+                                </figure>
+                                <figure class="animal__card hidden-right card__none">
+                                    <div class="white-circle">
+                                        <div class="white-dot"></div>
+                                    </div>
+                                </figure>
+                                <figure class="animal__card hidden-right card__none">
+                                    <div class="white-circle">
+                                        <div class="white-dot"></div>
+                                    </div>
+                                </figure>
+                                <figure class="animal__card hidden-right card__none">
+                                    <div class="white-circle">
+                                        <div class="white-dot"></div>
+                                    </div>
+                                </figure>
+                            </div>
+                        </div>
+                        <div class="galary__range-scroll">
+                            <p class="count">
+                                <output class="galary__output">02</output>/<span class="count-all">08</span>
+                            </p>
+                            <input class="galary__range" type="range" min="1" max="8" step="1" value="2">
+                        </div>
+                    </div>
+                    <ul class="galary__social-list">
+                        <li class="galary__social-item">
+                            <a href="https://www.instagram.com/" class="galary__social-link"><img src="../../assets/icons/instagram.svg" alt="instagram" class="galary__social-pic"></a>
+                        </li>
+                        <li class="galary__social-item">
+                            <a href="https://twitter.com/" class="galary__social-link"><img src="../../assets/icons/twitter.svg" alt="twitter" class="galary__social-pic"></a>
+                        </li>
+                        <li class="galary__social-item">
+                            <a href="https://www.youtube.com/" class="galary__social-link"><img src="../../assets/icons/youtube.svg" alt="youtube" class="galary__social-pic"></a>
+                        </li>
+                        <li class="galary__social-item">
+                            <a href="https://vk.com/" class="galary__social-link"><img src="../../assets/icons/vkontekte.svg" alt="vkontakte" class="galary__social-pic"></a>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            <section class="how-it-works">
+                <div class="how-it-works__top light">
+                    <div class="how-it-works__top-wrapper">
+                        <h3 class="how-it-works__title section__title light">How it works?</h3>
+                        <p class="how-it-works__subtitle light">As a voice for wildlife, we are devastated by
+                             the impact of the 2020 Australian bushfires on precious species and their habitat,
+                             and we are determined to assist in all aspects, including providing veterinary support and raising much-needed
+                             emergency funds. Zoo Online saves wildlife and inspires everyone to make conservation a priority in their lives.
+                             Animals have the right to a pain-free and happy life. They have equal claim to the resources of this planet,
+                             and deserve a life of dignity and compassion.As a voice for wildlife, we are devastated by the impact of the 2020
+                             Australian bushfires on precious species and their habitat.
+                        </p>
+                        <div class="how-it-works__image">
+                            <img src="../../assets/images/how-it-works__pic1.jpg" alt="wildlife pic" class="how-it-works__pic">
+                            <img src="../../assets/images/how-it-works__1-tablet.jpg" alt="wildlife pic" class="how-it-works__pic-tablet">
+                            <img src="../../assets/images/how-it-works__1-mobile.png" alt="wildlife pic" class="how-it-works__pic-mobile">
+                        </div>
+                        <div class="how-it-works__range-scroll">
+                            <p class="range-scroll__count light">01/<span class="range-scroll__count-all">04</span></p>
+                            <input class="range-scroll light" type="range" min="1" max="4" step="1" value="1">
+                        </div>
+                        <div class="how-it-works__button">
+                            <form action="../zoos/panda.html">
+                                <button class="watch-online__button">
+                                    <img class="watch-online__button-pic" src="../../assets/icons/play__watch-online-btn.svg" alt="play">
+                                    watch online
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="how-it-works__cards light">
+                    <div class="how-it-works__cards-wrapper">
+                        <div class="how-it-works__card">
+                            <img src="../../assets/icons/inspires__card.svg" alt="inspires" class="how-it-works__icon">
+                            <p class="how-it-works__card-title light">What inspires us?</p>
+                            <p class="how-it-works__card-subtitle light">
+                                As a voice for wildlife, we are devastated by the impact of
+                                the 2020 Australian bushfires on precious species and their
+                                habitat, and we are determined to assist in all aspects.
+                            </p>
+                        </div>
+                        <div class="how-it-works__card">
+                            <img src="../../assets/icons/mission__card.svg" alt="mission" class="how-it-works__icon">
+                            <p class="how-it-works__card-title light">Our mission</p>
+                            <p class="how-it-works__card-subtitle light">
+                                Zoo Online saves wildlife and inspires everyone to make
+                                conservation a priority in their lives.
+                            </p>
+                        </div>
+                        <div class="how-it-works__card">
+                            <img src="../../assets/icons/believe__card.svg" alt="believe" class="how-it-works__icon">
+                            <p class="how-it-works__card-title light">What we believe in?</p>
+                            <p class="how-it-works__card-subtitle light">
+                                Animals have the right to a pain-free and happy life.
+                                They have equal claim to the resources of this planet,
+                                and deserve a life of dignity and compassion.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="pets-in-zoo light">
+                <div class="pets-in-zoo__wrapper">
+                    <h3 class="section__title light">Pets in Zoo</h3>
+                    <div class="pets__galary-wrapper">
+                        <div class="pets__galary">
+                            <div class="left__slider">
+                                <button type="button" class="pets__slider pets__slider-left">
+                                    <img src="../../assets/icons/pets__slider.svg" alt="slider left" class="pets__slider-pic">
+                                </button>
+                            </div>
+                            <div class="pets__cards-wrapper">
+                                <div class="pets__cards pets__cards-one">
+                                    <figure class="pet__card">
+                                        <img src="../../assets/images/tiger.jpeg" alt="tiger" class="pet__card-pic">
+                                        <figcaption class="pet__card-nav">
+                                            <p class="animal__card-title">Panda’s name is Bei Bei. He 
+                                                is 2 years old. Bei Bei is from China. He loves bamboos.</p>
+                                            <div class="animal__card-buttons">
+                                                <form action="../zoos/panda.html">
+                                                    <button class="animal__card-button-play">
+                                                        <div class="play-pic">
+                                                            <img src="../../assets/icons/play__litle.svg" alt="play">
+                                                        </div>
+                                                        <p>watch-online</p>
+                                                    </button>
+                                                </form>
+                                                <form action="">
+                                                    <button class="animal__card-button-donate">
+                                                        <div class="donate-pic">
+                                                            <p>$</p>
+                                                        </div>
+                                                        <p>donate</p>
+                                                    </button>
+                                                </form>
+                                            </div>
+                                        </figcaption>
+                                    </figure>
+                                    <figure class="pet__card">
+                                        <img src="../../assets/images/elephant.jpeg" alt="elephant" class="pet__card-pic">
+                                        <figcaption class="pet__card-nav">
+                                            <p class="animal__card-title">Lorem ipsum dolor sit amet
+                                                 consectetur adipisicing elit. Ipsam, molestias.</p>
+                                            <div class="animal__card-buttons">
+                                                <form action="../zoos/eagle.html">
+                                                    <button class="animal__card-button-play">
+                                                        <div class="play-pic">
+                                                            <img src="../../assets/icons/play__litle.svg" alt="play">
+                                                        </div>
+                                                        <p>watch-online</p>
+                                                    </button>
+                                                </form>
+                                                <form action="">
+                                                    <button class="animal__card-button-donate">
+                                                        <div class="donate-pic">
+                                                            <p>$</p>
+                                                        </div>
+                                                        <p>donate</p>
+                                                    </button>
+                                                </form>
+                                            </div>
+                                        </figcaption>
+                                    </figure>
+                                    <figure class="pet__card">
+                                        <img src="../../assets/images/lion.jpeg" alt="lion" class="pet__card-pic">
+                                        <figcaption class="pet__card-nav">
+                                            <p class="animal__card-title">Lorem ipsum dolor sit amet
+                                                 consectetur adipisicing elit. Ipsam, molestias.</p>
+                                            <div class="animal__card-buttons">
+                                                <form action="../zoos/gorilla.html">
+                                                    <button class="animal__card-button-play">
+                                                        <div class="play-pic">
+                                                            <img src="../../assets/icons/play__litle.svg" alt="play">
+                                                        </div>
+                                                        <p>watch-online</p>
+                                                    </button>
+                                                </form>
+                                                <form action="">
+                                                    <button class="animal__card-button-donate">
+                                                        <div class="donate-pic">
+                                                            <p>$</p>
+                                                        </div>
+                                                        <p>donate</p>
+                                                    </button>
+                                                </form>
+                                            </div>
+                                        </figcaption>
+                                    </figure>
+                                    <figure class="pet__card pet__card-hiden">
+                                        <img src="../../assets/images/zebra.jpeg" alt="zebra" class="pet__card-pic">
+                                        <figcaption class="pet__card-nav">
+                                            <p class="animal__card-title">Lorem ipsum dolor sit amet
+                                                 consectetur adipisicing elit. Ipsam, molestias.</p>
+                                            <div class="animal__card-buttons">
+                                                <form action="../zoos/alligator.html">
+                                                    <button class="animal__card-button-play">
+                                                        <div class="play-pic">
+                                                            <img src="../../assets/icons/play__litle.svg" alt="play">
+                                                        </div>
+                                                        <p>watch-online</p>
+                                                    </button>
+                                                </form>
+                                                <form action="">
+                                                    <button class="animal__card-button-donate">
+                                                        <div class="donate-pic">
+                                                            <p>$</p>
+                                                        </div>
+                                                        <p>donate</p>
+                                                    </button>
+                                                </form>
+                                            </div>
+                                        </figcaption>
+                                    </figure>
+                                </div>
+                                <div class="pets__cards pets__cards-two">
+                                    <figure class="pet__card">
+                                        <img src="../../assets/images/panda.jpg" alt="panda" class="pet__card-pic">
+                                        <figcaption class="pet__card-nav">
+                                            <p class="animal__card-title">Panda’s name is Bei Bei. He 
+                                                is 2 years old. Bei Bei is from China. He loves bamboos.</p>
+                                            <div class="animal__card-buttons">
+                                                <form action="../zoos/panda.html">
+                                                    <button class="animal__card-button-play">
+                                                        <div class="play-pic">
+                                                            <img src="../../assets/icons/play__litle.svg" alt="play">
+                                                        </div>
+                                                        <p>watch-online</p>
+                                                    </button>
+                                                </form>
+                                                <form action="">
+                                                    <button class="animal__card-button-donate">
+                                                        <div class="donate-pic">
+                                                            <p>$</p>
+                                                        </div>
+                                                        <p>donate</p>
+                                                    </button>
+                                                </form>
+                                            </div>
+                                        </figcaption>
+                                    </figure>
+                                    <figure class="pet__card">
+                                        <img src="../../assets/images/eagle.jpg" alt="eagle" class="pet__card-pic">
+                                        <figcaption class="pet__card-nav">
+                                            <p class="animal__card-title">Lorem ipsum dolor sit amet
+                                                 consectetur adipisicing elit. Ipsam, molestias.</p>
+                                            <div class="animal__card-buttons">
+                                                <form action="../zoos/eagle.html">
+                                                    <button class="animal__card-button-play">
+                                                        <div class="play-pic">
+                                                            <img src="../../assets/icons/play__litle.svg" alt="play">
+                                                        </div>
+                                                        <p>watch-online</p>
+                                                    </button>
+                                                </form>
+                                                <form action="">
+                                                    <button class="animal__card-button-donate">
+                                                        <div class="donate-pic">
+                                                            <p>$</p>
+                                                        </div>
+                                                        <p>donate</p>
+                                                    </button>
+                                                </form>
+                                            </div>
+                                        </figcaption>
+                                    </figure>
+                                    <figure class="pet__card">
+                                        <img src="../../assets/images/gorilla2.jpg" alt="gorilla" class="pet__card-pic">
+                                        <figcaption class="pet__card-nav">
+                                            <p class="animal__card-title">Lorem ipsum dolor sit amet
+                                                 consectetur adipisicing elit. Ipsam, molestias.</p>
+                                            <div class="animal__card-buttons">
+                                                <form action="../zoos/gorilla.html">
+                                                    <button class="animal__card-button-play">
+                                                        <div class="play-pic">
+                                                            <img src="../../assets/icons/play__litle.svg" alt="play">
+                                                        </div>
+                                                        <p>watch-online</p>
+                                                    </button>
+                                                </form>
+                                                <form action="">
+                                                    <button class="animal__card-button-donate">
+                                                        <div class="donate-pic">
+                                                            <p>$</p>
+                                                        </div>
+                                                        <p>donate</p>
+                                                    </button>
+                                                </form>
+                                            </div>
+                                        </figcaption>
+                                    </figure>
+                                    <figure class="pet__card pet__card-hiden">
+                                        <img src="../../assets/images/crocodile2.jpg" alt="crocodile" class="pet__card-pic">
+                                        <figcaption class="pet__card-nav">
+                                            <p class="animal__card-title">Lorem ipsum dolor sit amet
+                                                 consectetur adipisicing elit. Ipsam, molestias.</p>
+                                            <div class="animal__card-buttons">
+                                                <form action="../zoos/alligator.html">
+                                                    <button class="animal__card-button-play">
+                                                        <div class="play-pic">
+                                                            <img src="../../assets/icons/play__litle.svg" alt="play">
+                                                        </div>
+                                                        <p>watch-online</p>
+                                                    </button>
+                                                </form>
+                                                <form action="">
+                                                    <button class="animal__card-button-donate">
+                                                        <div class="donate-pic">
+                                                            <p>$</p>
+                                                        </div>
+                                                        <p>donate</p>
+                                                    </button>
+                                                </form>
+                                            </div>
+                                        </figcaption>
+                                    </figure>
+                                </div>
+                                <div class="pets__cards pets__cards-three">
+                                    <figure class="pet__card">
+                                        <img src="../../assets/images/white-bear.jpeg" alt="white-bear" class="pet__card-pic">
+                                        <figcaption class="pet__card-nav">
+                                            <p class="animal__card-title">Panda’s name is Bei Bei. He 
+                                                is 2 years old. Bei Bei is from China. He loves bamboos.</p>
+                                            <div class="animal__card-buttons">
+                                                <form action="../zoos/panda.html">
+                                                    <button class="animal__card-button-play">
+                                                        <div class="play-pic">
+                                                            <img src="../../assets/icons/play__litle.svg" alt="play">
+                                                        </div>
+                                                        <p>watch-online</p>
+                                                    </button>
+                                                </form>
+                                                <form action="">
+                                                    <button class="animal__card-button-donate">
+                                                        <div class="donate-pic">
+                                                            <p>$</p>
+                                                        </div>
+                                                        <p>donate</p>
+                                                    </button>
+                                                </form>
+                                            </div>
+                                        </figcaption>
+                                    </figure>
+                                    <figure class="pet__card">
+                                        <img src="../../assets/images/penguin.jpeg" alt="penguin" class="pet__card-pic">
+                                        <figcaption class="pet__card-nav">
+                                            <p class="animal__card-title">Lorem ipsum dolor sit amet
+                                                 consectetur adipisicing elit. Ipsam, molestias.</p>
+                                            <div class="animal__card-buttons">
+                                                <form action="../zoos/eagle.html">
+                                                    <button class="animal__card-button-play">
+                                                        <div class="play-pic">
+                                                            <img src="../../assets/icons/play__litle.svg" alt="play">
+                                                        </div>
+                                                        <p>watch-online</p>
+                                                    </button>
+                                                </form>
+                                                <form action="">
+                                                    <button class="animal__card-button-donate">
+                                                        <div class="donate-pic">
+                                                            <p>$</p>
+                                                        </div>
+                                                        <p>donate</p>
+                                                    </button>
+                                                </form>
+                                            </div>
+                                        </figcaption>
+                                    </figure>
+                                    <figure class="pet__card">
+                                        <img src="../../assets/images/fox.jpg" alt="fox" class="pet__card-pic">
+                                        <figcaption class="pet__card-nav">
+                                            <p class="animal__card-title">Lorem ipsum dolor sit amet
+                                                 consectetur adipisicing elit. Ipsam, molestias.</p>
+                                            <div class="animal__card-buttons">
+                                                <form action="../zoos/gorilla.html">
+                                                    <button class="animal__card-button-play">
+                                                        <div class="play-pic">
+                                                            <img src="../../assets/icons/play__litle.svg" alt="play">
+                                                        </div>
+                                                        <p>watch-online</p>
+                                                    </button>
+                                                </form>
+                                                <form action="">
+                                                    <button class="animal__card-button-donate">
+                                                        <div class="donate-pic">
+                                                            <p>$</p>
+                                                        </div>
+                                                        <p>donate</p>
+                                                    </button>
+                                                </form>
+                                            </div>
+                                        </figcaption>
+                                    </figure>
+                                    <figure class="pet__card pet__card-hiden">
+                                        <img src="../../assets/images/kangaroo.jpeg" alt="kangaroo" class="pet__card-pic">
+                                        <figcaption class="pet__card-nav">
+                                            <p class="animal__card-title">Lorem ipsum dolor sit amet
+                                                 consectetur adipisicing elit. Ipsam, molestias.</p>
+                                            <div class="animal__card-buttons">
+                                                <form action="../zoos/alligator.html">
+                                                    <button class="animal__card-button-play">
+                                                        <div class="play-pic">
+                                                            <img src="../../assets/icons/play__litle.svg" alt="play">
+                                                        </div>
+                                                        <p>watch-online</p>
+                                                    </button>
+                                                </form>
+                                                <form action="">
+                                                    <button class="animal__card-button-donate">
+                                                        <div class="donate-pic">
+                                                            <p>$</p>
+                                                        </div>
+                                                        <p>donate</p>
+                                                    </button>
+                                                </form>
+                                            </div>
+                                        </figcaption>
+                                    </figure>
                                 </div>
                             </div>
                             <div class="right__slider">
@@ -403,8 +699,10 @@
                             </div>
                         </div>
                         <div class="pets-galary__range-scroll">
-                            <p class="range-scroll__count">01/<span class="range-scroll__count-all">08</span></p>
-                            <input class="range-scroll" type="range" min="1" max="8" step="1" value="1">
+                            <p class="range-scroll__count light">
+                                <output class=output name="pets">01</output>/<span class="range-scroll__count-all">08</span>
+                            </p>
+                            <input class="range-scroll light input" name="pets" type="range" min="1" max="8" step="1" value="1">
                         </div>
                         <div class="pets-galary__button">
                             <form action="../map/map.html">
@@ -416,12 +714,12 @@
                     </div>
                 </div>
             </section>
-            <section class="pay-and-feed">
+            <section class="pay-and-feed light">
                 <div class="pay-and-feed__wrapper">
-                    <h3 class="section__title pay-and-feed__title">
+                    <h3 class="pay-and-feed__title section__title light">
                         Pay and feed
                     </h3>
-                    <p class="pay-and-feed__subtitle">
+                    <p class="pay-and-feed__subtitle light">
                         The opportunity to easily and naturally
                         (but as often as possible) donate to the
                          needs of animals that you like.
@@ -429,7 +727,7 @@
                     <div class="pay-and-feed__cards">
                         <div class="pay-and-feed__card">
                                 <img src="../../assets/icons/pay-and-feed__visa.svg" alt="visa logo" class="pay-and-feed__card-pic">
-                                <p class="pay-and-feed__card-title">You pay with a 
+                                <p class="pay-and-feed__card-title light">You pay with a 
                                     VISA card</p>
                         </div>
                         <div class="pay-and-feed__arrow">
@@ -437,7 +735,7 @@
                         </div>
                         <div class="pay-and-feed__card">
                             <img src="../../assets/icons/pay-and-feed__zoo.svg" alt="zoo logo" class="pay-and-feed__card-pic">
-                            <p class="pay-and-feed__card-title">Payment goes 
+                            <p class="pay-and-feed__card-title light">Payment goes 
                                 to the Zoo</p>
                         </div>
                         <div class="pay-and-feed__arrow">
@@ -445,7 +743,7 @@
                         </div>
                         <div class="pay-and-feed__card">
                             <img src="../../assets/icons/pay-and-feed__panda.svg" alt="panda logo" class="pay-and-feed__card-pic">
-                            <p class="pay-and-feed__card-title">Panda gets 
+                            <p class="pay-and-feed__card-title light">Panda gets 
                                 the bamboo</p>
                         </div>
                     </div>
@@ -458,41 +756,41 @@
                     </div>
                 </div>
             </section>
-            <section class="testimonials">
+            <section class="testimonials light">
                 <div class="testimonials_wrapper">
-                    <h3 class="section__title">Testimonials</h3>
+                    <h3 class="section__title light">Testimonials</h3>
                     <div class="testimonials__cards-and-button-wrapper">
                         <div class="testimonials__galary">
                             <div class="left__slider">
                                 <button class="testimonials__slider">
-                                    <img class="testimonials__slider-left" src="../../assets/icons/testimonials__slider.svg" alt="slider left">
+                                    <img class="testimonials__slider-left sliders__comment light" src="../../assets/icons/testimonials__slider.svg" alt="slider left">
                                 </button>
                             </div>
                             <div class="testimonials__cards">
-                                <div class="testimonials__card testimonials__card-hidden">
+                                <div class="testimonials__card testimonials__card-hidden light">
                                     <div class="testimonials__card-wrapper">
                                         <div class="testimonials__avatar">
                                             <img src="../../assets/icons/testimonials__user-avatar.svg" alt="" class="testimonials__avatar-pic">
                                         </div>
-                                        <p class="testimonials__card-title">
+                                        <p class="testimonials__card-title light">
                                             Nastya Sidorova
                                         </p>
-                                        <p class="testimonials__card-subtitle">
+                                        <p class="testimonials__card-subtitle light">
                                             As a voice for wildlife, we are devastated
                                             by the impact of the 2020 Australian bushfires
                                             on precious species and their habitat.
                                         </p>
                                     </div>
                                 </div>
-                                <div class="testimonials__card testimonials__card-hidden-mobile">
+                                <div class="testimonials__card testimonials__card-hidden-mobile light">
                                     <div class="testimonials__card-wrapper">
                                         <div class="testimonials__avatar">
                                             <img src="../../assets/icons/testimonials__user-photo.svg" alt="" class="testimonials__avatar-pic">
                                         </div>
-                                        <p class="testimonials__card-title">
+                                        <p class="testimonials__card-title light">
                                             Vlad Kim
                                         </p>
-                                        <p class="testimonials__card-subtitle">
+                                        <p class="testimonials__card-subtitle light">
                                             As a voice for wildlife, we are devastated by
                                             the impact of the 2020 Australian bushfires on
                                             precious species and their habitat.
@@ -502,13 +800,13 @@
                             </div>
                             <div class="right__slider">
                                 <button class="testimonials__slider">
-                                    <img class="testimonials__slider-right" src="../../assets/icons/testimonials__slider.svg" alt="slider right">
+                                    <img class="testimonials__slider-right sliders__comment light " src="../../assets/icons/testimonials__slider.svg" alt="slider right">
                                 </button>
                             </div>
                         </div>
                         <div class="testimonials__range-scroll">
-                            <p class="range-scroll__count">01/<span class="range-scroll__count-all">08</span></p>
-                            <input class="range-scroll" type="range" min="1" max="8" step="1" value="1">
+                            <p class="range-scroll__count light">01/<span class="range-scroll__count-all">08</span></p>
+                            <input class="range-scroll light" type="range" min="1" max="8" step="1" value="1">
                         </div>
                         <div class="testimonials__button">
                             <form action="../main/index.html">
@@ -520,31 +818,31 @@
                     </div>
                 </div>
             </section>
-            <section class="map">
+            <section class="map  light">
                 <div class="map__wrapper">
-                    <h3 class="section__title map__title">Map</h3>
-                    <div class="world-map">
+                    <h3 class="section__title map__title light">Map</h3>
+                    <div class="world-map light">
                         <figure>
                             <!-- <img class="world-map__pic" src="../../assets/icons/map__world-map.svg" alt="map of the world"> -->
-                            <figcaption>
+                            <figcaption class="map__animals-placeholders light">
                                 <div class="map__placeholder placeholder__eagle">
                                     <div class="map__placeholder-pic-eagle"></div>
                                 </div>
-                                <div class="placeholder__nav nav__eagle">
+                                <div class="placeholder__nav nav__eagle light">
                                     <div class="placeholder__nav-wrapper">
                                         <div class="placeholder__nav-pic-eagle"></div>
                                         <div class="placeholder__nav-info">
-                                            <p class="placeholder__nav-info__title">
+                                            <p class="placeholder__nav-info__title light">
                                                 West End Bald Eagle
                                             </p>
-                                            <p class="placeholder__nav-info__subtitle">
-                                                <span class="placeholder__nav-info__subtitle-name">
+                                            <p class="placeholder__nav-info__subtitle light">
+                                                <span class="placeholder__nav-info__subtitle-name light">
                                                     Region:
                                                 </span>
                                                 on an island near Los Angeles
                                             </p>
-                                            <p class="placeholder__nav-info__subtitle">
-                                                <span class="placeholder__nav-info__subtitle-name">
+                                            <p class="placeholder__nav-info__subtitle light">
+                                                <span class="placeholder__nav-info__subtitle-name light">
                                                     Population:
                                                 </span>
                                                 more than 270 pairs in 2013
@@ -555,21 +853,21 @@
                                 <div class="map__placeholder placeholder__crocodile">
                                     <div class="map__placeholder-pic-crocodile"></div>
                                 </div>
-                                <div class="placeholder__nav nav__crocodile">
+                                <div class="placeholder__nav nav__crocodile light">
                                     <div class="placeholder__nav-wrapper">
                                         <div class="placeholder__nav-pic-crocodile"></div>
                                         <div class="placeholder__nav-info">
-                                            <p class="placeholder__nav-info__title">
+                                            <p class="placeholder__nav-info__title light">
                                                 Lorem ipsum dolor sit.
                                             </p>
-                                            <p class="placeholder__nav-info__subtitle">
-                                                <span class="placeholder__nav-info__subtitle-name">
+                                            <p class="placeholder__nav-info__subtitle light">
+                                                <span class="placeholder__nav-info__subtitle-name light">
                                                     Region:
                                                 </span>
                                                 Lorem ipsum dolor sit amet.
                                             </p>
-                                            <p class="placeholder__nav-info__subtitle">
-                                                <span class="placeholder__nav-info__subtitle-name">
+                                            <p class="placeholder__nav-info__subtitle light">
+                                                <span class="placeholder__nav-info__subtitle-name light">
                                                     Population:
                                                 </span>
                                                 Lorem ipsum dolor sit amet.
@@ -580,21 +878,21 @@
                                 <div class="map__placeholder placeholder__gorilla">
                                     <div class="map__placeholder-pic-gorilla"></div>
                                 </div>
-                                <div class="placeholder__nav nav__gorilla">
+                                <div class="placeholder__nav nav__gorilla light">
                                     <div class="placeholder__nav-wrapper">
                                         <div class="placeholder__nav-pic-gorilla"></div>
                                         <div class="placeholder__nav-info">
-                                            <p class="placeholder__nav-info__title">
+                                            <p class="placeholder__nav-info__title light">
                                                 Lorem ipsum dolor sit.
                                             </p>
-                                            <p class="placeholder__nav-info__subtitle">
-                                                <span class="placeholder__nav-info__subtitle-name">
+                                            <p class="placeholder__nav-info__subtitle light">
+                                                <span class="placeholder__nav-info__subtitle-name light">
                                                     Region:
                                                 </span>
                                                 Lorem ipsum dolor sit amet.
                                             </p>
-                                            <p class="placeholder__nav-info__subtitle">
-                                                <span class="placeholder__nav-info__subtitle-name">
+                                            <p class="placeholder__nav-info__subtitle light">
+                                                <span class="placeholder__nav-info__subtitle-name light">
                                                     Population:
                                                 </span>
                                                 Lorem ipsum dolor sit amet.
@@ -605,21 +903,21 @@
                                 <div class="map__placeholder placeholder__panda">
                                     <div class="map__placeholder-pic-panda"></div>
                                 </div>
-                                <div class="placeholder__nav nav__panda">
+                                <div class="placeholder__nav nav__panda  light">
                                     <div class="placeholder__nav-wrapper">
                                         <div class="placeholder__nav-pic-panda"></div>
                                         <div class="placeholder__nav-info">
-                                            <p class="placeholder__nav-info__title">
+                                            <p class="placeholder__nav-info__title light">
                                                 Lorem ipsum dolor sit.
                                             </p>
-                                            <p class="placeholder__nav-info__subtitle">
-                                                <span class="placeholder__nav-info__subtitle-name">
+                                            <p class="placeholder__nav-info__subtitle light">
+                                                <span class="placeholder__nav-info__subtitle-name light">
                                                     Region:
                                                 </span>
                                                 Lorem ipsum dolor sit amet.
                                             </p>
-                                            <p class="placeholder__nav-info__subtitle">
-                                                <span class="placeholder__nav-info__subtitle-name">
+                                            <p class="placeholder__nav-info__subtitle light">
+                                                <span class="placeholder__nav-info__subtitle-name light">
                                                     Population:
                                                 </span>
                                                 Lorem ipsum dolor sit amet.
@@ -750,5 +1048,6 @@
             </div>
         </footer>
     </div>
+    <script src="script.js"></script>
 </body>
 </html>

@@ -10,37 +10,37 @@
 <body class="page">
     <h1 class="hiden__title">Online Zoo</h1>
     <div class="wrapper">
-        <header class="header">
+        <header class="header light">
             <div class="header__wrapper">
                 <div class="logo">
                     <a href="../main/index.html" class="logo__link">
-                        <p class="logo__title">zoo</p>
-                        <p class="logo__subtitle">online</p>
+                        <p class="logo__title light">zoo</p>
+                        <p class="logo__subtitle light">online</p>
                     </a>
                 </div>
                 <nav class="header__nav">
                     <ul class="nav__list">
                         <li class="nav__item">
-                            <a href="../main/index.html" class="nav__link">About</a>
+                            <a href="../main/index.html" class="nav__link light">About</a>
                         </li>
                         <li class="nav__item">
-                            <a href="../zoos/panda.html" class="nav__link">Zoos</a>
+                            <a href="../zoos/panda.html" class="nav__link light">Zoos</a>
                         </li>
                         <li class="nav__item">
-                            <a href="#" class="nav__link  active__link">Map</a>
+                            <a href="#" class="nav__link  active__link light">Map</a>
                         </li>
                         <li class="nav__item">
-                            <a href="#footer" class="nav__link">Contact Us</a>
+                            <a href="#footer" class="nav__link light">Contact Us</a>
                         </li>
                         <li class="nav__item">
-                            <a href="https://www.figma.com/file/HKt5Nlx0jghQtJp6jW9q8F/zooApp" class="nav__link">Design</a>
+                            <a href="https://www.figma.com/file/HKt5Nlx0jghQtJp6jW9q8F/zooApp" class="nav__link light">Design</a>
                         </li>
                     </ul>
                 </nav>
                 <div class="header__right">
                     <div class="header__switch">
                         <label class="switch">
-                            <input type="checkbox">
+                            <input type="checkbox" id="theme">
                             <span class="slider round"></span>
                           </label>
                     </div>
@@ -52,11 +52,11 @@
                 </div>
             </div>
         </header>
-        <main class="main">
+        <main class="main light">
             <div class="main__wrapper">
                 <div class="main__top">
-                    <h3 class="section__title">Choose your favorite</h3>
-                    <p class="section__subtitle">
+                    <h3 class="section__title light">Choose your favorite</h3>
+                    <p class="section__subtitle light">
                         As a voice for wildlife, we are devastated by the impact
                         of the 2020 Australian bushfires on precious species and
                         their habitat, and we are determined to assist in all aspects,
@@ -111,14 +111,14 @@
                             </div>
                         </div>
                         <div class="pets-galary__range-scroll">
-                            <p class="range-scroll__count">02/<span class="range-scroll__count-all">08</span></p>
-                            <input class="range-scroll" type="range" min="1" max="8" step="1" value="2">
+                            <p class="range-scroll__count light">02/<span class="range-scroll__count-all">08</span></p>
+                            <input class="range-scroll light" type="range" min="1" max="8" step="1" value="2">
                         </div>
                     </div>
                 </div>
-                <div class="world-map">
+                <div class="world-map light">
                     <figure>
-                        <figcaption>
+                        <figcaption class="map__animals-placeholder light">
                             <div class="map__placeholder placeholder__eagle" title="Eagle">
                                 <div class="map__placeholder-pic-eagle"></div>
                             </div>
@@ -253,5 +253,6 @@
             </div>
         </footer>
     </div>
+    <script src="map.js"></script>
 </body>
 </html>

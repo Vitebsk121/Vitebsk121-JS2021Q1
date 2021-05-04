@@ -182,7 +182,7 @@
     height: 20px;
     width: 20px;
     left: 6px;
-    bottom: 5px;
+    bottom: 6px;
     background-color: #FFFFFF;
     -webkit-transition: .4s;
     transition: .4s;
@@ -2096,3 +2096,31 @@ input:checked + .slider:before {
 }
 
 /* media end */
+
+/* DARK THEME START  */
+
+.header.dark {
+    background-color: #333333;
+}
+
+.logo__title.dark,
+.logo__subtitle.dark,
+.nav__link.dark,
+.section__title.dark,
+.range-scroll__count.dark,
+.section__subtitle.dark,
+.info__item-subtitle.dark,
+.info__item-title.dark {
+    color: #FEFEFE;
+}
+
+.active__link.dark::after {
+    background-color: #FEFEFE;
+}
+
+.main.dark {
+    background-color: #4f4f4f;
+}
+
+
+/* DARK THEME END  */
