@@ -325,15 +325,56 @@ input:checked + .slider:before {
 }
 
 .animals__cards {
-    margin-left: 135px;
+    margin-left: 170px;
     display: flex;
     align-items: center;
-    grid-gap: 46px;
+    width: 1035px;
 }
 
 .animal__card {
+    width: 140px;
+    height: 203px;
     position: relative;
     filter: drop-shadow(5px 4px 50px rgba(152, 157, 198, 0.25));
+    margin-right: 46px;
+    transition: all 0.7s;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hidden-left {
+    transform: translateX(-170px);
+    width: 0;
+    height: 0;
+    opacity: 0;
+    margin: 0;
+}
+
+.hidden-right {
+    transform: translateX(170px);
+    width: 0;
+    height: 0;
+    opacity: 0;
+    margin: 0;
+}
+
+.white-circle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 11px;
+    height: 11px;
+    border: solid 1px #FEFEFE;
+    border-radius: 50%;
+}
+
+.white-dot {
+    width: 5px;
+    height: 5px;
+    background-color: #FEFEFE;
+    border-radius: 50%;
 }
 
 .animal__card-pic {
@@ -471,6 +512,11 @@ input:checked + .slider:before {
     position: relative;
 }
 
+.card__active:hover {
+    cursor: default;
+    transform: scale(1);
+}
+
 .card__active .animal__card-nav {
     visibility: visible;
 }
@@ -485,6 +531,15 @@ input:checked + .slider:before {
     bottom: 0;
     left: 0;
     z-index: 2;
+}
+
+.card__none:hover {
+    cursor: default;
+    transform: scale(1);
+}
+
+.card__none::after {
+    display: none;
 }
 
 input[class="galary__range"] {
