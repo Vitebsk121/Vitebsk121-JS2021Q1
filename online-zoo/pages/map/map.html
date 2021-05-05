@@ -111,8 +111,10 @@
                             </div>
                         </div>
                         <div class="pets-galary__range-scroll">
-                            <p class="range-scroll__count light">02/<span class="range-scroll__count-all">08</span></p>
-                            <input class="range-scroll light" type="range" min="1" max="8" step="1" value="2">
+                            <p class="range-scroll__count light">
+                                <output class="output" id="map__output">02</output>/<span class="range-scroll__count-all">08</span>
+                            </p>
+                            <input class="range-scroll light input" id="map__input" type="range" min="1" max="8" step="1" value="2">
                         </div>
                     </div>
                 </div>
@@ -135,7 +137,7 @@
                     </figure>
                 </div>
                 <div class="map__button">
-                    <form action="../zoos/panda.html">
+                    <form id="watch__online" action="../zoos/panda.html" onclick="">
                         <button class="watch-online__button">
                             <img class="watch-online__button-pic" src="../../assets/icons/play__watch-online-btn.svg" alt="play">
                             watch online

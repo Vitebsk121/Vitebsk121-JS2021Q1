@@ -58,8 +58,6 @@ function scrollAnimalsCards(p) {
     animalsCards.forEach((item) => item.classList.remove('card__active'));
     animalsCards[i].classList.add('card__active');
     const arrOfActive = [animalsCards[i - 1], animalsCards[i], animalsCards[i + 1], animalsCards[i + 2], animalsCards[i + 3]];
-    console.log(typeof i);
-    console.log(arrOfActive);
     animalsCards.forEach((item) => {
         item.classList.remove('hidden-left', 'hidden-right');
         if (Array.from(animalsCards).indexOf(item) < Array.from(animalsCards).indexOf(arrOfActive[0])) {
@@ -79,7 +77,6 @@ let count = true;
 let countPetsBlog = 1;
 
 function swapPetsBlogs(i) {
-    console.log(i);
     if (i === 1) {
         countPetsBlog += 1;
         if (countPetsBlog > 8) {
@@ -134,7 +131,7 @@ function swapPetsBlogs(i) {
         outputs.forEach((output) => output.name === "pets" ? output.value = '0' + countPetsBlog :  output.value);
         inputs.forEach((input) => input.name === "pets" ? input.value = countPetsBlog : input.value);
     }
-}
+};
 
 function slidersSwapBlog() {
     const i = Array.from(petsSliders).indexOf(this);
@@ -145,7 +142,7 @@ function slidersSwapBlog() {
             count = true;
         }, 300);
     }
-}
+};
 
 function petsInputSwapBlog(param) {
     let repeat = Number(param) - Number(countPetsBlog);
@@ -155,21 +152,19 @@ function petsInputSwapBlog(param) {
         }
     }
     if (repeat < 0) {
-        console.log(repeat);
         let p = Math.abs(repeat);
-        console.log(p);
         for (let i = 0; i < p; i++) {
             swapPetsBlogs(0);
         }
     }
-}
+};
 
 function inputUpdate() {
     outputs.forEach((output) => output.name === this.name ? output.value = '0' + this.value : output.value);
     if (this.name === "pets") {
         petsInputSwapBlog(this.value);
     }
-}
+};
 
 chbox.addEventListener('click', swapTheme);
 animalsCards.forEach((item) => item.addEventListener('click', getIndexOfCards));
