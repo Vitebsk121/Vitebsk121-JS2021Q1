@@ -224,12 +224,20 @@ function tranclateIndexOfPlaceholder(i) {
 };
 
 function defaultView() {
-    console.log('tratata');
     mapPetCards.forEach((item) => {
         item.classList.remove('pet__card-hidden');
     });
     mapPetCards[6].classList.add('pet__card-hidden');
     mapPetCards[7].classList.add('pet__card-hidden');
+};
+
+function defaultViewNew() {
+    mapPetCards.forEach((item) => {
+        item.classList.remove('pet__card-hidden');
+    });
+    mapPetCards[0].classList.add('pet__card-hidden');
+    mapPetCards[7].classList.add('pet__card-hidden');
+    countOfVisibleCard = 0;
 };
 
 function changeActivePlaceholder() {
@@ -241,7 +249,9 @@ function changeActivePlaceholder() {
     const b = Array.from(mapPetCards).indexOf(a);
     if (b === 7 && i === 2) {
         defaultView();
-        console.log(a);
+    };
+    if (b === 7 && i === 3) {
+        defaultViewNew();
     };
     mapPlaceholders.forEach((item) => {
         item.classList.remove('placeholder__active');
