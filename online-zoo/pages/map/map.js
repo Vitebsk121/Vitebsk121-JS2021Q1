@@ -223,14 +223,32 @@ function tranclateIndexOfPlaceholder(i) {
     };
 };
 
+function defaultView() {
+    console.log('tratata');
+    mapPetCards.forEach((item) => {
+        item.classList.remove('pet__card-hidden');
+    });
+    mapPetCards[6].classList.add('pet__card-hidden');
+    mapPetCards[7].classList.add('pet__card-hidden');
+};
+
 function changeActivePlaceholder() {
     const i = Array.from(mapPlaceholders).indexOf(this);
+    let a = 0;
+    mapPetCards.forEach((item) => {
+        item.classList.contains('pet__card__active') ? a = item : item;
+    });
+    const b = Array.from(mapPetCards).indexOf(a);
+    if (b === 7 && i === 2) {
+        defaultView();
+        console.log(a);
+    };
     mapPlaceholders.forEach((item) => {
         item.classList.remove('placeholder__active');
     });
     mapPlaceholders[i].classList.add('placeholder__active');
     tranclateIndexOfPlaceholder(i);
-}
+};
 
 chbox.addEventListener('click', swapTheme);
 mapPetCards.forEach((item) => item.addEventListener('click', getIndexOfPetCards));
