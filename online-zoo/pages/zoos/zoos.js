@@ -41,16 +41,6 @@ function swapVideo() {
     const mainVideo = videos[0].src
     videos[0].src = videos[i + 1].src;
     videos[i + 1].src = mainVideo;
-    // if (i === 0) {
-    //     videos[0].src = videos[1].src;
-    //     videos[1].src = mainVideo;
-    // } else if (i === 1) {
-    //     videos[0].src = videos[2].src;
-    //     videos[2].src = mainVideo;
-    // } else if (i === 2) {
-    //     videos[0].src = videos[3].src;
-    //     videos[3].src = mainVideo;
-    // }
 }
 
 chbox.addEventListener('click', swapTheme);
