@@ -443,11 +443,22 @@ input:checked + .slider:before {
 
 .main__videos-playlist {
     display: flex;
-    grid-gap: 26px;
 }
 
 .playlist__video {
+    margin-right: 26px;
     position: relative;
+}
+
+.playlist__video:nth-child(3) {
+    margin: 0;
+}
+
+.video__hidden {
+    width: 0;
+    height: 0;
+    opacity: 0;
+    margin: 0;
 }
 
 .playlist__video::after {
@@ -874,6 +885,11 @@ input:checked + .slider:before {
     height: 141px;
 }
 
+.video__hidden {
+    width: 0;
+    height: 0;
+}
+
 /* footer end */
 
 /* media start */
@@ -933,13 +949,13 @@ input:checked + .slider:before {
     .playlist__video {
         width: 164px;
         height: 94px;
+        margin-right: 18px;
+        position: relative;
     }
-
-    .main__videos-playlist {
-        grid-gap: 18px;
+    
+    .playlist__video:nth-child(3) {
+        margin: 0;
     }
-
-
 
 
     .favorite {
@@ -1102,6 +1118,12 @@ input:checked + .slider:before {
         z-index: 5;
     }
     
+    .video__hidden {
+        width: 0;
+        height: 0;
+        margin: 0;
+        opacity: 0;
+    }
 }
 
 @media screen and (max-width: 1200px) {
@@ -1315,10 +1337,6 @@ input:checked + .slider:before {
         overflow: hidden;
     }
 
-    .main__videos-playlist {
-        grid-gap: 16px;
-    }
-
     .main__videos {
         grid-gap: 15px;
     }
@@ -1523,6 +1541,17 @@ input:checked + .slider:before {
     .pet__card__active {
         width: 91px;
         height: 91px;
+    }
+
+    .playlist__video {
+        margin-right: 16px;
+    }
+
+    .video__hidden {
+        width: 0;
+        height: 0;
+        margin: 0;
+        opacity: 0;
     }
 }
 
