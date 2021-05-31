@@ -1,0 +1,96 @@
+.card-container {
+    margin: 1%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    perspective: 25rem;
+    cursor: pointer;
+
+    &.flipped:hover > .card {
+        box-shadow: 0 5px 10px rgba(0,0,0,0.5);
+    }
+
+    &.flipped > .card {
+        transform: rotateY(180deg) translateX(-100%);
+        transform-origin: left;
+    }
+}
+
+.card {
+    position: relative;
+    width: 7rem;
+    height: 9rem;
+    transform-style: preserve-3d;
+    transform-origin: right;
+    transition: all .5s;
+    box-shadow: 0 1px 5px black;
+    border-radius: 5px;
+
+    &__front,
+    &__back {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        backface-visibility: hidden;
+        border-radius: inherit;
+        background-position: center;
+        background-size: cover;
+    }
+
+    &__front {
+        background-color: crimson;
+    }
+
+    &__back {
+        background-color: gold;
+        background-image: url('../../assets/card-back.png');
+        transform: rotateY(180deg);
+    }
+}
+
+.card-one {
+    width: 7rem;
+    height: 9rem;
+}
+
+.card-two {
+    width: 4.5rem;
+    height: 5.7rem;
+}
+
+.card-three {
+    width: 3.5rem;
+    height: 4rem;
+}
+
+.card-non-success {
+    position: relative;
+}
+.card-non-success::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    border-radius: 5px;
+    background-color: rgba(255, 0, 0, 0.5);
+}
+
+.card-success {
+    position: relative;
+}
+.card-success::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    border-radius: 5px;
+    background-color: rgba(13, 255, 0, 0.5);
+}

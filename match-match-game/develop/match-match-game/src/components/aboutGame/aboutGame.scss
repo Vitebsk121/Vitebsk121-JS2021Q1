@@ -1,0 +1,109 @@
+.about-game{
+    margin: 10px;
+}
+
+.section-title {
+    margin-bottom: 10px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 30px;
+    letter-spacing: 0.15px;
+    color: rgba(0, 0, 0, 0.87);
+}
+
+.manual {
+    display: flex;
+}
+
+.manual__image-list {
+    margin-left: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.manual__item {
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: space-around;
+    background-color: white;
+}
+
+.item-one {
+    height: 218px;
+}
+.item-two {
+    height: 73px;
+}
+.item-three {
+    height: 240px;
+}
+
+.manual__item:last-child {
+    margin-bottom: 0;
+}
+
+.manual__item-number {
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    overflow: hidden;
+    background-color: #2196F3;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 21px;
+    letter-spacing: 0.25px;
+}
+
+.manual__item-title {
+    margin-top: 10px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0.25px;
+    color: rgba(0, 0, 0, 0.6);
+    width: 70%;
+}
+
+.manual__image-item {
+    margin-bottom: 15px;
+}
+
+.manual__image-item:last-child {
+    margin-bottom: 0;
+}
+
+.manual-reg {
+    width: 302px;
+    height: 218px;
+    background-image: url(../../assets/manual-reg.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.manual-settings {
+    width: 116px;
+    height: 73px;
+    background-image: url(../../assets/manual-settings.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.manual-game {
+    width: 330px;
+    height: 240px;
+    background-image: url(../../assets/manual-game.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
