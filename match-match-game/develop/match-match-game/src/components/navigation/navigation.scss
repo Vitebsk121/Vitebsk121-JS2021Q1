@@ -1,0 +1,56 @@
+.nav__list {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-left: 152px;
+
+    li {
+        height: 50px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        transition: all .5s;
+        background-color: #2196F3;
+        padding: 0 10px;
+
+        p {
+            font-size: 12px;
+            line-height: 15px;
+            text-align: center;
+            letter-spacing: 0.4px;
+        }
+    }
+    
+    li:hover {
+        background-color: #0376d5;
+    }
+}
+
+.nav_element-icon {
+    width: 20px;
+    height: 20px;
+    background-color: white;
+    border-radius: 50%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 80%;
+}
+
+.icon__about {
+    background-image: url(../../assets/about-game-icon.png);
+}
+
+.icon__best {
+    background-image: url(../../assets/best-score-icon.png);
+}
+
+.icon__settings {
+    background-image: url(../../assets/settings-icon.png);
+}
+
+.nav__list-item.active {
+    background-color: #0376d5;
+}

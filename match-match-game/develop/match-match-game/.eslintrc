@@ -1,0 +1,36 @@
+{
+  "env": {
+    "browser": true,
+    "es2021": true
+  },
+  "extends": [
+    "airbnb-typescript/base"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "project": "/Users/aleksandrdemcenko/Desktop/VSCode/vitebsk121-JSFE2021Q1/match-match-game/tsconfig.json"
+  },
+  "plugins": [
+    "@typescript-eslint",
+    "prettier"
+  ],
+  "rules": {
+    "no-param-reassign": "off",
+    "import/no-mutable-exports": "off",
+    "no-new": "off",
+    "import/no-cycle": "off",
+    "no-plusplus": "off",
+    "no-console": "warn",
+    "max-len": ["warn", { "code": 120 }],
+    "indent": ["warn", 2, {
+      "SwitchCase": 1
+    }],
+    "@typescript-eslint/indent": ["warn", 2, {
+      "SwitchCase": 1
+    }],
+    "import/prefer-default-export": "off"
+    // "no-param-reassign": ["error", {
+    //   "props": false
+    // }]
+  }
+}
