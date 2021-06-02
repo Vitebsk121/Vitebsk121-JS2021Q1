@@ -72,7 +72,7 @@ function ValidStyle() {
   if (!firstNameInput) throw Error('firstNameInput not founded');
   if (!inputsWrapper) throw Error('inputsWrapper not founded');
   firstNameInput.addEventListener('input', () => {
-    const reg: RegExp = /^[-a-zA-Zа-яА-Я0-9\s+]+$/;
+    const reg: RegExp = /^[a-zA-Zа-яА-Я0-9\s]{0,30}[a-zA-Zа-яА-Я]+[\s0-9]*$/;
     if (reg.test(firstNameInput.value)) {
       if (Number(firstNameInput.value)) {
         inputsWrapper[0].classList.remove('input__wrapper-valid');
@@ -94,7 +94,7 @@ function ValidStyle() {
     }
   });
   lastNameInput.addEventListener('input', () => {
-    const reg: RegExp = /^[-a-zA-Zа-яА-Я0-9\s+]+$/;
+    const reg: RegExp = /^[a-zA-Zа-яА-Я0-9\s]{0,30}[a-zA-Zа-яА-Я]+[\s0-9]*$/;
     if (reg.test(lastNameInput.value)) {
       if (Number(lastNameInput.value)) {
         inputsWrapper[1].classList.remove('input__wrapper-valid');
@@ -116,7 +116,7 @@ function ValidStyle() {
     }
   });
   emailInput.addEventListener('input', () => {
-    const reg: RegExp = /^([a-zA-Z0-9!#$%&'*+-/=?^_`{|}~]+\.)*[a-zA-Z0-9!#$%&'*+-/=?^_`{|}~]+@[a-zA-Z0-9_-]+(\.[a-zA-Z0-9_-]+)*\.[a-zA-Z]{2,6}$/;
+    const reg: RegExp = /[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/g;
     if (reg.test(emailInput.value)) {
       inputsWrapper[2].classList.add('input__wrapper-valid');
       if (inputsWrapper[0].classList.contains('input__wrapper-valid')
