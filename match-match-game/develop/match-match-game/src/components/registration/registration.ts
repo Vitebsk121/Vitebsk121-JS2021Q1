@@ -33,7 +33,7 @@ export class Registration extends BaseComponent {
     this.inputWrapper = new BaseComponent('div', ['input__wrapper']);
     this.form.element.append(this.inputWrapper.element);
     this.input = new Input('user-first-name', ['form__input', 'first-name'], 'text', 'First Name');
-    this.input.element.setAttribute('pattern', '[A-Za-zА-Яа-яЁё0-9 ]{1,30}');
+    this.input.element.setAttribute('pattern', '^[a-zA-Zа-яА-Я0-9 ]{0,30}[a-zA-Zа-яА-Я]+[ 0-9]*$');
     this.input.element.setAttribute('maxlength', '30');
     this.input.element.setAttribute(
       'title',
@@ -43,7 +43,7 @@ export class Registration extends BaseComponent {
     this.inputWrapper = new BaseComponent('div', ['input__wrapper']);
     this.form.element.append(this.inputWrapper.element);
     this.input = new Input('user-last-name', ['form__input', 'last-name'], 'text', 'Last Name');
-    this.input.element.setAttribute('pattern', '[A-Za-zА-Яа-яЁё0-9 ]{1,30}');
+    this.input.element.setAttribute('pattern', '^^[a-zA-Zа-яА-Я0-9 ]{0,30}[a-zA-Zа-яА-Я]+[ 0-9]*$');
     this.input.element.setAttribute('maxlength', '30');
     this.input.element.setAttribute(
       'title',
