@@ -8,8 +8,7 @@
   ],
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
-    // "project": "/Users/aleksandrdemcenko/Desktop/VSCode/vitebsk121-JSFE2021Q1/match-match-game/tsconfig.json"
-    "project": "/Users/aleksandrdemcenko/Desktop/VSCode/vitebsk121-JSFE2021Q1/match-match-game/develop/match-match-game/tsconfig.json"
+    "project": "./tsconfig.json"
   },
   "plugins": [
     "@typescript-eslint",
@@ -30,8 +29,5 @@
       "SwitchCase": 1
     }],
     "import/prefer-default-export": "off"
-    // "no-param-reassign": ["error", {
-    //   "props": false
-    // }]
   }
 }
