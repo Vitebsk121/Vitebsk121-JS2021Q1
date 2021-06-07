@@ -11,7 +11,7 @@ export class GarageMessage extends BaseComponent {
   }
 
   show(): void {
-    this.message.element.style.display = 'block';
+    this.message.element.style.display = 'flex';
   }
 
   hide(): void {

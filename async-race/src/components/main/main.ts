@@ -1,4 +1,5 @@
 import { BaseComponent } from '../base-component';
+import { Garage } from '../garage/garage';
 import { GarageMenu } from '../garageMenu/garageMenu';
 import { GarageMessage } from '../garageMessage/garageMessage';
 import './main.scss';
@@ -13,8 +14,11 @@ export class Main extends BaseComponent {
       mainWrapper.element.append(garageMenuAndMessageWrapper.element);
       const garageMenu = new GarageMenu();
       garageMenuAndMessageWrapper.element.append(garageMenu.element);
-      const garageMessage = new GarageMessage();
+      const garageMessage = new GarageMessage('Garage message');
       garageMenuAndMessageWrapper.element.append(garageMessage.element);
+      
+      const garage = new Garage();
+      mainWrapper.element.append(garage.element);
     }
   }
 }
