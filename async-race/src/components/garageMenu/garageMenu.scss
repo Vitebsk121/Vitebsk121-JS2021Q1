@@ -1,0 +1,59 @@
+.garage__menu {
+    > form {
+        margin-bottom: 10px;
+    }
+}
+
+.garage__top-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.garage__menu-input {
+    padding: 10px 5px;
+    margin-right: 10px;
+    border-radius: 5px;
+    border-color: sandybrown;
+
+    &:focus {
+        border-color: rgb(29, 101, 255);
+        box-shadow: 0px 5px 10px 5px rgba(15, 175, 232, 0.5);
+    }
+}
+
+.new-car-color__input,
+.selected-car-color__input {
+    height: 40px;
+    padding: 0;
+    cursor: pointer;
+}
+
+.garage__menu-button {
+    padding: 8px 12px;
+    background: linear-gradient(90deg, #f8ff00 0%, #3ad59f 100%);
+
+    &:hover {
+        box-shadow: 0px 0px 20px 5px rgba(226, 235, 44, 0.6);
+    }
+
+}
+
+.new-car__form,
+.selected-car__form {
+    display: flex;
+    align-items: center;
+}
+
+.garage__menu-button {
+    font-size: 13px;
+}
+
+.disabled {
+    background: slategray;
+    
+
+    &:hover {
+        transform: none;
+        box-shadow: none;
+    }
+}

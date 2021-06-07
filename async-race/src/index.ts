@@ -7,7 +7,7 @@ export class Page {
   constructor(body: HTMLElement) {
     const header = new Header();
     body.append(header.element);
-    const main = new Main();
+    const main = new Main('garage');
     body.append(main.element);
   }
 }
