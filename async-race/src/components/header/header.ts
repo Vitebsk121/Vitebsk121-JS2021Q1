@@ -1,4 +1,4 @@
-import { renderMain } from '../../shared/service';
+import { renderMain } from '../../shared/rendering';
 import { BaseComponent } from '../base-component';
 import { Button } from '../buttons/button';
 import './header.scss';
