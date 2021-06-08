@@ -53,12 +53,8 @@ export function getPlayersList(users: object[]) {
   validUserList = [];
   const ValidPlayersList: object[] = [];
   users.forEach((item) => {
-    if (Object(item).score > 0) {
-      ValidPlayersList.push(item);
-    }
+    ValidPlayersList.push(item);
   });
-  console.log(ValidPlayersList);
   ValidPlayersList.sort(sortPlayers);
   validUserList = ValidPlayersList;
-  console.log(ValidPlayersList);
 }
