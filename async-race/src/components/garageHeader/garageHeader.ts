@@ -9,10 +9,10 @@ export class GarageHeader extends BaseComponent {
     const garageInfo = new BaseComponent('div', ['garage__info']);
     this.element.append(garageInfo.element);
 
-    const countOfCar = new BaseComponent('p', ['info__cars-count'], 'Cars in garage ()');
+    const countOfCar = new BaseComponent('p', ['info__cars-count'], 'Cars in garage (1)');
     garageInfo.element.append(countOfCar.element);
 
-    const pageNumber = new BaseComponent('p', ['info__page-number'], 'Page ()');
+    const pageNumber = new BaseComponent('p', ['info__page-number'], 'Page #1');
     garageInfo.element.append(pageNumber.element);
 
     const startButton = new Button('race', ['garage__button']);
