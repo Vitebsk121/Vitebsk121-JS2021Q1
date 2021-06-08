@@ -2,6 +2,7 @@ import { BaseComponent } from '../base-component';
 import { Garage } from '../garage/garage';
 import { GarageMenu } from '../garageMenu/garageMenu';
 import { GarageMessage } from '../garageMessage/garageMessage';
+import { WinnersTop } from '../winnersTiop/winnersTop';
 import './main.scss';
 
 export class Main extends BaseComponent {
@@ -20,7 +21,10 @@ export class Main extends BaseComponent {
       mainWrapper.element.append(garage.element);
     }
     if (view === 'winners') {
-
+      const winnersTitle = new WinnersTop();
+      mainWrapper.element.append(winnersTitle.element);
+      // const winners;
+      // const winnersFooter;
     }
   }
 }
