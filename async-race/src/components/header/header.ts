@@ -11,5 +11,14 @@ export class Header extends BaseComponent {
     const winnersButton = new Button('Winners', ['header__button']);
     nav.element.append(garageButton.element);
     nav.element.append(winnersButton.element);
+    this.listenersAdd();
+  }
+
+  listenersAdd() {
+    const headerButtons = document.querySelectorAll('.header__button');
+    console.log(headerButtons);
+    headerButtons.forEach((button) => button.addEventListener('click', () => {
+      console.log(button);
+    }))
   }
 }
