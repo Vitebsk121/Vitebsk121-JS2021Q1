@@ -3,7 +3,7 @@ import { Main } from './components/main/main';
 import {
   getGameSettings, pauseGame, setDifficulty, setTypeOfCards, stopGame, unPauseGame, wonGame,
 } from './gameService';
-import { connectDB, getFile } from './indexedDB';
+import { connectDB } from './indexedDB';
 import { preSaveUser, user } from './shared/users';
 
 let delay = false;
@@ -182,10 +182,7 @@ export function service() {
       render('aboutGame');
     }
     if (Array.from(navButtons).indexOf(button) === 1) {
-      getFile();
-      setTimeout(() => {
-        render('bestScore');
-      }, 500);
+      render('bestScore');
     }
     if (Array.from(navButtons).indexOf(button) === 2) {
       render('game-settings');

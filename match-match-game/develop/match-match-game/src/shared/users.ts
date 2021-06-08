@@ -49,7 +49,6 @@ function sortPlayers(a: Object, b: Object) {
   return sravnenie;
 }
 
-
 export function getPlayersList(users: object[]) {
   validUserList = [];
   const ValidPlayersList: object[] = [];

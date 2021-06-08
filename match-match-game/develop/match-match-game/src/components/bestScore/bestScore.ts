@@ -1,4 +1,5 @@
 // import { validUserList } from '../../shared/users';
+import { getFile } from '../../indexedDB';
 import { validUserList } from '../../shared/users';
 import { Avatar } from '../avatar/avatar';
 import { BaseComponent } from '../base-component';
@@ -50,7 +51,7 @@ export class BestScore extends BaseComponent {
     this.score = new BaseComponent('span', ['score'], '1000000');
     this.scoreTitle.element.append(this.score.element);
 
-    if (!validUserList) return;
+    getFile();
 
     for (let i = 0; i < validUserList.length && i < 9; i++) {
       this.playerInfo = new BaseComponent('div', ['player-info']);
