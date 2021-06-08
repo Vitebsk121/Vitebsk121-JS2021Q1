@@ -4,6 +4,7 @@ import { GarageMenu } from '../garageMenu/garageMenu';
 import { GarageMessage } from '../garageMessage/garageMessage';
 import { WinnersField } from '../winnersField/winnersField';
 import { WinnersFieldHeader } from '../winnersFieldHeader/winnersFieldHeader';
+import { WinnersFooter } from '../winnersFooter/winnersFooter';
 import { WinnersTop } from '../winnersTiop/winnersTop';
 import './main.scss';
 
@@ -32,8 +33,8 @@ export class Main extends BaseComponent {
       winnersMain.element.append(winnersFieldHeader.element);
       const winnersField = new WinnersField();
       winnersMain.element.append(winnersField.element);
-      // const winnersFooter = new WinnersFooter();
-      // winnersMain.element.append(winnersFooter.element);
+      const winnersFooter = new WinnersFooter();
+      winnersMain.element.append(winnersFooter.element);
     }
   }
 }
