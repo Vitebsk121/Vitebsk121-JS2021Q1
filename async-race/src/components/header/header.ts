@@ -1,3 +1,4 @@
+import { renderMain } from '../../shared/service';
 import { BaseComponent } from '../base-component';
 import { Button } from '../buttons/button';
 import './header.scss';
@@ -25,8 +26,10 @@ export class Header extends BaseComponent {
 
   listenersAdd(): void {
     this.garageButton.element.addEventListener('click', () => {
+      renderMain('garage');
     });
     this.winnersButton.element.addEventListener('click', () => {
+      renderMain('winners');
     });
   }
 }
