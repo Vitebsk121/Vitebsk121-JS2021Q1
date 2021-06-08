@@ -2,11 +2,12 @@
     background: linear-gradient(90deg, #fcff9e 0%, #c67700 100%);
     display: flex;
     flex-wrap: nowrap;
-    justify-content: space-around;
-    width: 50%;
     border-radius: 3px;
 
     >p {
+        width: 20%;
+        display: flex;
+        justify-content: center;
         cursor: default;
         font-size: calc( (100vw - 480px)/(1280 - 480) * (22 - 13) + 13px);
     }

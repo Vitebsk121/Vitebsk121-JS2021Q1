@@ -1,0 +1,22 @@
+.winner__info {
+    display: flex;
+
+    >* {
+        width: 20%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: default;
+        font-size: calc( (100vw - 480px)/(1280 - 480) * (19 - 11) + 11px);
+    }
+
+    &:hover {
+        background-color: rgba(0, 0, 0, 0.1);
+    }
+}
+
+.winner__info-car {
+    >* {
+        width: 30%;
+    }
+}

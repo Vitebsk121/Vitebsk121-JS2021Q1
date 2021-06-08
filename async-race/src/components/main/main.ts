@@ -2,6 +2,7 @@ import { BaseComponent } from '../base-component';
 import { Garage } from '../garage/garage';
 import { GarageMenu } from '../garageMenu/garageMenu';
 import { GarageMessage } from '../garageMessage/garageMessage';
+import { WinnersField } from '../winnersField/winnersField';
 import { WinnersFieldHeader } from '../winnersFieldHeader/winnersFieldHeader';
 import { WinnersTop } from '../winnersTiop/winnersTop';
 import './main.scss';
@@ -25,11 +26,14 @@ export class Main extends BaseComponent {
       const winnersTitle = new WinnersTop();
       mainWrapper.element.append(winnersTitle.element);
 
-      const winnersMain = new BaseComponent('div', ['winners__wrapper']);
+      const winnersMain = new BaseComponent('div', ['winners__main']);
       mainWrapper.element.append(winnersMain.element);
       const winnersFieldHeader = new WinnersFieldHeader();
       winnersMain.element.append(winnersFieldHeader.element);
-      // const winnersFooter;
+      const winnersField = new WinnersField();
+      winnersMain.element.append(winnersField.element);
+      // const winnersFooter = new WinnersFooter();
+      // winnersMain.element.append(winnersFooter.element);
     }
   }
 }
