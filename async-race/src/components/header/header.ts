@@ -3,22 +3,30 @@ import { Button } from '../buttons/button';
 import './header.scss';
 
 export class Header extends BaseComponent {
+  private garageButton: Button;
+
+  private winnersButton: Button;
+
   constructor() {
     super('header', ['header']);
     const nav = new BaseComponent('nav', ['header_nav']);
-    this.element.append(nav.element);
-    const garageButton = new Button('Garage', ['header__button']);
-    const winnersButton = new Button('Winners', ['header__button']);
-    nav.element.append(garageButton.element);
-    nav.element.append(winnersButton.element);
-    this.listenersAdd();
+    this.garageButton = new Button('Garage', ['header__button']);
+    this.winnersButton = new Button('Winners', ['header__button']);
+    const header = new Promise<void>((res) => {
+      this.element.append(nav.element);
+      nav.element.append(this.garageButton.element);
+      nav.element.append(this.winnersButton.element);
+      res();
+    });
+    header.then(() => {
+      this.listenersAdd();
+    });
   }
 
-  listenersAdd() {
-    const headerButtons = document.querySelectorAll('.header__button');
-    console.log(headerButtons);
-    headerButtons.forEach((button) => button.addEventListener('click', () => {
-      console.log(button);
-    }))
+  listenersAdd(): void {
+    this.garageButton.element.addEventListener('click', () => {
+    });
+    this.winnersButton.element.addEventListener('click', () => {
+    });
   }
 }

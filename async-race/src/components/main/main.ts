@@ -16,7 +16,7 @@ export class Main extends BaseComponent {
       garageMenuAndMessageWrapper.element.append(garageMenu.element);
       const garageMessage = new GarageMessage('Garage message');
       garageMenuAndMessageWrapper.element.append(garageMessage.element);
-      
+
       const garage = new Garage();
       mainWrapper.element.append(garage.element);
     }
