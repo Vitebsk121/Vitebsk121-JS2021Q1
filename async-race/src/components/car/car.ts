@@ -34,10 +34,11 @@ export class Car extends BaseComponent {
         carControlAndRoadWrapper.element.append(road.element);
 
         const car = new BaseComponent('div', ['car']);
-        const carSVG = new CarSvg('blue', car.element);
+        new CarSvg('blue', car.element);
         road.element.append(car.element);
 
         const roadFlag = new BaseComponent('div', ['flag']);
         road.element.append(roadFlag.element);
+        
     }
 }
