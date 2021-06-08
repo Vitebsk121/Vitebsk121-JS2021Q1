@@ -5,7 +5,7 @@ import { GarageMessage } from '../garageMessage/garageMessage';
 import { WinnersField } from '../winnersField/winnersField';
 import { WinnersFieldHeader } from '../winnersFieldHeader/winnersFieldHeader';
 import { WinnersFooter } from '../winnersFooter/winnersFooter';
-import { WinnersTop } from '../winnersTiop/winnersTop';
+import { WinnersTop } from '../winnersTop/winnersTop';
 import './main.scss';
 
 export class Main extends BaseComponent {
