@@ -1,4 +1,4 @@
-import { getCountOfPages } from '../../shared/garageStorage';
+import { setPageNumber } from '../../shared/garageStorage';
 import { renderMain } from '../../shared/rendering';
 import { BaseComponent } from '../base-component';
 import { Button } from '../buttons/button';
@@ -39,7 +39,7 @@ export class Header extends BaseComponent {
       renderMain('winners');
     });
     this.testButton.element.addEventListener('click', () => {
-      console.log(localStorage.getItem('Pages'));
+      setPageNumber();
     });
   }
 }

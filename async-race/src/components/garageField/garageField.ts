@@ -4,16 +4,18 @@ import { Car } from '../car/car';
 import './garageField.scss';
 
 export class GarageField extends BaseComponent {
-  constructor() {
+  constructor(pageNumber: number) {
     super('div', ['garage__field']);
     const fieldLength = 7;
+    const endCarNum = fieldLength * pageNumber;
+    const startCarNum = endCarNum - 7;
     getAllCars().then((data) => {
-      for ( let i = 0; i < data.length && i <= fieldLength ; i++) {
-        const color = data[i].color;
-        const name = data[i].name;
+      for (let i = startCarNum; i < data.length && i < endCarNum; i++) {
+        const { color } = data[i];
+        const { name } = data[i];
         const car = new Car(color, name);
         this.element.append(car.element);
       }
-    })
+    });
   }
 }

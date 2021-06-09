@@ -1,4 +1,3 @@
-import { getCountOfPages } from '../../shared/garageStorage';
 import { getAllCars } from '../../shared/server';
 import { BaseComponent } from '../base-component';
 import { Button } from '../buttons/button';
