@@ -5,9 +5,13 @@ import './garageHeader.scss';
 
 export class GarageHeader extends BaseComponent {
   private garageInfo!: BaseComponent;
+
   private countOfCar!: BaseComponent;
+
   private pageNumber!: BaseComponent;
+
   private startButton!: Button;
+
   private resetButton!: Button;
 
   constructor() {
@@ -24,11 +28,10 @@ export class GarageHeader extends BaseComponent {
       getPageNum.then((pageNum: number) => {
         this.renderGarageHeader(carsCount, pageNum);
       });
-
     });
   }
 
-  renderGarageHeader(carsNum: number, pageNum: number) {
+  renderGarageHeader(carsNum: number, pageNum: number): void {
     this.garageInfo = new BaseComponent('div', ['garage__info']);
     this.element.append(this.garageInfo.element);
 
