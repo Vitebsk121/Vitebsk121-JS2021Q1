@@ -8,15 +8,21 @@ export class Header extends BaseComponent {
 
   private winnersButton: Button;
 
+  testButton: Button;
+
   constructor() {
     super('header', ['header']);
     const nav = new BaseComponent('nav', ['header_nav']);
     this.garageButton = new Button('Garage', ['header__button']);
     this.winnersButton = new Button('Winners', ['header__button']);
+
+    this.testButton = new Button('TEST', ['header__button']);
+
     const header = new Promise<void>((res) => {
       this.element.append(nav.element);
       nav.element.append(this.garageButton.element);
       nav.element.append(this.winnersButton.element);
+      nav.element.append(this.testButton.element);
       res();
     });
     header.then(() => {
@@ -30,6 +36,9 @@ export class Header extends BaseComponent {
     });
     this.winnersButton.element.addEventListener('click', () => {
       renderMain('winners');
+    });
+    this.testButton.element.addEventListener('click', () => {
+      getAllCars();
     });
   }
 }
