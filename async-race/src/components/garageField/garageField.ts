@@ -6,6 +6,7 @@ import './garageField.scss';
 export class GarageField extends BaseComponent {
   constructor(pageNumber: number) {
     super('div', ['garage__field']);
+    
     const fieldLength = 7;
     const endCarNum = fieldLength * pageNumber;
     const startCarNum = endCarNum - 7;
