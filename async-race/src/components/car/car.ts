@@ -4,7 +4,7 @@ import { CarSvg } from '../carSvg/carSvg';
 import './car.scss';
 
 export class Car extends BaseComponent {
-  constructor() {
+  constructor(color: string, name: string) {
     super('div', ['car__wrapper']);
     const carMenagmentWrapper = new BaseComponent('div', ['car__menagment']);
     this.element.append(carMenagmentWrapper.element);
@@ -15,7 +15,7 @@ export class Car extends BaseComponent {
     const deleteButton = new Button('delete', ['car__menagment-button', 'car__button-delete']);
     carMenagmentWrapper.element.append(deleteButton.element);
 
-    const carName = new BaseComponent('p', ['car__name'], 'Mazda CX-5');
+    const carName = new BaseComponent('p', ['car__name'], `${name}`);
     carMenagmentWrapper.element.append(carName.element);
 
     const carControlAndRoadWrapper = new BaseComponent('div', ['road__wrapper']);
@@ -34,7 +34,7 @@ export class Car extends BaseComponent {
     carControlAndRoadWrapper.element.append(road.element);
 
     const car = new BaseComponent('div', ['car']);
-    const carSVG = () => new CarSvg('blue', car.element);
+    const carSVG = () => new CarSvg(`${color}`, car.element);
     carSVG();
     road.element.append(car.element);
 
