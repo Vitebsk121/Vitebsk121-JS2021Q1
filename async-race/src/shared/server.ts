@@ -1,11 +1,19 @@
-const serverURL = 'http://127.0.0.1:3000/';
-
-const serverSections = {
-    garage: 'garage',
+function serverUrlGenerator(serverSection: string): string {
+  return `http://127.0.0.1:3000/${serverSection}`;
 }
 
-async function getAllCars() {
-    const data = await fetch(`${serverURL}${serverSections.garage}`);
+const server = {
+  garage: serverUrlGenerator('garage'),
+};
 
-    console.log(data);
+export async function getAllCars(): Promise<{ [key: string]: string }[]> {
+  const serverResponse = await fetch(server.garage);
+  const data: { [key: string]: string }[] = await serverResponse.json();
+  return data;
+}
+
+export async function getCarById(id: string): Promise<{ [key: string]: string }> {
+  const serverResponse = await fetch(`${server.garage}/${id}`);
+  const data: { [key: string]: string } = await serverResponse.json();
+  return data;
 }

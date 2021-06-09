@@ -1,4 +1,5 @@
 import { renderMain } from '../../shared/rendering';
+import { getCarById } from '../../shared/server';
 import { BaseComponent } from '../base-component';
 import { Button } from '../buttons/button';
 import './header.scss';
@@ -38,7 +39,7 @@ export class Header extends BaseComponent {
       renderMain('winners');
     });
     this.testButton.element.addEventListener('click', () => {
-      getAllCars();
+      getCarById('1');
     });
   }
 }
