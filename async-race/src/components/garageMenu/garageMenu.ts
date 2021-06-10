@@ -1,3 +1,4 @@
+import { randomCar } from '../../shared/randomCars';
 import { refreshGarage } from '../../shared/renderGarage';
 import { createCar } from '../../shared/server';
 import { BaseComponent } from '../base-component';
@@ -24,6 +25,10 @@ export class GarageMenu extends BaseComponent {
 
   private generateCarsButton: Button;
 
+  static carName: HTMLInputElement;
+
+  static carColor: HTMLInputElement;
+
   constructor() {
     super('div', ['garage__menu']);
     this.newCarForm = new BaseComponent('form', ['new-car__form']);
@@ -42,6 +47,8 @@ export class GarageMenu extends BaseComponent {
     );
     this.submitButtonSelectedCar.element.setAttribute('disabled', 'disabled');
     this.generateCarsButton = new Button('generate cars', ['garage__menu-button', 'generate-car__bitton']);
+    GarageMenu.carName = (<HTMLInputElement> this.inputNewCarName.element);
+    GarageMenu.carColor = (<HTMLInputElement> this.inputNewCarColor.element);
 
     const GarageMenuGo = (): Promise<void> => new Promise<void>((res) => {
       this.renderGarageMenu();
@@ -64,24 +71,42 @@ export class GarageMenu extends BaseComponent {
     this.element.append(this.generateCarsButton.element);
   }
 
+  clearForm(): void {
+    GarageMenu.carName.value = '';
+    GarageMenu.carColor.value = '#000000';
+  };
+
+  addNewCar(): void {
+    const NewCar = {
+      name: GarageMenu.carName.value,
+      color: GarageMenu.carColor.value,
+    };
+
+    createCar(NewCar).then(() => {
+      refreshGarage();
+      this.clearForm();
+    });
+  };
+
+  addRandomCars(): void {
+    const countOfNewCars = 100;
+    for (let i = 0; i < countOfNewCars; i++) {
+      createCar(randomCar());
+    }
+    refreshGarage();
+  }
+
   addEventListeners(): void {
     this.inputNewCarName.element.addEventListener('input', () => {
     });
     this.submitButtonNewCar.element.addEventListener('click', (e) => {
-      const carName = (<HTMLInputElement> this.inputNewCarName.element);
-      const carColor = (<HTMLInputElement> this.inputNewCarColor.element);
-      if (carName.value !== '') {
+      if (GarageMenu.carName.value !== '') {
         e.preventDefault();
-        const NewCar = {
-          name: carName.value,
-          color: carColor.value,
-        };
-        createCar(NewCar).then(() => {
-          refreshGarage();
-          carName.value = '';
-          carColor.value = '#000000';
-        });
+        this.addNewCar();
       }
+    });
+    this.generateCarsButton.element.addEventListener('click', () => {
+      this.addRandomCars();
     });
   }
 }

@@ -7,7 +7,7 @@ export function renderNewGarage(): void {
   garage?.replaceWith(newGarage.element);
 }
 
-export function refreshGarage() {
+export function refreshGarage(): void {
   setCarsList().then(() => {
     renderNewGarage();
   });
