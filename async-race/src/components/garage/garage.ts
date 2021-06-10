@@ -3,7 +3,7 @@ import { GarageHeader } from '../garageHeader/garageHeader';
 import { GarageField } from '../garageField/garageField';
 import './garage.scss';
 import { GarageFooter } from '../garageFooter/garageFooter';
-import { setPageNumber } from '../../shared/garageStorage';
+import { setPageNumber } from '../../shared/garageNavigation';
 
 export class Garage extends BaseComponent {
   constructor() {
