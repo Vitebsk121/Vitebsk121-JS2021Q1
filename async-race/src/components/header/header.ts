@@ -1,5 +1,6 @@
 import { setPageNumber } from '../../shared/garageStorage';
 import { renderMain } from '../../shared/rendering';
+import { createCar } from '../../shared/server';
 import { BaseComponent } from '../base-component';
 import { Button } from '../buttons/button';
 import './header.scss';
@@ -39,7 +40,6 @@ export class Header extends BaseComponent {
       renderMain('winners');
     });
     this.testButton.element.addEventListener('click', () => {
-      setPageNumber();
     });
   }
 }
