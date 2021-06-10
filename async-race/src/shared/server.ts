@@ -18,7 +18,7 @@ export async function getCar(id: string): Promise<{ [key: string]: string }> {
   return data;
 }
 
-export async function createCar(car: { [key: string]: string }) {
+export async function createCar(car: { [key: string]: string }): Promise<{ [key: string]: string }> {
   const serverResponse = await fetch(`${server.garage}`, {
     method: 'POST',
     headers: {
@@ -26,7 +26,7 @@ export async function createCar(car: { [key: string]: string }) {
     },
     body: JSON.stringify(car),
   });
-  
+
   const data: { [key: string]: string } = await serverResponse.json();
 
   return data;

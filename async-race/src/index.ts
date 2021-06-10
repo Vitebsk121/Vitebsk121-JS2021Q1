@@ -9,6 +9,7 @@ export class Page {
     body.append(header.element);
     const main = new Main('garage');
     body.append(main.element);
+    main.renderGarageView();
   }
 }
 

@@ -9,32 +9,69 @@ import { WinnersTop } from '../winnersTop/winnersTop';
 import './main.scss';
 
 export class Main extends BaseComponent {
+  private mainWrapper: BaseComponent;
+
+  private garageMenuAndMessageWrapper: BaseComponent;
+
+  private garageMenu: GarageMenu;
+
+  private garageMessage: GarageMessage;
+
+  private garage: Garage;
+
+  private winnersTitle: WinnersTop;
+
+  private winnersMain: BaseComponent;
+
+  private winnersFieldHeader: WinnersFieldHeader;
+
+  private winnersField: WinnersField;
+
+  private winnersFooter: WinnersFooter;
+
   constructor(view: string) {
     super('main', ['main']);
-    const mainWrapper = new BaseComponent('div', ['main__wrapper']);
-    this.element.append(mainWrapper.element);
+
+    this.mainWrapper = new BaseComponent('div', ['main__wrapper']);
+    this.element.append(this.mainWrapper.element);
+
+    this.garageMenuAndMessageWrapper = new BaseComponent('div', ['garage__top-wrapper']);
+    this.garageMenu = new GarageMenu();
+    this.garageMessage = new GarageMessage('Garage message');
+    this.garage = new Garage();
+
+    this.winnersTitle = new WinnersTop();
+    this.winnersMain = new BaseComponent('div', ['winners__main']);
+    this.winnersFieldHeader = new WinnersFieldHeader();
+    this.winnersField = new WinnersField();
+    this.winnersFooter = new WinnersFooter();
+
     if (view === 'garage') {
-      const garageMenuAndMessageWrapper = new BaseComponent('div', ['garage__top-wrapper']);
-      mainWrapper.element.append(garageMenuAndMessageWrapper.element);
-      const garageMenu = new GarageMenu();
-      garageMenuAndMessageWrapper.element.append(garageMenu.element);
-      const garageMessage = new GarageMessage('Garage message');
-      garageMenuAndMessageWrapper.element.append(garageMessage.element);
-      const garage = new Garage();
-      mainWrapper.element.append(garage.element);
+      this.renderGarageView();
     }
     if (view === 'winners') {
-      const winnersTitle = new WinnersTop();
-      mainWrapper.element.append(winnersTitle.element);
-
-      const winnersMain = new BaseComponent('div', ['winners__main']);
-      mainWrapper.element.append(winnersMain.element);
-      const winnersFieldHeader = new WinnersFieldHeader();
-      winnersMain.element.append(winnersFieldHeader.element);
-      const winnersField = new WinnersField();
-      winnersMain.element.append(winnersField.element);
-      const winnersFooter = new WinnersFooter();
-      winnersMain.element.append(winnersFooter.element);
+      this.renderWinnersView();
     }
+  }
+
+  renderGarageView(): void {
+    this.mainWrapper.element.append(this.garageMenuAndMessageWrapper.element);
+    this.garageMenuAndMessageWrapper.element.append(this.garageMenu.element);
+    this.garageMenuAndMessageWrapper.element.append(this.garageMessage.element);
+    this.mainWrapper.element.append(this.garage.element);
+  }
+
+  renderWinnersView(): void {
+    this.mainWrapper.element.append(this.winnersTitle.element);
+    this.mainWrapper.element.append(this.winnersMain.element);
+    this.winnersMain.element.append(this.winnersFieldHeader.element);
+    this.winnersMain.element.append(this.winnersField.element);
+    this.winnersMain.element.append(this.winnersFooter.element);
+  }
+
+  renderNewGarage(): void {
+    const garage = this.garage.element;
+    const newGarage = new Garage();
+    garage.replaceWith(newGarage.element);
   }
 }

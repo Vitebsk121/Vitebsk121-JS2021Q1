@@ -1,4 +1,4 @@
-import { renderNewGarage } from '../../shared/rendering';
+import { renderNewGarage } from '../../shared/renderGarage';
 import { createCar } from '../../shared/server';
 import { BaseComponent } from '../base-component';
 import { Button } from '../buttons/button';
@@ -7,13 +7,21 @@ import './garageMenu.scss';
 
 export class GarageMenu extends BaseComponent {
   private newCarForm: BaseComponent;
+
   private inputNewCarName: Input;
+
   private inputNewCarColor: Input;
+
   private submitButtonNewCar: Button;
+
   private selectedCarForm: BaseComponent;
+
   private inputChangeCarName: Input;
+
   private inputChangeCarColor: Input;
+
   private submitButtonSelectedCar: Button;
+
   private generateCarsButton: Button;
 
   constructor() {
@@ -27,18 +35,21 @@ export class GarageMenu extends BaseComponent {
     this.inputChangeCarName.element.setAttribute('disabled', 'disabled');
     this.inputChangeCarColor = new Input(['garage__menu-input', 'selected-car-color__input'], '', 'color');
     this.inputChangeCarColor.element.setAttribute('disabled', 'disabled');
-    this.submitButtonSelectedCar = new Button('Change Car', ['garage__menu-button', 'change-car__bitton', 'disabled'], 'submit');
+    this.submitButtonSelectedCar = new Button(
+      'Change Car',
+      ['garage__menu-button', 'change-car__bitton', 'disabled'],
+      'submit',
+    );
     this.submitButtonSelectedCar.element.setAttribute('disabled', 'disabled');
     this.generateCarsButton = new Button('generate cars', ['garage__menu-button', 'generate-car__bitton']);
 
-
-    const GarageMenu: Promise<void>  = new Promise<void>((res) => {
+    const GarageMenuGo = (): Promise<void> => new Promise<void>((res) => {
       this.renderGarageMenu();
       res();
     }).then(() => {
       this.addEventListeners();
     });
-    
+    GarageMenuGo();
   }
 
   renderGarageMenu(): void {
@@ -51,26 +62,25 @@ export class GarageMenu extends BaseComponent {
     this.selectedCarForm.element.append(this.inputChangeCarColor.element);
     this.selectedCarForm.element.append(this.submitButtonSelectedCar.element);
     this.element.append(this.generateCarsButton.element);
-  };
+  }
 
   addEventListeners(): void {
-    console.log('listener added');
     this.inputNewCarName.element.addEventListener('input', () => {
     });
     this.submitButtonNewCar.element.addEventListener('click', (e) => {
-      const carName = (<HTMLInputElement>this.inputNewCarName.element);
-      const carColor = (<HTMLInputElement>this.inputNewCarColor.element);
+      const carName = (<HTMLInputElement> this.inputNewCarName.element);
+      const carColor = (<HTMLInputElement> this.inputNewCarColor.element);
       if (carName.value !== '') {
         e.preventDefault();
         const NewCar = {
           name: carName.value,
           color: carColor.value,
-        }
+        };
         createCar(NewCar);
         renderNewGarage();
         carName.value = '';
         carColor.value = '';
-      };
+      }
     });
-  };
+  }
 }
