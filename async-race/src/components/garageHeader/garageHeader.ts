@@ -1,4 +1,3 @@
-import { getAllCars } from '../../shared/server';
 import { BaseComponent } from '../base-component';
 import { Button } from '../buttons/button';
 import './garageHeader.scss';
@@ -14,21 +13,10 @@ export class GarageHeader extends BaseComponent {
 
   private resetButton!: Button;
 
-  constructor() {
+  constructor(data: { [key: string]: string; }[], pageNumber: number) {
     super('div', ['garage__header']);
 
-    getAllCars().then((data) => {
-      const carsCount = data.length;
-      const getPageNum = new Promise<number>((res) => {
-        const pageNum = localStorage.getItem('page-number');
-        if (!pageNum) return;
-        res(+pageNum);
-      });
-
-      getPageNum.then((pageNum: number) => {
-        this.renderGarageHeader(carsCount, pageNum);
-      });
-    });
+    this.renderGarageHeader(data.length, pageNumber);
   }
 
   renderGarageHeader(carsNum: number, pageNum: number): void {
