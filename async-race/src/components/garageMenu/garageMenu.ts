@@ -1,4 +1,4 @@
-import { renderNewGarage } from '../../shared/renderGarage';
+import { refreshGarage } from '../../shared/renderGarage';
 import { createCar } from '../../shared/server';
 import { BaseComponent } from '../base-component';
 import { Button } from '../buttons/button';
@@ -76,10 +76,11 @@ export class GarageMenu extends BaseComponent {
           name: carName.value,
           color: carColor.value,
         };
-        createCar(NewCar);
-        renderNewGarage();
-        carName.value = '';
-        carColor.value = '';
+        createCar(NewCar).then(() => {
+          refreshGarage();
+          carName.value = '';
+          carColor.value = '#000000';
+        });
       }
     });
   }

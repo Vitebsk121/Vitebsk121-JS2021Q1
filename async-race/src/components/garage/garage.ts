@@ -4,7 +4,7 @@ import { GarageField } from '../garageField/garageField';
 import './garage.scss';
 import { GarageFooter } from '../garageFooter/garageFooter';
 import { getPageNumber } from '../../shared/garageNavigation';
-import { getAllCars } from '../../shared/server';
+import { carsList } from '../../shared/localDB';
 
 export class Garage extends BaseComponent {
   constructor() {
@@ -15,16 +15,14 @@ export class Garage extends BaseComponent {
     });
     GarageServise().then((pageNumber) => {
       if (!pageNumber) GarageServise();
-      getAllCars().then((cars) => {
-        const garageHeader = new GarageHeader(cars, pageNumber);
-        this.element.append(garageHeader.element);
+      const garageHeader = new GarageHeader(carsList(), pageNumber);
+      this.element.append(garageHeader.element);
 
-        const garageField = new GarageField(cars, pageNumber);
-        this.element.append(garageField.element);
+      const garageField = new GarageField(carsList(), pageNumber);
+      this.element.append(garageField.element);
 
-        const garageFotter = new GarageFooter(cars);
-        this.element.append(garageFotter.element);
-      });
+      const garageFotter = new GarageFooter(carsList());
+      this.element.append(garageFotter.element);
     });
   }
 }
