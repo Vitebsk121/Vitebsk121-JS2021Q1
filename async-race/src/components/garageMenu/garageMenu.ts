@@ -25,9 +25,11 @@ export class GarageMenu extends BaseComponent {
 
   private generateCarsButton: Button;
 
-  static carName: HTMLInputElement;
+  private carName: HTMLInputElement;
 
-  static carColor: HTMLInputElement;
+  private carColor: HTMLInputElement;
+
+  private countOfNewCars: number;
 
   constructor() {
     super('div', ['garage__menu']);
@@ -47,8 +49,9 @@ export class GarageMenu extends BaseComponent {
     );
     this.submitButtonSelectedCar.element.setAttribute('disabled', 'disabled');
     this.generateCarsButton = new Button('generate cars', ['garage__menu-button', 'generate-car__bitton']);
-    GarageMenu.carName = (<HTMLInputElement> this.inputNewCarName.element);
-    GarageMenu.carColor = (<HTMLInputElement> this.inputNewCarColor.element);
+    this.carName = (<HTMLInputElement> this.inputNewCarName.element);
+    this.carColor = (<HTMLInputElement> this.inputNewCarColor.element);
+    this.countOfNewCars = 0;
 
     const GarageMenuGo = (): Promise<void> => new Promise<void>((res) => {
       this.renderGarageMenu();
@@ -72,25 +75,25 @@ export class GarageMenu extends BaseComponent {
   }
 
   clearForm(): void {
-    GarageMenu.carName.value = '';
-    GarageMenu.carColor.value = '#000000';
-  };
+    this.carName.value = '';
+    this.carColor.value = '#000000';
+  }
 
   addNewCar(): void {
     const NewCar = {
-      name: GarageMenu.carName.value,
-      color: GarageMenu.carColor.value,
+      name: this.carName.value,
+      color: this.carColor.value,
     };
 
     createCar(NewCar).then(() => {
       refreshGarage();
       this.clearForm();
     });
-  };
+  }
 
   addRandomCars(): void {
-    const countOfNewCars = 100;
-    for (let i = 0; i < countOfNewCars; i++) {
+    this.countOfNewCars = 100;
+    for (let i = 0; i < this.countOfNewCars; i++) {
       createCar(randomCar());
     }
     refreshGarage();
@@ -100,7 +103,7 @@ export class GarageMenu extends BaseComponent {
     this.inputNewCarName.element.addEventListener('input', () => {
     });
     this.submitButtonNewCar.element.addEventListener('click', (e) => {
-      if (GarageMenu.carName.value !== '') {
+      if (this.carName.value !== '') {
         e.preventDefault();
         this.addNewCar();
       }

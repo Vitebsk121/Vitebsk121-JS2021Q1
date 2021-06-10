@@ -4,41 +4,61 @@ import { CarSvg } from '../carSvg/carSvg';
 import './car.scss';
 
 export class Car extends BaseComponent {
-  constructor(color: string, name: string) {
+  private carMenagmentWrapper: BaseComponent;
+  private selectButton: Button;
+  private deleteButton: Button;
+  private carName: BaseComponent;
+  private carControlAndRoadWrapper: BaseComponent;
+  private carControllers: BaseComponent;
+  private startEngineButton: Button;
+  private stopEngineButton: Button;
+  private road: BaseComponent;
+  private car: BaseComponent;
+  private roadFlag: BaseComponent;
+
+  constructor(color: string, name: string, id: string) {
     super('div', ['car__wrapper']);
-    const carMenagmentWrapper = new BaseComponent('div', ['car__menagment']);
-    this.element.append(carMenagmentWrapper.element);
 
-    const selectButton = new Button('select', ['car__menagment-button', 'car__button-select']);
-    carMenagmentWrapper.element.append(selectButton.element);
+    this.carMenagmentWrapper = new BaseComponent('div', ['car__menagment']);
+    this.selectButton = new Button('select', ['car__menagment-button', 'car__button-select'], 'button', id);
+    this.deleteButton = new Button('delete', ['car__menagment-button', 'car__button-delete']);
+    this.carName = new BaseComponent('p', ['car__name'], `${name}`);
+    this.carControlAndRoadWrapper = new BaseComponent('div', ['road__wrapper']);
+    this.carControllers = new BaseComponent('div', ['car__controllers']);
+    this.startEngineButton = new Button('A', ['engine__button', 'engine-start']);
+    this.stopEngineButton = new Button('B', ['engine__button', 'engine-stop']);
+    this.road = new BaseComponent('div', ['garage__road']);
+    this.car = new BaseComponent('div', ['car']);
+    this.roadFlag = new BaseComponent('div', ['flag']);
 
-    const deleteButton = new Button('delete', ['car__menagment-button', 'car__button-delete']);
-    carMenagmentWrapper.element.append(deleteButton.element);
+    const carService = () => new Promise<void>((res) =>{
+      this.renderCar(color);
+      res();
+    });
+    carService().then(() => {
+      this.addEventListeners();
+    });
+  }
 
-    const carName = new BaseComponent('p', ['car__name'], `${name}`);
-    carMenagmentWrapper.element.append(carName.element);
-
-    const carControlAndRoadWrapper = new BaseComponent('div', ['road__wrapper']);
-    this.element.append(carControlAndRoadWrapper.element);
-
-    const carControllers = new BaseComponent('div', ['car__controllers']);
-    carControlAndRoadWrapper.element.append(carControllers.element);
-
-    const startEngineButton = new Button('A', ['engine__button', 'engine-start']);
-    carControllers.element.append(startEngineButton.element);
-
-    const stopEngineButton = new Button('B', ['engine__button', 'engine-stop']);
-    carControllers.element.append(stopEngineButton.element);
-
-    const road = new BaseComponent('div', ['garage__road']);
-    carControlAndRoadWrapper.element.append(road.element);
-
-    const car = new BaseComponent('div', ['car']);
-    const carSVG = () => new CarSvg(`${color}`, car.element);
+  renderCar(color: string) {
+    this.element.append(this.carMenagmentWrapper.element);
+    this.carMenagmentWrapper.element.append(this.selectButton.element);
+    this.carMenagmentWrapper.element.append(this.deleteButton.element);
+    this.carMenagmentWrapper.element.append(this.carName.element);
+    this.element.append(this.carControlAndRoadWrapper.element);
+    this.carControlAndRoadWrapper.element.append(this.carControllers.element);
+    this.carControllers.element.append(this.startEngineButton.element);
+    this.carControllers.element.append(this.stopEngineButton.element);
+    this.carControlAndRoadWrapper.element.append(this.road.element);
+    const carSVG = () => new CarSvg(`${color}`, this.car.element);
     carSVG();
-    road.element.append(car.element);
+    this.road.element.append(this.car.element);
+    this.road.element.append(this.roadFlag.element);
+  }
 
-    const roadFlag = new BaseComponent('div', ['flag']);
-    road.element.append(roadFlag.element);
+  addEventListeners(): void {
+    this.selectButton.element.addEventListener('click', () => {
+      console.log(this.selectButton.element.id);
+    })
   }
 }
