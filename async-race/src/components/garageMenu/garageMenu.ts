@@ -1,6 +1,6 @@
 import { randomCar } from '../../shared/randomCars';
 import { refreshGarage } from '../../shared/renderGarage';
-import { createCar } from '../../shared/server';
+import { createCar, updateCar } from '../../shared/server';
 import { BaseComponent } from '../base-component';
 import { Button } from '../buttons/button';
 import { Input } from '../inputs/inputs';
@@ -31,6 +31,10 @@ export class GarageMenu extends BaseComponent {
 
   private countOfNewCars: number;
 
+  private updateNameOfCar: HTMLInputElement;
+
+  private updateColorOfCar: HTMLInputElement;
+
   constructor() {
     super('div', ['garage__menu']);
     this.newCarForm = new BaseComponent('form', ['new-car__form']);
@@ -52,6 +56,8 @@ export class GarageMenu extends BaseComponent {
     this.carName = (<HTMLInputElement> this.inputNewCarName.element);
     this.carColor = (<HTMLInputElement> this.inputNewCarColor.element);
     this.countOfNewCars = 0;
+    this.updateNameOfCar = (<HTMLInputElement> this.inputChangeCarName.element);
+    this.updateColorOfCar = (<HTMLInputElement> this.inputChangeCarColor.element);
 
     const GarageMenuGo = (): Promise<void> => new Promise<void>((res) => {
       this.renderGarageMenu();
@@ -74,9 +80,22 @@ export class GarageMenu extends BaseComponent {
     this.element.append(this.generateCarsButton.element);
   }
 
-  clearForm(): void {
-    this.carName.value = '';
-    this.carColor.value = '#000000';
+  clearForm(form: string): void {
+    if (form = 'newCar') {
+      this.carName.value = '';
+      this.carColor.value = '#000000';
+    }
+    if (form = 'selectedCar') {
+      this.updateNameOfCar.value = '';
+      this.updateColorOfCar.value = '#000000';
+
+      const form = document.querySelector('.selected-car__form');
+      if (!form) throw Error('Selected form not founded');
+      for (let i = 0; i < form.children.length; i++) {
+        form.children[i].setAttribute('disabled', '');
+      };
+      form.children[2].classList.add('disabled');
+    }
   }
 
   addNewCar(): void {
@@ -87,7 +106,22 @@ export class GarageMenu extends BaseComponent {
 
     createCar(NewCar).then(() => {
       refreshGarage();
-      this.clearForm();
+      this.clearForm('newCar');
+    });
+  }
+
+  updateSelectedCar(): void {
+    const id = localStorage.getItem('carID');
+    if (!id) throw Error('CarID not founded');
+    const NewCar = {
+      name: this.updateNameOfCar.value,
+      color: this.updateColorOfCar.value,
+      id: id,
+    };
+    
+    updateCar(NewCar).then(() => {
+      refreshGarage();
+      this.clearForm('selectedCar');
     });
   }
 
@@ -110,6 +144,12 @@ export class GarageMenu extends BaseComponent {
     });
     this.generateCarsButton.element.addEventListener('click', () => {
       this.addRandomCars();
+    });
+    this.submitButtonSelectedCar.element.addEventListener('click', (e) => {
+      if (this.updateNameOfCar.value !== '') {
+        e.preventDefault();
+        this.updateSelectedCar();
+      }
     });
   }
 }

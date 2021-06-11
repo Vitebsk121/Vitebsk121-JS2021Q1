@@ -5,15 +5,25 @@ import './car.scss';
 
 export class Car extends BaseComponent {
   private carMenagmentWrapper: BaseComponent;
+
   private selectButton: Button;
+
   private deleteButton: Button;
+
   private carName: BaseComponent;
+
   private carControlAndRoadWrapper: BaseComponent;
+
   private carControllers: BaseComponent;
+
   private startEngineButton: Button;
+
   private stopEngineButton: Button;
+
   private road: BaseComponent;
+
   private car: BaseComponent;
+
   private roadFlag: BaseComponent;
 
   constructor(color: string, name: string, id: string) {
@@ -30,17 +40,20 @@ export class Car extends BaseComponent {
     this.road = new BaseComponent('div', ['garage__road']);
     this.car = new BaseComponent('div', ['car']);
     this.roadFlag = new BaseComponent('div', ['flag']);
+    this.element.setAttribute('id', id);
 
-    const carService = () => new Promise<void>((res) =>{
+    const carService = () => new Promise<void>((res) => {
       this.renderCar(color);
       res();
     });
     carService().then(() => {
+      this.setSelectedCarStyle();
       this.addEventListeners();
+      console.log(this.element.classList.contains('active'));
     });
   }
 
-  renderCar(color: string) {
+  renderCar(color: string): void {
     this.element.append(this.carMenagmentWrapper.element);
     this.carMenagmentWrapper.element.append(this.selectButton.element);
     this.carMenagmentWrapper.element.append(this.deleteButton.element);
@@ -56,9 +69,36 @@ export class Car extends BaseComponent {
     this.road.element.append(this.roadFlag.element);
   }
 
+  clearCarsStyle() {
+    const cars = document.querySelectorAll(`.${this.element.className}`);
+    cars.forEach((item) => {
+      item.classList.remove('active');
+    });
+  };
+
+  setSelectedCarStyle() {
+    this.clearCarsStyle();
+    const id = localStorage.getItem('carID');
+    if (!id) return
+    if (this.element.id === id) {
+      this.element.classList.add('active');
+    };
+  }
+
+  setFormActiveStyle() {
+    const form = document.querySelector('.selected-car__form');
+    if (!form) throw Error('Selected form not founded');
+    for (let i = 0; i < form.children.length; i++) {
+      form.children[i].removeAttribute('disabled');
+      form.children[i].classList.remove('disabled');
+    };
+  }
+
   addEventListeners(): void {
     this.selectButton.element.addEventListener('click', () => {
-      console.log(this.selectButton.element.id);
-    })
+      localStorage.setItem('carID', this.element.id);
+      this.setSelectedCarStyle();
+      this.setFormActiveStyle();
+    });
   }
 }

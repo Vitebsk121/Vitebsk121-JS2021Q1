@@ -12,8 +12,17 @@ export async function getAllCars(): Promise<{ [key: string]: string }[]> {
   return data;
 }
 
-export async function getCar(id: string): Promise<{ [key: string]: string }> {
-  const serverResponse = await fetch(`${server.garage}/${id}`);
+export async function updateCar(car: { [key: string]: string }): Promise<{ [key: string]: string }> {
+  const serverResponse = await fetch(`${server.garage}/${+car.id}`, {
+    method: 'Put',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({
+      name: car.name,
+      color: car.color,
+    }),
+  });
   const data: { [key: string]: string } = await serverResponse.json();
   return data;
 }
