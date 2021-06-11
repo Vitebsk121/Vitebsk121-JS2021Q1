@@ -39,7 +39,13 @@ export class GarageMenu extends BaseComponent {
     super('div', ['garage__menu']);
     this.newCarForm = new BaseComponent('form', ['new-car__form']);
     this.inputNewCarName = new Input(['garage__menu-input', 'new-car-name__input'], 'Enter model');
+    let inputNameValue = localStorage.getItem('inputNameValue');
+    if (!inputNameValue) inputNameValue = '';
+    (<HTMLInputElement> this.inputNewCarName.element).value = inputNameValue;
     this.inputNewCarColor = new Input(['garage__menu-input', 'new-car-color__input'], '', 'color');
+    let inputColorValue = localStorage.getItem('inputColorValue');
+    if (!inputColorValue) inputColorValue = '#000000';
+    (<HTMLInputElement> this.inputNewCarColor.element).value = inputColorValue;
     this.submitButtonNewCar = new Button('Add new Car', ['garage__menu-button', 'new-car__bitton'], 'submit');
     this.selectedCarForm = new BaseComponent('form', ['selected-car__form']);
     this.inputChangeCarName = new Input(['garage__menu-input', 'selected-car__input'], 'Enter model');
@@ -84,6 +90,8 @@ export class GarageMenu extends BaseComponent {
     if (form === 'newCar') {
       this.carName.value = '';
       this.carColor.value = '#000000';
+      localStorage.setItem('inputNameValue', '');
+      localStorage.setItem('inputColorValue', '#000000');
     }
     if (form === 'selectedCar') {
       this.updateNameOfCar.value = '';
@@ -135,16 +143,26 @@ export class GarageMenu extends BaseComponent {
 
   addEventListeners(): void {
     this.inputNewCarName.element.addEventListener('input', () => {
+      const inputValue = (<HTMLInputElement> this.inputNewCarName.element).value;
+      localStorage.setItem('inputNameValue', inputValue);
     });
+
+    this.inputNewCarColor.element.addEventListener('input', () => {
+      const inputValue = (<HTMLInputElement> this.inputNewCarColor.element).value;
+      localStorage.setItem('inputColorValue', inputValue);
+    });
+
     this.submitButtonNewCar.element.addEventListener('click', (e) => {
       if (this.carName.value !== '') {
         e.preventDefault();
         this.addNewCar();
       }
     });
+
     this.generateCarsButton.element.addEventListener('click', () => {
       this.addRandomCars();
     });
+
     this.submitButtonSelectedCar.element.addEventListener('click', (e) => {
       if (this.updateNameOfCar.value !== '') {
         e.preventDefault();

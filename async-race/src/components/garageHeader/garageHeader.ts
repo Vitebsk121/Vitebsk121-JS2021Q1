@@ -1,3 +1,4 @@
+import { raceAllCars, resetAllCars } from '../../shared/race';
 import { BaseComponent } from '../base-component';
 import { Button } from '../buttons/button';
 import './garageHeader.scss';
@@ -16,7 +17,13 @@ export class GarageHeader extends BaseComponent {
   constructor(data: { [key: string]: string; }[], pageNumber: number) {
     super('div', ['garage__header']);
 
-    this.renderGarageHeader(data.length, pageNumber);
+    const garageHeaderServise = () => new Promise<void>((res) => {
+      this.renderGarageHeader(data.length, pageNumber);
+      res();
+    });
+    garageHeaderServise().then(() => {
+      this.addEventListeners();
+    });
   }
 
   renderGarageHeader(carsNum: number, pageNum: number): void {
@@ -34,5 +41,15 @@ export class GarageHeader extends BaseComponent {
 
     this.resetButton = new Button('reset', ['garage__button']);
     this.element.append(this.resetButton.element);
+  }
+
+  addEventListeners(): void {
+    this.startButton.element.addEventListener('click', () => {
+      raceAllCars();
+    });
+
+    this.resetButton.element.addEventListener('click', () => {
+      resetAllCars();
+    });
   }
 }
