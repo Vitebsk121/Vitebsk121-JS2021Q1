@@ -12,3 +12,18 @@ export function refreshGarage(): void {
     renderNewGarage();
   });
 }
+
+export function clearGarageSelectedForm(): void {
+  const updateNameOfCar = (<HTMLInputElement>document.querySelector('.selected-car__input'));
+  const updateColorOfCar = (<HTMLInputElement>document.querySelector('.selected-car-color__input'));
+
+  updateNameOfCar.value = '';
+  updateColorOfCar.value = '#000000';
+
+  const selectedForm = document.querySelector('.selected-car__form');
+  if (!selectedForm) throw Error('Selected form not founded');
+  for (let i = 0; i < selectedForm.children.length; i++) {
+    selectedForm.children[i].setAttribute('disabled', '');
+  }
+  selectedForm.children[2].classList.add('disabled');
+}

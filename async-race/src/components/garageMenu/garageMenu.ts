@@ -81,20 +81,20 @@ export class GarageMenu extends BaseComponent {
   }
 
   clearForm(form: string): void {
-    if (form = 'newCar') {
+    if (form === 'newCar') {
       this.carName.value = '';
       this.carColor.value = '#000000';
     }
-    if (form = 'selectedCar') {
+    if (form === 'selectedCar') {
       this.updateNameOfCar.value = '';
       this.updateColorOfCar.value = '#000000';
 
-      const form = document.querySelector('.selected-car__form');
-      if (!form) throw Error('Selected form not founded');
-      for (let i = 0; i < form.children.length; i++) {
-        form.children[i].setAttribute('disabled', '');
-      };
-      form.children[2].classList.add('disabled');
+      const selectedForm = document.querySelector('.selected-car__form');
+      if (!selectedForm) throw Error('Selected form not founded');
+      for (let i = 0; i < selectedForm.children.length; i++) {
+        selectedForm.children[i].setAttribute('disabled', '');
+      }
+      selectedForm.children[2].classList.add('disabled');
     }
   }
 
@@ -116,9 +116,9 @@ export class GarageMenu extends BaseComponent {
     const NewCar = {
       name: this.updateNameOfCar.value,
       color: this.updateColorOfCar.value,
-      id: id,
+      id,
     };
-    
+
     updateCar(NewCar).then(() => {
       refreshGarage();
       this.clearForm('selectedCar');

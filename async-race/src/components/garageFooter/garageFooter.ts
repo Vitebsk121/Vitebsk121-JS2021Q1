@@ -1,5 +1,5 @@
 import { setNextGarageButtonSettings, setPageNumber, setPrevGarageButtonSettings } from '../../shared/garageNavigation';
-import { renderNewGarage } from '../../shared/renderGarage';
+import { clearGarageSelectedForm, renderNewGarage } from '../../shared/renderGarage';
 import { BaseComponent } from '../base-component';
 import { Button } from '../buttons/button';
 import './garageFooter.scss';
@@ -31,11 +31,13 @@ export class GarageFooter extends BaseComponent {
       if (this.prevPage.element.classList.contains('disabled')) return;
       setPageNumber(-1);
       renderNewGarage();
+      clearGarageSelectedForm();
     });
     this.nextPage.element.addEventListener('click', () => {
       if (this.nextPage.element.classList.contains('disabled')) return;
       setPageNumber(1);
       renderNewGarage();
+      clearGarageSelectedForm();
     });
   }
 
