@@ -73,11 +73,20 @@
 .car {
     min-width: 5%;
     min-height: 100%;
-    transition: all 10s;
 
     &.drive {
-        transform: translateX(735%);
+        position: relative;
+        animation: carMove;
+        animation-timing-function: linear;
+        animation-fill-mode: forwards;
+        animation-duration: 10s;
+        animation-play-state: running;
     }
+}
+
+@keyframes carMove {
+    from {left: 0px}
+    to {left: 85%}
 }
 
 .flag {

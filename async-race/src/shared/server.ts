@@ -4,6 +4,7 @@ function serverUrlGenerator(serverSection: string): string {
 
 const server = {
   garage: serverUrlGenerator('garage'),
+  engine: serverUrlGenerator('engine'),
 };
 
 export async function getAllCars(): Promise<{ [key: string]: string }[]> {
@@ -45,6 +46,24 @@ export async function deleteCar(id: string): Promise<{ [key: string]: string }> 
   const serverResponse = await fetch(`${server.garage}/${id}`, {
     method: 'DELETE',
   });
+  const data: { [key: string]: string } = await serverResponse.json();
+  return data;
+}
+
+export async function startEngineOfCar(id: string): Promise<{ [key: string]: string }> {
+  const serverResponse = await fetch(`${server.engine}?id=${id}&status=started`);
+  const data: { [key: string]: string } = await serverResponse.json();
+  return data;
+}
+
+export async function stopEngineOfCar(id: string): Promise<{ [key: string]: string }> {
+  const serverResponse = await fetch(`${server.engine}?id=${id}&status=stopped`);
+  const data: { [key: string]: string } = await serverResponse.json();
+  return data;
+}
+
+export async function driveEngineOfCar(id: string): Promise<{ [key: string]: string }> {
+  const serverResponse = await fetch(`${server.engine}?id=${id}&status=drive`);
   const data: { [key: string]: string } = await serverResponse.json();
   return data;
 }

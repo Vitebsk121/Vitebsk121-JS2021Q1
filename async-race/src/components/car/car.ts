@@ -1,3 +1,4 @@
+import { raceCar, resetCar } from '../../shared/race';
 import { clearGarageSelectedForm, refreshGarage } from '../../shared/renderGarage';
 import { deleteCar } from '../../shared/server';
 import { BaseComponent } from '../base-component';
@@ -38,7 +39,8 @@ export class Car extends BaseComponent {
     this.carControlAndRoadWrapper = new BaseComponent('div', ['road__wrapper']);
     this.carControllers = new BaseComponent('div', ['car__controllers']);
     this.startEngineButton = new Button('A', ['engine__button', 'engine-start']);
-    this.stopEngineButton = new Button('B', ['engine__button', 'engine-stop']);
+    this.stopEngineButton = new Button('B', ['engine__button', 'engine-stop', 'disabled']);
+    this.stopEngineButton.element.setAttribute('disabled', '');
     this.road = new BaseComponent('div', ['garage__road']);
     this.car = new BaseComponent('div', ['car']);
     this.roadFlag = new BaseComponent('div', ['flag']);
@@ -90,12 +92,11 @@ export class Car extends BaseComponent {
     }
   }
 
-  deleteSelectedCar(id: string): void {
-    deleteCar(id).then(() => {
-      refreshGarage();
-    }).catch((e) =>{
-      console.log(e);
-    });
+  switchEngineButtonStatus(): void {
+    this.startEngineButton.element.toggleAttribute('disabled');
+    this.startEngineButton.element.classList.toggle('disabled');
+    this.stopEngineButton.element.toggleAttribute('disabled');
+    this.stopEngineButton.element.classList.toggle('disabled');
   }
 
   addEventListeners(): void {
@@ -104,9 +105,22 @@ export class Car extends BaseComponent {
       this.setSelectedCarStyle();
       this.setFormActiveStyle();
     });
+
     this.deleteButton.element.addEventListener('click', () => {
-      this.deleteSelectedCar(this.element.id);
-      clearGarageSelectedForm();
+      deleteCar(this.element.id).then(() => {
+        refreshGarage();
+        clearGarageSelectedForm();
+      });
+    });
+
+    this.startEngineButton.element.addEventListener('click', () => {
+      raceCar(this.element.id, this.car.element);
+      this.switchEngineButtonStatus();
+    });
+
+    this.stopEngineButton.element.addEventListener('click', () => {
+      resetCar(this.element.id, this.car.element);
+      this.switchEngineButtonStatus();
     });
   }
 }
