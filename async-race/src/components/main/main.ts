@@ -37,7 +37,7 @@ export class Main extends BaseComponent {
 
     this.garageMenuAndMessageWrapper = new BaseComponent('div', ['garage__top-wrapper']);
     this.garageMenu = new GarageMenu();
-    this.garageMessage = new GarageMessage('Garage message');
+    this.garageMessage = new GarageMessage(' ');
     this.garage = new Garage();
 
     this.winnersTitle = new WinnersTop();
@@ -55,6 +55,7 @@ export class Main extends BaseComponent {
   }
 
   renderGarageView(): void {
+    this.element.classList.add('main-garage');
     this.mainWrapper.element.append(this.garageMenuAndMessageWrapper.element);
     this.garageMenuAndMessageWrapper.element.append(this.garageMenu.element);
     this.garageMenuAndMessageWrapper.element.append(this.garageMessage.element);
@@ -62,6 +63,7 @@ export class Main extends BaseComponent {
   }
 
   renderWinnersView(): void {
+    this.element.classList.add('main-winners');
     this.mainWrapper.element.append(this.winnersTitle.element);
     this.mainWrapper.element.append(this.winnersMain.element);
     this.winnersMain.element.append(this.winnersFieldHeader.element);

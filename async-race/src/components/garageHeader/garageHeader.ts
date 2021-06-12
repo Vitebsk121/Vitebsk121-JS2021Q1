@@ -36,10 +36,11 @@ export class GarageHeader extends BaseComponent {
     this.pageNumber = new BaseComponent('p', ['info__page-number'], `Page #${pageNum}`);
     this.garageInfo.element.append(this.pageNumber.element);
 
-    this.startButton = new Button('race', ['garage__button']);
+    this.startButton = new Button('race', ['garage__button'], 'button', 'race');
     this.element.append(this.startButton.element);
 
-    this.resetButton = new Button('reset', ['garage__button']);
+    this.resetButton = new Button('reset', ['garage__button', 'disabled'], 'button', 'reset');
+    this.resetButton.element.setAttribute('disabled', 'disabled');
     this.element.append(this.resetButton.element);
   }
 
