@@ -36,12 +36,14 @@ export function raceAllCars(): void {
   }
   const syncStart = () => Promise.all(arrOfPromises);
   syncStart().then((data) => {
+    console.log(cars);
     for (let i = 0; i < data.length; i++) {
+      console.log(cars[i]);
       const speed = (+data[i].distance / +data[i].velocity) / 1000;
       (<HTMLElement>cars[i]).style.animationDuration = `${speed}s`;
       (<HTMLElement>cars[i]).style.animationPlayState = 'running';
       (<HTMLElement>cars[i]).classList.add('drive');
-      driveEngineOfCar(String(i + 1)).catch(() => {
+      driveEngineOfCar(String(id[i])).catch(() => {
         (<HTMLElement>cars[i]).style.animationPlayState = 'paused';
       });
     }
