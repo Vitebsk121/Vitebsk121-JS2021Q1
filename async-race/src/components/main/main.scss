@@ -14,3 +14,19 @@
 .garage__top-wrapper {
     margin-bottom: 30px;
 }
+
+.main-garage {
+    position: relative;
+    z-index: 100;
+
+    &.main-hidden {
+        z-index: -100;
+    }
+}
+
+.main-winners {
+    position: absolute;
+    width: 100%;
+    top: 60px;
+    left: 0;
+}

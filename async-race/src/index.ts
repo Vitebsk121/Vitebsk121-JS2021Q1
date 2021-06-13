@@ -8,9 +8,10 @@ export class Page {
   constructor(body: HTMLElement) {
     const header = new Header();
     body.append(header.element);
-    const main = new Main('garage');
-    body.append(main.element);
-    main.renderGarageView();
+    const mainGarage = new Main('garage');
+    const mainWinners = new Main('winners');
+    body.append(mainGarage.element);
+    body.append(mainWinners.element);
   }
 }
 

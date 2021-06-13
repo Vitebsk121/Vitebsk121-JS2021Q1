@@ -1,4 +1,5 @@
 import { carsList } from './localDB';
+import { renderMain } from './rendering';
 import { driveEngineOfCar, startEngineOfCar, stopEngineOfCar } from './server';
 
 export function raceCar(id: string, car: HTMLElement): void {
@@ -49,9 +50,22 @@ function setWinnerStyle(winnerID: string): void {
   carWrapper.forEach((item) => {
     item.id === winnerID ? item.classList.add('winner') : item;
   });
-  setTimeout(() => {
- carWrapper.forEach((item) => item.classList.remove('winner'));
-  }, 7000);
+}
+
+function blockAllButtons() {
+  const buttons = document.querySelectorAll('button');
+  buttons.forEach((item) => {
+    if (!item.classList.contains('header__button')) {
+      item.classList.add('disabled');
+      item.setAttribute('disabled', 'disabled');
+    }
+  });
+}
+
+function unblockResetButtons() {
+  const resetButton = document.getElementById('reset');
+  resetButton?.removeAttribute('disabled');
+  resetButton?.classList.remove('disabled');
 }
 
 function getWinnerOfRace(): void {
@@ -63,43 +77,22 @@ function getWinnerOfRace(): void {
         winnerID = car.id;
         setGarageMessage(winnerID);
         setWinnerStyle(winnerID);
+        unblockResetButtons();
       };
     });
   });
 }
 
-function blockAllButtons() {
-  const buttons = document.querySelectorAll('button');
-  setTimeout(() => {
-    buttons.forEach((item) => {
-      if (item.id !== 'reset') {
-        item.classList.add('disabled');
-        item.setAttribute('disabled', 'disabled');
-      } else {
-        item.classList.remove('disabled');
-        item.removeAttribute('disabled');
-      }
-    });
-  }, 500);
-}
-
-function unblockAllButtons() {
-  const buttons = document.querySelectorAll('button');
-  setTimeout(() => {
-    buttons.forEach((item) => {
-      if (item.id !== 'reset') {
-        if (item.classList.contains('change-car__bitton') || item.classList.contains('engine-stop')) {
-          return;
-        } else {
-          item.classList.remove('disabled');
-          item.removeAttribute('disabled');
-        };
-      } else {
-        item.classList.add('disabled');
-        item.setAttribute('disabled', 'disabled');
-      };
-    });
-  }, 500);
+function checkCarsEngines(cars: NodeListOf<Element>) {
+  let countOfBrokeEnginesCars = 0;
+  cars.forEach((car) => {
+    if ((<HTMLElement>car).style.animationPlayState === 'paused') {
+      countOfBrokeEnginesCars += 1;
+    }
+  });
+  if (countOfBrokeEnginesCars === cars.length) {
+    unblockResetButtons();
+  }
 }
 
 export function raceAllCars(): void {
@@ -120,18 +113,20 @@ export function raceAllCars(): void {
       (<HTMLElement>cars[i]).classList.add('drive');
       driveEngineOfCar(String(id[i])).catch(() => {
         (<HTMLElement>cars[i]).style.animationPlayState = 'paused';
+        checkCarsEngines(cars);
       });
     }
   });
 }
 
 export function resetAllCars(): void {
-  unblockAllButtons();
   const cars = document.querySelectorAll('.car');
-  const arrOfid = getIdOfAllCarsOnRace();
+  const arrOfId = getIdOfAllCarsOnRace();
+  let arrOfPromisesToEngineStop: Promise<{ [key: string]: string }>[] = [];
   for (let i = 0; i < cars.length; i++) {
-    stopEngineOfCar(arrOfid[i]).then(() => {
-      (<HTMLElement>cars[i]).classList.remove('drive');
-    });
+    arrOfPromisesToEngineStop.push(stopEngineOfCar(arrOfId[i]));
   }
+  const syncStop = () => Promise.all(arrOfPromisesToEngineStop);
+  syncStop().then(() => renderMain('garage'));
+
 }

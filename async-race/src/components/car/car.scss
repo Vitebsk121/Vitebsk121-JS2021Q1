@@ -3,12 +3,16 @@
     border-radius: 5px;
     padding: 3px;
 
+    &.winner {
+        background-color: rgba(1, 255, 31, 0.3);
+    }
+
     &.active {
         background-color: rgba(0, 0, 0, 0.3);
     }
 
-    &.winner {
-        background-color: rgba(1, 255, 31, 0.3);
+    &.car__wrapper-hidden {
+        height: 0;
     }
 }
 

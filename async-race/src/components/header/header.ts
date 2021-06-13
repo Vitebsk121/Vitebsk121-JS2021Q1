@@ -27,10 +27,17 @@ export class Header extends BaseComponent {
 
   listenersAdd(): void {
     this.garageButton.element.addEventListener('click', () => {
-      renderMain('garage');
+      const garageMain = document.querySelector('.main-garage');
+      const carWrapper = document.querySelectorAll('.car__wrapper');
+      garageMain?.classList.remove('main-hidden');
+      carWrapper.forEach((item) => item.classList.remove('car__wrapper-hidden'));
     });
+    
     this.winnersButton.element.addEventListener('click', () => {
-      renderMain('winners');
+      const garageMain = document.querySelector('.main-garage');
+      const carWrapper = document.querySelectorAll('.car__wrapper');
+      garageMain?.classList.add('main-hidden');
+      carWrapper.forEach((item) => item.classList.add('car__wrapper-hidden'));
     });
   }
 }
