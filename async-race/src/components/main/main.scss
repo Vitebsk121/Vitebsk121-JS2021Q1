@@ -1,5 +1,5 @@
 .main {
-    min-height: 100%;
+    min-height: calc(100% - 60px);
     display: flex;
     justify-content: center;
     background: linear-gradient(6deg, #FDBB2D 0%, #22C1C3 100%);

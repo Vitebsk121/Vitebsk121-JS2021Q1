@@ -1,4 +1,3 @@
-import { renderMain } from '../../shared/rendering';
 import { BaseComponent } from '../base-component';
 import { Button } from '../buttons/button';
 import './header.scss';
@@ -32,7 +31,7 @@ export class Header extends BaseComponent {
       garageMain?.classList.remove('main-hidden');
       carWrapper.forEach((item) => item.classList.remove('car__wrapper-hidden'));
     });
-    
+
     this.winnersButton.element.addEventListener('click', () => {
       const garageMain = document.querySelector('.main-garage');
       const carWrapper = document.querySelectorAll('.car__wrapper');

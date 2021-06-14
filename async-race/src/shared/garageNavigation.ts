@@ -33,7 +33,7 @@ export function setPrevGarageButtonSettings(): string {
   const countOfPages = localStorage.getItem('pages');
   if (!countOfPages) throw Error('Count of pages not founded');
   let buttonSettings = 'disabled';
-  if (+countOfPages > 1) {
+  if (+countOfPages >= 1) {
     if (pageNumber !== 1) {
       buttonSettings = 'active';
     }

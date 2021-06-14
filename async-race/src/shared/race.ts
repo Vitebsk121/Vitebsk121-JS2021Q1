@@ -31,12 +31,12 @@ function getIdOfAllCarsOnRace() {
 
 function setGarageMessage(winnerID: string): void {
   const winnerName = (carsList().filter((car) => String(car.id) === winnerID))[0].name;
-  let winnerTime: string = 'time not founded';
-  const cars = document.querySelectorAll('.car')
+  let winnerTime = 'time not founded';
+  const cars = document.querySelectorAll('.car');
   cars.forEach((car) => {
-   if (car.id === winnerID) {
-    winnerTime = ((<HTMLElement>car).style.animationDuration).split('').filter((item) => item !== 's').join('');
-   }
+    if (car.id === winnerID) {
+      winnerTime = ((<HTMLElement>car).style.animationDuration).split('').filter((item) => item !== 's').join('');
+    }
   });
   const message = document.querySelector('.garage__message-text');
   (<HTMLElement>message).innerText = `${winnerName} won first (${(+winnerTime).toFixed(2)}s)`;
@@ -48,7 +48,9 @@ function setGarageMessage(winnerID: string): void {
 function setWinnerStyle(winnerID: string): void {
   const carWrapper = document.querySelectorAll('.car__wrapper');
   carWrapper.forEach((item) => {
-    item.id === winnerID ? item.classList.add('winner') : item;
+    if (item.id === winnerID) {
+      item.classList.add('winner');
+    }
   });
 }
 
@@ -78,7 +80,7 @@ function getWinnerOfRace(): void {
         setGarageMessage(winnerID);
         setWinnerStyle(winnerID);
         unblockResetButtons();
-      };
+      }
     });
   });
 }
@@ -122,11 +124,10 @@ export function raceAllCars(): void {
 export function resetAllCars(): void {
   const cars = document.querySelectorAll('.car');
   const arrOfId = getIdOfAllCarsOnRace();
-  let arrOfPromisesToEngineStop: Promise<{ [key: string]: string }>[] = [];
+  const arrOfPromisesToEngineStop: Promise<{ [key: string]: string }>[] = [];
   for (let i = 0; i < cars.length; i++) {
     arrOfPromisesToEngineStop.push(stopEngineOfCar(arrOfId[i]));
   }
   const syncStop = () => Promise.all(arrOfPromisesToEngineStop);
   syncStop().then(() => renderMain('garage'));
-
 }

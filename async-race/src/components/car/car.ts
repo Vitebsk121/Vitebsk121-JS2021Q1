@@ -43,7 +43,7 @@ export class Car extends BaseComponent {
     this.stopEngineButton.element.setAttribute('disabled', '');
     this.road = new BaseComponent('div', ['garage__road']);
     this.car = new BaseComponent('div', ['car']);
-    this.car.element.setAttribute('id', id)
+    this.car.element.setAttribute('id', id);
     this.roadFlag = new BaseComponent('div', ['flag']);
     this.element.setAttribute('id', id);
 
