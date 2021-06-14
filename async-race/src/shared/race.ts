@@ -1,6 +1,8 @@
 import { carsList } from './localDB';
 import { renderMain } from './rendering';
-import { driveEngineOfCar, startEngineOfCar, stopEngineOfCar } from './server';
+import {
+  createNewWinner, driveEngineOfCar, getWinner, startEngineOfCar, stopEngineOfCar, updateWinner,
+} from './server';
 
 export function raceCar(id: string, car: HTMLElement): void {
   startEngineOfCar(id).then((data) => {
@@ -20,7 +22,7 @@ export function resetCar(id: string, car: HTMLElement): void {
   });
 }
 
-function getIdOfAllCarsOnRace() {
+function getIdOfAllCarsOnRace(): string[] {
   const cars = document.querySelectorAll('.car__wrapper');
   const arrOfID: string[] = [];
   cars.forEach((item) => {
@@ -54,7 +56,7 @@ function setWinnerStyle(winnerID: string): void {
   });
 }
 
-function blockAllButtons() {
+function blockAllButtons(): void {
   const buttons = document.querySelectorAll('button');
   buttons.forEach((item) => {
     if (!item.classList.contains('header__button')) {
@@ -64,10 +66,35 @@ function blockAllButtons() {
   });
 }
 
-function unblockResetButtons() {
+function unblockResetButtons(): void {
   const resetButton = document.getElementById('reset');
   resetButton?.removeAttribute('disabled');
   resetButton?.classList.remove('disabled');
+}
+
+function createWinner(winnerID: string): void {
+  let winnerTime = '1';
+  const cars = document.querySelectorAll('.car');
+  cars.forEach((car) => {
+    if (car.id === winnerID) {
+      winnerTime = ((<HTMLElement>car).style.animationDuration).split('').filter((item) => item !== 's').join('');
+    }
+  });
+  const winner = {
+    id: winnerID,
+    wins: '1',
+    time: winnerTime,
+  };
+  getWinner(winner.id)
+    .then((response) => {
+      if (response.status !== 200) {
+        createNewWinner(winner);
+      } else {
+        winner.wins = response.car.wins + 1;
+        if (+response.car.time < +winner.time) winner.time = response.car.time;
+        updateWinner(winner);
+      }
+    });
 }
 
 function getWinnerOfRace(): void {
@@ -79,13 +106,14 @@ function getWinnerOfRace(): void {
         winnerID = car.id;
         setGarageMessage(winnerID);
         setWinnerStyle(winnerID);
+        createWinner(winnerID);
         unblockResetButtons();
       }
     });
   });
 }
 
-function checkCarsEngines(cars: NodeListOf<Element>) {
+function checkCarsEngines(cars: NodeListOf<Element>): void {
   let countOfBrokeEnginesCars = 0;
   cars.forEach((car) => {
     if ((<HTMLElement>car).style.animationPlayState === 'paused') {
