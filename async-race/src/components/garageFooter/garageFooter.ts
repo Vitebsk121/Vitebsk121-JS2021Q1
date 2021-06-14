@@ -12,7 +12,7 @@ export class GarageFooter extends BaseComponent {
   constructor(cars: { [key: string]: string; }[]) {
     super('div', ['garage__footer']);
     const countOfPages = Math.ceil(cars.length / 7);
-    localStorage.setItem('pages', `${countOfPages}`);
+    localStorage.setItem('garage-pages', `${countOfPages}`);
     const GarageFooterServise = (): Promise<void> => new Promise<void>((res) => {
       const nextButtonSettings = setNextGarageButtonSettings();
       const prevButtonSettings = setPrevGarageButtonSettings();

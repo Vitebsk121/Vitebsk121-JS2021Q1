@@ -14,7 +14,7 @@
 }
 
 .field__title-button {
-    cursor: pointer;
+    cursor: pointer !important;
     transition: all 0.1s;
 
     &:hover {

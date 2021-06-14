@@ -1,5 +1,6 @@
 import { carsList } from './localDB';
 import { renderMain } from './rendering';
+import { refreshWinners } from './renderWinners';
 import {
   createNewWinner, driveEngineOfCar, getWinner, startEngineOfCar, stopEngineOfCar, updateWinner,
 } from './server';
@@ -41,7 +42,7 @@ function setGarageMessage(winnerID: string): void {
     }
   });
   const message = document.querySelector('.garage__message-text');
-  (<HTMLElement>message).innerText = `${winnerName} won first (${(+winnerTime).toFixed(2)}s)`;
+  (<HTMLElement>message).innerText = `${winnerName} was first (${(+winnerTime).toFixed(2)}s)`;
   setTimeout(() => {
     (<HTMLElement>message).innerText = '';
   }, 7000);
@@ -59,7 +60,7 @@ function setWinnerStyle(winnerID: string): void {
 function blockAllButtons(): void {
   const buttons = document.querySelectorAll('button');
   buttons.forEach((item) => {
-    if (!item.classList.contains('header__button')) {
+    if (!item.classList.contains('header__button') && !item.classList.contains('winners__button')) {
       item.classList.add('disabled');
       item.setAttribute('disabled', 'disabled');
     }
@@ -88,11 +89,11 @@ function createWinner(winnerID: string): void {
   getWinner(winner.id)
     .then((response) => {
       if (response.status !== 200) {
-        createNewWinner(winner);
+        createNewWinner(winner).then(() => refreshWinners());
       } else {
         winner.wins = response.car.wins + 1;
         if (+response.car.time < +winner.time) winner.time = response.car.time;
-        updateWinner(winner);
+        updateWinner(winner).then(() => refreshWinners());
       }
     });
 }

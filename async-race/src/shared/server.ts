@@ -115,3 +115,11 @@ export async function getAllWinners(): Promise<{ [key: string]: string }[]> {
   const data: { [key: string]: string }[] = await serverResponse.json();
   return data;
 }
+
+export async function deleteWinner(id: string): Promise<{ [key: string]: string }> {
+  const serverResponse = await fetch(`${server.winners}/${id}`, {
+    method: 'DELETE',
+  });
+  const data: { [key: string]: string } = await serverResponse.json();
+  return data;
+}

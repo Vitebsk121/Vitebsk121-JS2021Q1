@@ -1,5 +1,6 @@
 import { randomCar } from '../../shared/randomCars';
 import { refreshGarage } from '../../shared/renderGarage';
+import { refreshWinners } from '../../shared/renderWinners';
 import { createCar, updateCar } from '../../shared/server';
 import { BaseComponent } from '../base-component';
 import { Button } from '../buttons/button';
@@ -130,7 +131,8 @@ export class GarageMenu extends BaseComponent {
     updateCar(NewCar).then(() => {
       refreshGarage();
       this.clearForm('selectedCar');
-    });
+    })
+    .then(() => refreshWinners());
   }
 
   addRandomCars(): void {

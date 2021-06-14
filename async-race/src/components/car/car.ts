@@ -1,6 +1,7 @@
 import { raceCar, resetCar } from '../../shared/race';
 import { clearGarageSelectedForm, refreshGarage } from '../../shared/renderGarage';
-import { deleteCar } from '../../shared/server';
+import { refreshWinners } from '../../shared/renderWinners';
+import { deleteCar, deleteWinner } from '../../shared/server';
 import { BaseComponent } from '../base-component';
 import { Button } from '../buttons/button';
 import { CarSvg } from '../carSvg/carSvg';
@@ -108,10 +109,13 @@ export class Car extends BaseComponent {
     });
 
     this.deleteButton.element.addEventListener('click', () => {
-      deleteCar(this.element.id).then(() => {
+      deleteCar(this.element.id)
+      .then(() => {
         refreshGarage();
         clearGarageSelectedForm();
-      });
+      })
+      .then(() => deleteWinner(this.element.id))
+      .then(() => refreshWinners());
     });
 
     this.startEngineButton.element.addEventListener('click', () => {

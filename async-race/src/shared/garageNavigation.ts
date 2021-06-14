@@ -1,10 +1,10 @@
 export function setDefaultPageNumber(): void {
-  localStorage.setItem('page-number', '1');
+  localStorage.setItem('garage-page-number', '1');
 }
 
 export function getPageNumber(): number {
-  if (!localStorage.getItem('page-number')) setDefaultPageNumber();
-  const pageNumber = localStorage.getItem('page-number');
+  if (!localStorage.getItem('garage-page-number')) setDefaultPageNumber();
+  const pageNumber = localStorage.getItem('garage-page-number');
   if (!pageNumber) throw Error('Page number not founded');
   return +pageNumber;
 }
@@ -12,12 +12,12 @@ export function getPageNumber(): number {
 export function setPageNumber(n: number): void {
   const currentPageNumber = getPageNumber();
   const newPageNumber = currentPageNumber + n;
-  localStorage.setItem('page-number', `${newPageNumber}`);
+  localStorage.setItem('garage-page-number', `${newPageNumber}`);
 }
 
 export function setNextGarageButtonSettings(): string {
   const pageNumber = getPageNumber();
-  const countOfPages = localStorage.getItem('pages');
+  const countOfPages = localStorage.getItem('garage-pages');
   if (!countOfPages) throw Error('Count of pages not founded');
   let buttonSettings = 'disabled';
   if (+countOfPages > 1) {
@@ -30,7 +30,7 @@ export function setNextGarageButtonSettings(): string {
 
 export function setPrevGarageButtonSettings(): string {
   const pageNumber = getPageNumber();
-  const countOfPages = localStorage.getItem('pages');
+  const countOfPages = localStorage.getItem('garage-pages');
   if (!countOfPages) throw Error('Count of pages not founded');
   let buttonSettings = 'disabled';
   if (+countOfPages >= 1) {
