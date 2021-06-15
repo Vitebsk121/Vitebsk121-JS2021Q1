@@ -1,0 +1,32 @@
+.garage__header {
+    margin-bottom: 5px;
+    display: flex;
+}
+
+.garage__info {
+    margin-right: 35%;
+
+    >p {
+        color: rgb(8, 31, 101);
+    }
+
+    .info__cars-count {
+        margin-bottom: 10px;
+        font-size: 1.5em;
+    }
+}
+
+
+.garage__button {
+    padding: 8px 12px;
+    background: linear-gradient(90deg, #f8ff00 0%, #3ad59f 100%);
+    margin-right: 20px;
+
+    &:hover {
+        box-shadow: 0px 0px 20px 5px rgba(226, 235, 44, 0.6);
+    }
+
+    &:last-child {
+        margin: 0;
+    }
+}

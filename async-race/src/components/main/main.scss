@@ -1,0 +1,32 @@
+.main {
+    min-height: calc(100% - 60px);
+    display: flex;
+    justify-content: center;
+    background: linear-gradient(6deg, #FDBB2D 0%, #22C1C3 100%);
+}
+
+.main__wrapper {
+    margin-top: 10px;
+    width: 95%;
+    height: 95%;
+}
+
+.garage__top-wrapper {
+    margin-bottom: 30px;
+}
+
+.main-garage {
+    position: relative;
+    z-index: 100;
+
+    &.main-hidden {
+        z-index: -100;
+    }
+}
+
+.main-winners {
+    position: absolute;
+    width: 100%;
+    top: 60px;
+    left: 0;
+}

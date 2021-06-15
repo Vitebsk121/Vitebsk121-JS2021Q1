@@ -1,0 +1,28 @@
+.field__header {
+    background: linear-gradient(90deg, #fcff9e 0%, #c67700 100%);
+    display: flex;
+    flex-wrap: nowrap;
+    border-radius: 3px;
+
+    >p {
+        width: 20%;
+        display: flex;
+        justify-content: center;
+        cursor: default;
+        font-size: calc( (100vw - 480px)/(1280 - 480) * (22 - 13) + 13px);
+    }
+}
+
+.field__title-button {
+    cursor: pointer !important;
+    transition: all 0.1s;
+
+    &:hover {
+        color: red;
+        text-shadow: 0px 0px 15px rgb(242, 255, 0);
+    }
+
+    &:active {
+        transform: scale(0.95);
+    }
+}
