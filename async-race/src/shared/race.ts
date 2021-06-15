@@ -127,8 +127,9 @@ function checkCarsEngines(cars: NodeListOf<Element>): void {
 }
 
 export function raceAllCars(): void {
-  blockAllButtons();
   const cars = document.querySelectorAll('.car');
+  if (cars.length === 0) return;
+  blockAllButtons();
   const id = getIdOfAllCarsOnRace();
   getWinnerOfRace();
   const arrOfPromises: Promise<{ [key: string]: string }>[] = [];

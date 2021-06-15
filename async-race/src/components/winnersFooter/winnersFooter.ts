@@ -1,13 +1,17 @@
 import { winnersList } from '../../shared/localDB';
 import { refreshWinners } from '../../shared/renderWinners';
-import { setNextWinnersButtonSettings, setPrevWinnersButtonSettings, setWinnersPageNumber } from '../../shared/winnersNavigation';
+import {
+  setNextWinnersButtonSettings, setPrevWinnersButtonSettings, setWinnersPageNumber,
+} from '../../shared/winnersNavigation';
 import { BaseComponent } from '../base-component';
 import { Button } from '../buttons/button';
 import './winnersFooter.scss';
 
 export class WinnersFooter extends BaseComponent {
   private prevPage!: Button;
+
   private nextPage!: Button;
+
   constructor() {
     super('div', ['winners__footer']);
 
@@ -21,10 +25,9 @@ export class WinnersFooter extends BaseComponent {
       res();
     });
     winnersFooterService()
-    .then(() => {
-      this.addEventListeners();
-    });
-
+      .then(() => {
+        this.addEventListeners();
+      });
   }
 
   renderWinnersFooter(prevButtonSettings: string, nextButtonSettings: string): void {

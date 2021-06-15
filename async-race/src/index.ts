@@ -17,10 +17,12 @@ export class Page {
 
 window.onload = () => {
   const syncRender = () => Promise.all([setCarsList(), setWinnersList()]);
+  localStorage.setItem('sort', '');
+  localStorage.setItem('order', '');
   syncRender().then(() => {
     const body = document.querySelector('body');
     if (!body) throw Error('body not found');
     const page = () => new Page(body);
     page();
-  })
+  });
 };

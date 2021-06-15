@@ -111,7 +111,11 @@ export async function updateWinner(car: { [key: string]: string }): Promise<{ [k
 }
 
 export async function getAllWinners(): Promise<{ [key: string]: string }[]> {
-  const serverResponse = await fetch(server.winners);
+  let url = server.winners;
+  const currentSort = localStorage.getItem('sort');
+  const currentOrder = localStorage.getItem('order');
+  if (currentSort !== '' && currentOrder !== '') url = `${server.winners}?_sort=${currentSort}&_order=${currentOrder}`;
+  const serverResponse = await fetch(url);
   const data: { [key: string]: string }[] = await serverResponse.json();
   return data;
 }

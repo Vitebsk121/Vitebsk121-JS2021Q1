@@ -110,12 +110,12 @@ export class Car extends BaseComponent {
 
     this.deleteButton.element.addEventListener('click', () => {
       deleteCar(this.element.id)
-      .then(() => {
-        refreshGarage();
-        clearGarageSelectedForm();
-      })
-      .then(() => deleteWinner(this.element.id))
-      .then(() => refreshWinners());
+        .then(() => {
+          refreshGarage();
+          clearGarageSelectedForm();
+        })
+        .then(() => deleteWinner(this.element.id))
+        .then(() => refreshWinners());
     });
 
     this.startEngineButton.element.addEventListener('click', () => {

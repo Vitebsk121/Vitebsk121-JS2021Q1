@@ -129,10 +129,11 @@ export class GarageMenu extends BaseComponent {
     };
 
     updateCar(NewCar).then(() => {
-      refreshGarage();
-      this.clearForm('selectedCar');
-    })
-    .then(() => refreshWinners());
+      refreshGarage().then(() => {
+        this.clearForm('selectedCar');
+        refreshWinners();
+      });
+    });
   }
 
   addRandomCars(): void {

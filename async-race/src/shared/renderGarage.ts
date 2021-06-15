@@ -7,8 +7,8 @@ export function renderNewGarage(): void {
   garage?.replaceWith(newGarage.element);
 }
 
-export function refreshGarage(): void {
-  setCarsList().then(() => {
+export async function refreshGarage(): Promise<void> {
+  await setCarsList().then(() => {
     renderNewGarage();
   });
 }
