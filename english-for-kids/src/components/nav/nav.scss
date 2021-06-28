@@ -1,0 +1,20 @@
+.app__nav {
+    min-height: 100%;
+    width: 450px;
+    background-color: royalblue;
+    transition: all .7s;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translateX(-100%);
+
+    &.active {
+        transform: translateX(0); 
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .app__nav {
+        width: 320px;
+    }
+}
