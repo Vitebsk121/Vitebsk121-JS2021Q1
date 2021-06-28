@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Kirang+Haerang&display=swap');
+
 body {
   min-height: 100vh;
   display: flex;
@@ -7,4 +9,5 @@ body {
   background-color: white;
   color: rgb(40, 34, 34);
   text-transform: uppercase;
+  font-size: calc( (100vw - 480px)/(1280 - 480) * (22 - 13) + 13px);
 }

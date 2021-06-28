@@ -1,0 +1,16 @@
+.rainbow-animated {
+    font-family: 'Kirang Haerang', cursive;
+    background: linear-gradient(to right, red, orange, yellow, green, cyan, blue, violet, red, orange, yellow, green, cyan, blue, violet);
+    background-size: 120% 120%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: rainbow 20s linear infinite;
+    font-size: calc( (100vw - 380px)/(1280 - 480) * (46 - 20) + 20px);
+    cursor: default;
+  }
+   
+  @keyframes rainbow {
+    0% { background-position: 0% 50% }
+    50% { background-position: 300% 50% }
+    100% { background-position: 0% 50% }
+  }
