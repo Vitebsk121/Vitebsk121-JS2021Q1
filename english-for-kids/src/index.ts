@@ -2,6 +2,7 @@ import { BaseComponent } from './components/baseComponents';
 import { Header } from './components/header/header';
 import { Navigation } from './components/nav/nav';
 import './reset.scss';
+import { closeNav } from './shared/servise';
 import './styles.scss';
 
 export class Page {
@@ -26,9 +27,10 @@ export class Page {
     addEventListeners() {
       document.addEventListener('click', (event) => {
         const element = <HTMLElement>event.target;
-        if (!element.classList.contains('app__nav')) {
-          this.nav.element.classList.remove('active');
-        }
+        if (element.classList.contains('app__nav') || 
+            element.classList.contains('header__burger') ||
+            element.classList.contains('burger__line')) return;
+        closeNav();
       })
     }
   }

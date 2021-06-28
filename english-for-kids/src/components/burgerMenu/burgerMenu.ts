@@ -1,3 +1,4 @@
+import { openCloseNav } from '../../shared/servise';
 import { BaseComponent } from '../baseComponents';
 import './burgerMenu.scss';
 
@@ -25,11 +26,7 @@ export class BurgerMenu extends BaseComponent {
 
     addEventListeners() {
         this.element.addEventListener('click', () => {
-            const nav = document.querySelector('.app__nav');
-            this.lineOne.element.classList.toggle('active');
-            this.lineTwo.element.classList.toggle('active');
-            this.lineThree.element.classList.toggle('active');
-            nav?.classList.toggle('active');
+            openCloseNav();
         })
     }
 
