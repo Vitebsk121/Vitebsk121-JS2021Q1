@@ -1,7 +1,7 @@
 .app__nav {
     min-height: 100%;
     width: 450px;
-    background: linear-gradient(158deg, rgba(255,215,0,1) 0%, rgba(0,187,255,1) 23%, rgba(208,77,255,1) 47%, rgba(0,137,255,1) 68%, rgba(0,255,209,1) 93%);
+    background: var(--backgroundStyleMode);
     transition: all .7s;
     position: absolute;
     top: 0;
