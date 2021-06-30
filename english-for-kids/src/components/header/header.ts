@@ -5,20 +5,22 @@ import { Switcher } from '../switcher/switcher';
 import './header.scss';
 
 export class Header extends BaseComponent {
-    private burgerMenu: BurgerMenu;
-    private logo: Logo;
-    private switcher: Switcher;
+  private burgerMenu: BurgerMenu;
 
-    constructor() {
-        super('div', ['header']);
+  private logo: Logo;
 
-        this.burgerMenu = new BurgerMenu('div', ['header__burger'])
-        this.element.append(this.burgerMenu.element);
+  private switcher: Switcher;
 
-        this.logo = new Logo();
-        this.element.append(this.logo.element);
+  constructor() {
+    super('div', ['header']);
 
-        this.switcher = new Switcher();
-        this.element.append(this.switcher.element);
-    }
+    this.burgerMenu = new BurgerMenu('div', ['header__burger']);
+    this.element.append(this.burgerMenu.element);
+
+    this.logo = new Logo();
+    this.element.append(this.logo.element);
+
+    this.switcher = new Switcher();
+    this.element.append(this.switcher.element);
+  }
 }
