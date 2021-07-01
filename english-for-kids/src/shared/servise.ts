@@ -1,3 +1,5 @@
+import { Main } from "../components/main/main";
+
 export function closeNav(): void {
   const nav = document.querySelector('.app__nav');
   if (!nav?.classList.contains('active')) return;
@@ -42,4 +44,10 @@ export function switchTheme(themeMode: string): void {
         rgba(148,233,165,1) 100%)`,
     );
   }
+}
+
+export function renderNewMain(category: string, mode: string) {
+  const main = document.querySelector('.app__main');
+  const newMain = new Main(category, mode);
+  main?.replaceWith(newMain.element);
 }
