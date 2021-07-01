@@ -12,7 +12,7 @@ export class Header extends BaseComponent {
   private switcher: Switcher;
 
   constructor() {
-    super('div', ['header']);
+    super('header', ['header']);
 
     this.burgerMenu = new BurgerMenu('div', ['header__burger']);
     this.element.append(this.burgerMenu.element);

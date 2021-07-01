@@ -1,5 +1,6 @@
 import { BaseComponent } from './components/baseComponents';
 import { Header } from './components/header/header';
+import { Main } from './components/main/main';
 import { Navigation } from './components/nav/nav';
 import './reset.scss';
 import { closeNav } from './shared/servise';
@@ -12,15 +13,19 @@ export class Page {
 
   private nav: Navigation;
 
+  private main: Main;
+
   constructor(body: HTMLElement) {
     this.page = body;
     this.appWrapper = new BaseComponent('div', ['app__wrapper']);
     const header = new Header();
     this.nav = new Navigation();
+    this.main = new Main('categories', 'train');
     const pageService = () => new Promise<void>((res) => {
       body.append(this.appWrapper.element);
       this.appWrapper.element.append(header.element);
       this.appWrapper.element.append(this.nav.element);
+      this.appWrapper.element.append(this.main.element);
       res();
     });
     pageService().then(() => {
