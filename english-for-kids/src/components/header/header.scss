@@ -1,10 +1,12 @@
 .header {
-    width: 90vw;
+    width: 93%;
     height: 10vh;
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 10px;
+    background: var(--backgroundStyleMode);
+    border-radius: 0 0 10px 10px;
 }
 
 .header__burger {
@@ -19,9 +21,17 @@
     }
 }
 
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 840px) {
     .header__burger {
         width: 40px;
         height: 25px;
+    }
+}
+
+@media screen and (max-width: 660px) {
+
+    .header {
+        position: fixed;
+        z-index: 400;
     }
 }

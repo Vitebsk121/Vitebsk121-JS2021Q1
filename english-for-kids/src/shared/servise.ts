@@ -1,15 +1,19 @@
 export function closeNav(): void {
   const nav = document.querySelector('.app__nav');
   if (!nav?.classList.contains('active')) return;
+  const app = document.querySelector('.app__wrapper');
   const burger = document.querySelectorAll('.burger__line');
   nav?.classList.remove('active');
+  app?.classList.remove('to-right');
   burger.forEach((line) => line.classList.remove('active'));
 }
 
 export function openCloseNav(): void {
   const nav = document.querySelector('.app__nav');
   const burger = document.querySelectorAll('.burger__line');
+  const app = document.querySelector('.app__wrapper');
   nav?.classList.toggle('active');
+  app?.classList.toggle('to-right');
   burger.forEach((line) => line.classList.toggle('active'));
 }
 

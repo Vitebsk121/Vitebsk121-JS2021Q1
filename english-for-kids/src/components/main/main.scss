@@ -3,5 +3,13 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
+    transition: all .5s;
+}
+
+@media screen and (max-width: 660px) {
+
+    .app__main  {
+        margin-top: 11vh;
+    }
 }
 

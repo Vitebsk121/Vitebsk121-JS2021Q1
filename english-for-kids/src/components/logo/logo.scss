@@ -7,6 +7,7 @@
     animation: rainbow 20s linear infinite;
     font-size: calc( (100vw - 380px)/(1280 - 480) * (46 - 20) + 20px);
     cursor: default;
+    text-align: center;
   }
    
   @keyframes rainbow {

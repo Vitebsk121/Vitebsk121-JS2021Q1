@@ -24,7 +24,7 @@ export class Page {
     const pageService = () => new Promise<void>((res) => {
       body.append(this.appWrapper.element);
       this.appWrapper.element.append(header.element);
-      this.appWrapper.element.append(this.nav.element);
+      body.append(this.nav.element);
       this.appWrapper.element.append(this.main.element);
       res();
     });
