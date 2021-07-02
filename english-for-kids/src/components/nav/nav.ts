@@ -1,5 +1,5 @@
 import { getHeadersOfCards } from '../../shared/server';
-import { renderNewMain } from '../../shared/servise';
+import { renderNewMain, setNavistStye } from '../../shared/servise';
 import { BaseComponent } from '../baseComponents';
 import './nav.scss';
 
@@ -17,9 +17,9 @@ export class Navigation extends BaseComponent {
     this.navList = new BaseComponent('ul', ['nav__list']);
     nav.element.append(this.navList.element);
 
-    this.navListElement = new BaseComponent('li', ['nav__list-item'], 'Main Page');
+    this.navListElement = new BaseComponent('li', ['nav__list-item', 'active'], 'Main Page');
     this.navList.element.append(this.navListElement.element);
-    this.addEventListener('categories');
+    this.addEventListener('Main Page');
 
     getHeadersOfCards().then((headers) => {
       for (let i = 0; i < headers.length; i++) {
@@ -32,6 +32,7 @@ export class Navigation extends BaseComponent {
 
   addEventListener(category: string): void {
     this.navListElement.element.addEventListener('click', () => {
+      setNavistStye(category);
       renderNewMain(category);
     });
   }

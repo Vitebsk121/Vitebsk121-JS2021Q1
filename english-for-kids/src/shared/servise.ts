@@ -57,3 +57,13 @@ export async function getMode(): Promise<string> {
   if (!mode) throw new Error('App mode is not founded');
   return mode;
 }
+
+export function setNavistStye(nameOfCategory: string): void {
+  const arrOfNavElement = document.querySelectorAll('.nav__list-item');
+  arrOfNavElement.forEach((item) => {
+    item.classList.remove('active');
+    if (item.textContent === nameOfCategory) {
+      item.classList.add('active');
+    }
+  });
+}

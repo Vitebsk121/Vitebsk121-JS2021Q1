@@ -20,7 +20,7 @@ export class Page {
     this.appWrapper = new BaseComponent('div', ['app__wrapper']);
     const header = new Header();
     this.nav = new Navigation();
-    this.main = new Main('categories');
+    this.main = new Main('Main Page');
     const pageService = () => new Promise<void>((res) => {
       body.append(this.appWrapper.element);
       this.appWrapper.element.append(header.element);

@@ -20,8 +20,10 @@ export class Switcher extends BaseComponent {
       switcher?.addEventListener('input', (e) => {
         if ((<HTMLInputElement>e.target).checked) {
           switchTheme('train');
+          localStorage.setItem('mode', 'train');
         } else {
           switchTheme('play');
+          localStorage.setItem('mode', 'play');
         }
       });
     });

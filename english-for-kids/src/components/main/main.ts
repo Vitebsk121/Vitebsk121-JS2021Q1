@@ -10,7 +10,7 @@ export class Main extends BaseComponent {
   constructor(category: string) {
     super('main', ['app__main']);
 
-    if (category === 'categories') {
+    if (category === 'Main Page') {
       getHeadersOfCards().then((categories) => {
         categories.forEach((cat) => {
           getCards(cat).then((arrOfCards) => {
