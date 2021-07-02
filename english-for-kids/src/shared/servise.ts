@@ -1,4 +1,4 @@
-import { Main } from "../components/main/main";
+import { Main } from '../components/main/main';
 
 export function closeNav(): void {
   const nav = document.querySelector('.app__nav');
@@ -46,8 +46,14 @@ export function switchTheme(themeMode: string): void {
   }
 }
 
-export function renderNewMain(category: string, mode: string) {
+export function renderNewMain(category: string): void {
   const main = document.querySelector('.app__main');
-  const newMain = new Main(category, mode);
+  const newMain = new Main(category);
   main?.replaceWith(newMain.element);
+}
+
+export async function getMode(): Promise<string> {
+  const mode = localStorage.getItem('mode');
+  if (!mode) throw new Error('App mode is not founded');
+  return mode;
 }

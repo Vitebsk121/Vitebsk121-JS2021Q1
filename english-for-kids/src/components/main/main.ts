@@ -1,4 +1,5 @@
-import cards from '../../shared/cards';
+import { getCards, getHeadersOfCards } from '../../shared/server';
+import { getMode } from '../../shared/servise';
 import { BaseComponent } from '../baseComponents';
 import { Card } from '../card/card';
 import './main.scss';
@@ -6,21 +7,29 @@ import './main.scss';
 export class Main extends BaseComponent {
   private card!: Card;
 
-  constructor(category: string, mode: string) {
+  constructor(category: string) {
     super('main', ['app__main']);
 
     if (category === 'categories') {
-      for (let i = 0; i < cards[0].length; i++) {
-        const title = String(cards[0][i]);
-        this.card = new Card(category, mode, title, cards[i+1][0], i);
-        this.element.append(this.card.element);
-      }
+      getHeadersOfCards().then((categories) => {
+        categories.forEach((cat) => {
+          getCards(cat).then((arrOfCards) => {
+            getMode().then((mode) => {
+              this.card = new Card(arrOfCards[0], mode, cat);
+              this.element.append(this.card.element);
+            });
+          });
+        });
+      });
     } else {
-      for (let i = 0; i < cards[+category].length; i++) {
-        const title = String(Object(cards[+category][i]).word);
-        this.card = new Card(category, mode, title, cards[+category][i], i);
-        this.element.append(this.card.element);
-      }
+      getCards(category).then((arrOfCards) => {
+        getMode().then((mode) => {
+          arrOfCards.forEach((card) => {
+            this.card = new Card(card, mode);
+            this.element.append(this.card.element);
+          });
+        });
+      });
     }
   }
 }

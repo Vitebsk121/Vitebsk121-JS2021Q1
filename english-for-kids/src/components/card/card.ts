@@ -1,42 +1,43 @@
 import './card.scss';
 import { BaseComponent } from '../baseComponents';
 import { renderNewMain } from '../../shared/servise';
+import { CardObj } from '../../shared/interfaces';
 
 export class Card extends BaseComponent {
   private image: BaseComponent;
 
   private title: BaseComponent;
 
-  constructor(category: string, mode: string, title: string, data: string | { word: string; translation: string; image: string; audioSrc: string; }, url: number) {
+  constructor(card: CardObj, mode: string, categoriesName?: string) {
     super('div', ['card-container']);
     this.image = new BaseComponent('img', ['card-pic']);
     this.title = new BaseComponent('p', ['card-title']);
 
-    if (category === 'categories') {
-      this.renderCategoriesCards(title, Object(data).image);
-      this.addEventListener(String(url + 1), mode);
+    if (categoriesName) {
+      this.renderCategoriesCards(card, categoriesName);
+      this.addEventListener(categoriesName);
     } else {
-      this.renderPlayCards(Object(data), mode);
+      this.renderPlayCards(card, mode);
     }
   }
 
-  renderCategoriesCards(title: string, src: string): void {
-    this.image.element.setAttribute('src', src);
-    this.title.element.textContent = title;
+  renderCategoriesCards(card: CardObj, categoriesName: string): void {
+    this.image.element.setAttribute('src', card.image);
+    this.title.element.textContent = categoriesName;
     this.element.append(this.image.element);
     this.element.append(this.title.element);
   }
 
-  renderPlayCards(data: { [key: string]:string }, mode: string) {
-    this.image.element.setAttribute('src', data.image);
-    this.title.element.textContent = data.word;
+  renderPlayCards(card: CardObj, mode: string): void {
+    this.image.element.setAttribute('src', card.image);
+    this.title.element.textContent = card.word;
     this.element.append(this.image.element);
     this.element.append(this.title.element);
   }
 
-  addEventListener(catURL: string, mode: string) {
+  addEventListener(categoriesName: string): void {
     this.element.addEventListener('click', () => {
-      renderNewMain(catURL, mode);
-    })
+      renderNewMain(categoriesName);
+    });
   }
 }

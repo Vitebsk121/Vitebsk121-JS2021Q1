@@ -20,7 +20,7 @@ export class Page {
     this.appWrapper = new BaseComponent('div', ['app__wrapper']);
     const header = new Header();
     this.nav = new Navigation();
-    this.main = new Main('categories', 'train');
+    this.main = new Main('categories');
     const pageService = () => new Promise<void>((res) => {
       body.append(this.appWrapper.element);
       this.appWrapper.element.append(header.element);
@@ -38,7 +38,7 @@ export class Page {
       const element = <HTMLElement>event.target;
       if (element.classList.contains('app__nav')
             || element.classList.contains('header__burger')
-            || element.classList.contains('burger__line') 
+            || element.classList.contains('burger__line')
             || element.classList.contains('nav__list')
             || element.classList.contains('app__nav')) return;
       closeNav();
@@ -47,6 +47,7 @@ export class Page {
 }
 
 window.onload = () => {
+  localStorage.setItem('mode', 'train');
   const body = document.querySelector('body');
   if (!body) throw Error('body not found');
   const page = () => new Page(body);
