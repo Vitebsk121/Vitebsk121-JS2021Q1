@@ -38,7 +38,9 @@ export class Page {
       const element = <HTMLElement>event.target;
       if (element.classList.contains('app__nav')
             || element.classList.contains('header__burger')
-            || element.classList.contains('burger__line')) return;
+            || element.classList.contains('burger__line') 
+            || element.classList.contains('nav__list')
+            || element.classList.contains('app__nav')) return;
       closeNav();
     });
   }

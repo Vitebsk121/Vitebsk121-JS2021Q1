@@ -10,10 +10,20 @@
     transform: translateX(-100%);
     z-index: 200;
     animation: BackgroundAnimate 30s linear infinite;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
     &.active {
         transform: translateX(0); 
     }
+}
+
+.nav__list-item {
+    width: fit-content;
+    margin-bottom: 20px;
+    color: white;
+    cursor: pointer;
 }
 
 @keyframes BackgroundAnimate {
