@@ -1,5 +1,4 @@
 .card-container {
-    display: flex;
     margin: 7px;
     display: flex;
     flex-direction: column;
@@ -7,24 +6,32 @@
     justify-content: center;
     width: 300px;
     height: 300px;
-    position: relative;
     background: var(--backgroundStyleMode);
     background-size: 100% 47%;
     background-repeat: no-repeat;
     border-radius: 15px;
-    box-shadow: 0 2px 5px 0 rgb(0 0 0 / 16%), 0 2px 10px 0 rgb(0 0 0 / 12%);
-    overflow: hidden;
     transition: all .5s;
     perspective: 25rem;
 
     &:hover {
-        box-shadow: 0 10px 20px rgb(0 0 0 / 40%);
         cursor: pointer;
+        box-shadow: 0 10px 20px rgb(0 0 0 / 40%);
+    }
+
+    &.game__state {
+        cursor: default;
+        box-shadow: none;
+        background: none;
+    }
+
+    &.game__state:hover > .train-card {
+        cursor: pointer;
+        box-shadow: 0 10px 20px rgb(0 0 0 / 40%);
     }
 
     &.flipped > .train-card {
-        transform: rotateY(180deg) translateX(-100%);
-        transform-origin: left;
+        transform: rotateY(180deg);
+        transform-origin: center;
     }
 }
 
@@ -68,9 +75,10 @@
     height: 100%;
     position: relative;
     transform-style: preserve-3d;
-    transform-origin: right;
+    transform-origin: center;
     transition: all .5s;
     border-radius: 5px;
+    box-shadow: 0 2px 5px 0 rgb(0 0 0 / 16%), 0 2px 10px 0 rgb(0 0 0 / 12%);
 
     &__front,
     &__back {
@@ -107,6 +115,11 @@
 .front__menu,
 .back__menu {
     margin-bottom: 5%;
+    font-size: calc( (100vw - 480px)/(1280 - 480) * (20 - 13) + 13px);;
+}
+
+.hidden {
+    display: none;
 }
 
 
