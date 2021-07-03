@@ -9,7 +9,6 @@ export class Navigation extends BaseComponent {
 
   private navListElement: BaseComponent;
 
-
   private img: BaseComponent;
 
   constructor() {
@@ -33,7 +32,7 @@ export class Navigation extends BaseComponent {
         this.navListElement = new BaseComponent('li', ['nav__list-item'], `${headers[i]}`);
         this.navList.element.append(this.navListElement.element);
         this.img = new BaseComponent('img', ['nav__pic']);
-        this.img.element.setAttribute('src', `${navPic[i+1]}`);
+        this.img.element.setAttribute('src', `${navPic[i + 1]}`);
         this.navListElement.element.append(this.img.element);
         this.addEventListener(headers[i]);
       }

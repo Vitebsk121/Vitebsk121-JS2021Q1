@@ -12,7 +12,7 @@
     position: relative;
     border: none;
     border-radius: 50%;
-    left: 43%;
+    left: 40%;
     padding: 20px;
     font-family: 'Zen Tokyo Zoo', cursive;
     color: rgb(0, 0, 0);
@@ -23,6 +23,14 @@
 
     &:hover {
         box-shadow: 0 10px 20px rgb(0 0 0 / 40%);
+    }
+
+    &:active {
+        transform: scale(0.9);
+    }
+
+    &.hidden {
+        visibility: hidden;
     }
 }
 
