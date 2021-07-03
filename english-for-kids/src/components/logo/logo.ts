@@ -6,9 +6,9 @@ export class Logo extends BaseComponent {
   constructor() {
     super('h1', ['header__logo', 'rainbow-animated'], 'English For Kids');
     this.addEventListener();
-  };
+  }
 
-  addEventListener() {
+  addEventListener(): void {
     this.element.addEventListener('click', () => {
       renderNewMain('Main Page');
       setNavistStye('Main Page');

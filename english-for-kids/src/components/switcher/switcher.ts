@@ -1,4 +1,4 @@
-import { switchTheme } from '../../shared/servise';
+import { renderNewMain, switchTheme } from '../../shared/servise';
 import { BaseComponent } from '../baseComponents';
 import './switcher.scss';
 
@@ -18,12 +18,17 @@ export class Switcher extends BaseComponent {
     switcherService().then(() => {
       const switcher = document.getElementById('myonoffswitch');
       switcher?.addEventListener('input', (e) => {
+        const page = localStorage.getItem('page');
         if ((<HTMLInputElement>e.target).checked) {
           switchTheme('train');
           localStorage.setItem('mode', 'train');
+          if (!page) return;
+          renderNewMain(page);
         } else {
           switchTheme('play');
           localStorage.setItem('mode', 'play');
+          if (!page) return;
+          renderNewMain(page);
         }
       });
     });

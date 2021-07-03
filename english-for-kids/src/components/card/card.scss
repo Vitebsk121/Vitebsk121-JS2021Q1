@@ -18,13 +18,21 @@
         box-shadow: 0 10px 20px rgb(0 0 0 / 40%);
     }
 
-    &.game__state {
+    &:hover > p {
+        background: linear-gradient(to right, red, orange, yellow, green, cyan, blue, violet, red, orange, yellow, green, cyan, blue, violet);
+        background-size: 120% 120%;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        animation: rainbow 20s linear infinite;
+    }
+
+    &.train__state {
         cursor: default;
         box-shadow: none;
         background: none;
     }
 
-    &.game__state:hover > .train-card {
+    &.train__state:hover > .train-card {
         cursor: pointer;
         box-shadow: 0 10px 20px rgb(0 0 0 / 40%);
     }
@@ -69,6 +77,12 @@
     100%{transform: rotate(-360deg);}
 }
 
+@keyframes rainbow {
+    0% { background-position: 0% 50% }
+    50% { background-position: 300% 50% }
+    100% { background-position: 0% 50% }
+}
+
 
 .train-card {
     width: 100%;
@@ -77,7 +91,7 @@
     transform-style: preserve-3d;
     transform-origin: center;
     transition: all .5s;
-    border-radius: 5px;
+    border-radius: 15px;
     box-shadow: 0 2px 5px 0 rgb(0 0 0 / 16%), 0 2px 10px 0 rgb(0 0 0 / 12%);
 
     &__front,
@@ -115,11 +129,25 @@
 .front__menu,
 .back__menu {
     margin-bottom: 5%;
-    font-size: calc( (100vw - 480px)/(1280 - 480) * (20 - 13) + 13px);;
+    font-size: calc( (100vw - 480px)/(1280 - 480) * (20 - 13) + 13px);
+
+    &::after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 2%;
+        top: 80%;
+        left: 0;
+        background: var(--backgroundStyleMode);
+    }
 }
 
 .hidden {
     display: none;
+}
+
+.play__state {
+    box-shadow: 0 2px 5px 0 rgb(0 0 0 / 16%), 0 2px 10px 0 rgb(0 0 0 / 12%);
 }
 
 

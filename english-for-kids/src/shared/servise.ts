@@ -59,6 +59,7 @@ export async function getMode(): Promise<string> {
 }
 
 export function setNavistStye(nameOfCategory: string): void {
+  localStorage.setItem('page', `${nameOfCategory}`);
   const arrOfNavElement = document.querySelectorAll('.nav__list-item');
   arrOfNavElement.forEach((item) => {
     item.classList.remove('active');

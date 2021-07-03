@@ -24,8 +24,21 @@
     margin-bottom: 20px;
     color: white;
     cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row-reverse;
+    
 
-
+    &:hover {
+        background: linear-gradient(to right, red, orange, yellow, green, cyan, blue, violet, red, orange, yellow, green, cyan, blue, violet);
+        background-size: 120% 120%;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        animation: rainbow 20s linear infinite;
+        transform: scale(1.1);
+    }
+    
     &.active {
         background: linear-gradient(to right, red, orange, yellow, green, cyan, blue, violet, red, orange, yellow, green, cyan, blue, violet);
         background-size: 120% 120%;
@@ -35,11 +48,17 @@
     }
 }
 
+.nav__pic {
+    margin-right: 10px;
+    width: 30px;
+    height: 30px;
+}
+
 @keyframes rainbow {
     0% { background-position: 0% 50% }
     50% { background-position: 300% 50% }
     100% { background-position: 0% 50% }
-  }
+}
 
 @keyframes BackgroundAnimate {
     0%{background-position:10% 0%}
