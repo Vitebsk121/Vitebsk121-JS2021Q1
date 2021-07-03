@@ -1,10 +1,29 @@
 .app__main {
-    margin-top: 10px;
     padding: 10px;
     display: flex;
+    flex-direction: column;
     flex-wrap: wrap;
-    justify-content: space-around;
+    align-items: center;
+    justify-content: center;
     transition: all .5s;
+}
+
+.game-btn {
+    position: relative;
+    border: none;
+    border-radius: 50%;
+    left: 43%;
+    padding: 20px;
+    font-family: 'Zen Tokyo Zoo', cursive;
+    color: rgb(0, 0, 0);
+    text-transform: uppercase;
+    background: var(--backgroundStyleMode);
+    box-shadow: 0 2px 5px 0 rgb(0 0 0 / 16%), 0 2px 10px 0 rgb(0 0 0 / 12%);
+    transition: all .5s;
+
+    &:hover {
+        box-shadow: 0 10px 20px rgb(0 0 0 / 40%);
+    }
 }
 
 @media screen and (max-width: 660px) {
