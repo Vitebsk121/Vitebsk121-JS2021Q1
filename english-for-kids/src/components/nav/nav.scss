@@ -1,0 +1,80 @@
+.app__nav {
+    height: 100%;
+    width: 450px;
+    background: var(--backgroundStyleMode);
+    background-size: 250% 250%;
+    transition: all .7s;
+    position: fixed;
+    top: 0;
+    left: 0;
+    transform: translateX(-100%);
+    z-index: 200;
+    animation: BackgroundAnimate 30s linear infinite;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &.active {
+        transform: translateX(0); 
+    }
+}
+
+.nav__list-item {
+    width: fit-content;
+    margin-bottom: 20px;
+    color: white;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row-reverse;
+    font-family: 'Zen Tokyo Zoo', cursive;
+    
+
+    &:hover {
+        background: linear-gradient(to right, red, orange, yellow, green, cyan, blue, violet, red, orange, yellow, green, cyan, blue, violet);
+        background-size: 120% 120%;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        animation: rainbow 20s linear infinite;
+        transform: scale(1.1);
+    }
+    
+    &.active {
+        background: linear-gradient(to right, red, orange, yellow, green, cyan, blue, violet, red, orange, yellow, green, cyan, blue, violet);
+        background-size: 120% 120%;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        animation: rainbow 20s linear infinite;
+    }
+}
+
+.nav__pic {
+    margin-right: 10px;
+    width: 30px;
+    height: 30px;
+}
+
+@keyframes rainbow {
+    0% { background-position: 0% 50% }
+    50% { background-position: 300% 50% }
+    100% { background-position: 0% 50% }
+}
+
+@keyframes BackgroundAnimate {
+    0%{background-position:10% 0%}
+    50%{background-position:91% 100%}
+    100%{background-position:10% 0%}
+}
+
+@media screen and (max-width: 980px) {
+    .app__nav {
+        width: 320px;
+    }
+}
+
+@media screen and (max-width: 660px) {
+    .app__nav {
+        width: 100%;
+    }
+}

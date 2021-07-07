@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Kirang+Haerang&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Zen+Tokyo+Zoo&display=swap');
+@import './global-variables.scss';
+
+html {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  background-color: white;
+  color: rgb(40, 34, 34);
+  text-transform: uppercase;
+  font-size: calc( (100vw - 480px)/(1280 - 480) * (22 - 13) + 13px);
+}
+
+.app__wrapper {
+  width: 95%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: all .5s;
+
+  &.to-right {
+    width: calc(100% - 460px);
+    margin-left: 460px;
+  }
+}
+
+@media screen and (max-width: 980px) {
+
+  .app__wrapper {
+
+    &.to-right {
+      width: calc(100% - 330px);
+      margin-left: 330px;
+    }
+  }
+}
+
+@media screen and (max-width: 660px) {
+  
+  .app__wrapper {
+
+    &.to-right {
+      width: 100%;
+      margin-left: 0;
+    }
+  }
+}

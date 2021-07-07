@@ -1,0 +1,22 @@
+.score-field {
+    display: flex;
+    position: absolute;
+    top: 5px;
+    align-items: center;
+    justify-content: flex-end;
+    flex-wrap: nowrap;
+    width: 97%;
+    min-height: 25px;
+    margin-bottom: 10px;
+    overflow: hidden;
+}
+
+.score-star {
+    filter: brightness(0);
+    box-sizing: border-box;
+    margin-right: 5px;
+    min-width: 20px;
+    height: 20px;
+    background-image: url('../../../public/icons/star.png');
+    background-size: cover;
+}

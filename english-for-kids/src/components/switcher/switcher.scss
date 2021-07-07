@@ -1,0 +1,105 @@
+.onoffswitch {
+    position: relative; width: 110px;
+    -webkit-user-select:none; -moz-user-select:none; -ms-user-select: none;
+}
+.onoffswitch-checkbox {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+}
+.onoffswitch-label {
+    display: block; overflow: hidden; cursor: pointer;
+    border: 2px solid #FFFFFF; border-radius: 10px;
+}
+.onoffswitch-inner {
+    display: block; width: 200%; margin-left: -100%;
+    transition: margin 0.3s ease-in 0s;
+}
+.onoffswitch-inner:before, .onoffswitch-inner:after {
+    display: block; float: left; width: 50%; height: 45px; padding: 0; line-height: 45px;
+    font-size: 17px; color: white; font-family: Trebuchet, Arial, sans-serif; font-weight: bold;
+    box-sizing: border-box;
+}
+.onoffswitch-inner:before {
+    content: "TRAIN";
+    padding-left: 10px;
+    background: linear-gradient(158deg, rgba(255,215,0,1) 0%, rgba(0,187,255,1) 23%, rgba(208,77,255,1) 47%, rgba(0,137,255,1) 68%, rgba(0,255,209,1) 93%);
+    }
+.onoffswitch-inner:after {
+    content: "PLAY";
+    padding-right: 10px;
+    color: black;
+    background: linear-gradient(158deg, rgba(158,252,227,1) 0%, rgba(0,224,139,1) 24%, rgba(199,255,69,1) 48%, rgba(111,130,255,1) 74%, rgba(148,233,165,1) 100%);
+    text-align: right;
+}
+.onoffswitch-switch {
+    display: block; width: 30px; margin: 7.5px;
+    background: rgb(255, 217, 0);
+    position: absolute; top: 0; bottom: 0;
+    right: 61px;
+    border: 2px solid #FFFFFF; border-radius: 10px;
+    transition: all 0.3s ease-in 0s; 
+}
+.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-inner {
+    margin-left: 0;
+}
+.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-switch {
+    right: 0px; 
+}
+
+@media screen and (max-width: 840px) {
+    .onoffswitch {
+        position: relative;
+        width: 85px;
+        -webkit-user-select:none;
+        -moz-user-select:none;
+        -ms-user-select: none;
+    }
+    .onoffswitch-checkbox {
+        position: absolute;
+        opacity: 0;
+        pointer-events: none;
+    }
+    .onoffswitch-label {
+        display: block;
+        overflow: hidden;
+        cursor: pointer;
+        border: 2px solid #FFFFFF; border-radius: 10px;
+    }
+    .onoffswitch-inner {
+        display: block;
+        width: 200%;
+        margin-left: -100%;
+        transition: margin 0.3s ease-in 0s;
+    }
+    .onoffswitch-inner:before, .onoffswitch-inner:after {
+        display: block; float: left; width: 50%; height: 32px; padding: 0; line-height: 32px;
+        font-size: 13px; color: white; font-family: Trebuchet, Arial, sans-serif; font-weight: bold;
+        box-sizing: border-box;
+    }
+    .onoffswitch-inner:before {
+        content: "TRAIN";
+        padding-left: 10px;
+        background: linear-gradient(158deg, rgba(255,215,0,1) 0%, rgba(0,187,255,1) 23%, rgba(208,77,255,1) 47%, rgba(0,137,255,1) 68%, rgba(0,255,209,1) 93%);
+    }
+    .onoffswitch-inner:after {
+        content: "PLAY";
+        padding-right: 10px;
+        background: linear-gradient(158deg, rgba(158,252,227,1) 0%, rgba(0,224,139,1) 24%, rgba(199,255,69,1) 48%, rgba(111,130,255,1) 74%, rgba(148,233,165,1) 100%);
+        text-align: right;
+    }
+    .onoffswitch-switch {
+        display: block; width: 20px; margin: 6px;
+        background: rgb(255, 217, 0);
+        position: absolute; top: 0; bottom: 0;
+        right: 49px;
+        border: 2px solid #FFFFFF; border-radius: 10px;
+        transition: all 0.3s ease-in 0s; 
+    }
+    .onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-inner {
+        margin-left: 0;
+    }
+    .onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-switch {
+        right: 0px; 
+    }
+}
